@@ -1,0 +1,88 @@
+# MAGPIE: MAG Platform for Intelligent Execution
+
+## Product Overview
+MAGPIE is a multiagent LLM platform designed for aircraft MRO (Maintenance, Repair, and Overhaul) organizations to augment their work with AI capabilities. The platform leverages Azure OpenAI API with GPT-4.1 and other models to provide intelligent assistance for maintenance technicians, engineers, and managers.
+
+## Target Users
+- Aircraft maintenance technicians
+- MRO engineers
+- Quality assurance personnel
+- Maintenance planners
+- MRO management
+
+## Key Features and Requirements
+
+### Core Platform Infrastructure
+1. Develop a FastAPI backend with proper project structure
+2. Implement Azure OpenAI API integration with model selection capabilities
+3. Create a centralized orchestrator for routing requests to appropriate agents
+4. Implement context management for maintaining conversation history
+5. Develop a model selection system to optimize for cost and capability
+6. Create a monitoring and logging system for tracking usage and performance
+7. Implement authentication and authorization
+
+### Technical Documentation Assistant
+1. Develop an agent for processing and querying technical documentation
+2. Create mock aircraft maintenance manuals, service bulletins, and regulatory documents
+3. Implement natural language querying capabilities
+4. Develop document summarization functionality
+5. Implement cross-referencing between different documents
+6. Create a system for highlighting critical safety information
+
+### Troubleshooting Advisor
+1. Develop an agent for diagnosing and resolving aircraft system issues
+2. Create a mock database of common aircraft system faults
+3. Implement symptom analysis and cause identification
+4. Develop step-by-step troubleshooting guidance
+5. Create a system for integrating with maintenance history
+6. Implement solution recommendation with parts and tools required
+
+### Maintenance Procedure Generator
+1. Develop an agent for creating customized maintenance procedures
+2. Create mock templates for standard maintenance tasks
+3. Implement customization based on aircraft configuration
+4. Develop incorporation of regulatory requirements
+5. Create a system for identifying required tools, parts, and equipment
+6. Implement safety precaution and warning inclusion
+
+### Testing and Validation
+1. Develop comprehensive test cases for each agent
+2. Implement integration tests for the orchestrator
+3. Create performance benchmarks for different model sizes
+4. Develop a system for evaluating response quality
+5. Implement user feedback collection for continuous improvement
+
+## Technical Requirements
+- Python 3.10+ for backend development
+- FastAPI for API development
+- PostgreSQL with Supabase for data storage
+- Redis for caching
+- Docker for containerization
+- Azure OpenAI API for LLM capabilities
+- GitHub Actions for CI/CD
+
+## Constraints
+- Focus on backend development initially, with frontend to be developed later
+- Use mock data for initial development and testing
+- Optimize for cost by using appropriate model sizes for different tasks
+- Ensure compliance with aviation industry standards and regulations
+
+## Success Metrics
+- Successful routing of requests to appropriate agents
+- Accurate model selection based on task complexity
+- High-quality responses from each specialized agent
+- Efficient use of context window
+- Optimal balance of cost and capability
+
+## Timeline
+- Phase 1: Core infrastructure development (4 weeks)
+- Phase 2: Agent development and integration (6 weeks)
+- Phase 3: Testing and optimization (4 weeks)
+- Phase 4: Documentation and handoff (2 weeks)
+
+## Future Considerations
+- Integration with actual MRO systems
+- Development of a user-friendly frontend
+- Expansion to additional specialized agents
+- Implementation of ML-based model selection
+- Mobile client applications
