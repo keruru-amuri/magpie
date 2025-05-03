@@ -17,7 +17,7 @@ def test_root_endpoint(client: TestClient):
 
 def test_health_check(client: TestClient):
     """Test the health check endpoint."""
-    response = client.get("/health")
+    response = client.get(f"{settings.API_V1_STR}/health")
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"

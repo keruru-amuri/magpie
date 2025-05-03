@@ -1,0 +1,50 @@
+[run]
+source = app
+omit =
+    */tests/*
+    */migrations/*
+    */venv/*
+    */env/*
+    */.venv/*
+    */site-packages/*
+    */dist-packages/*
+    */docs/*
+    */examples/*
+    */scripts/*
+    */setup.py
+    */conftest.py
+    */__init__.py
+    */__main__.py
+    */__pycache__/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    pass
+    raise ImportError
+    except ImportError
+    raise ValueError
+    raise TypeError
+    raise AttributeError
+    raise KeyError
+    raise IndexError
+    raise RuntimeError
+    except RuntimeError
+    except ValueError
+    except TypeError
+    except AttributeError
+    except KeyError
+    except IndexError
+    except Exception
+    except:
+    if TYPE_CHECKING:
+    if typing.TYPE_CHECKING:
+    if t.TYPE_CHECKING:
+    @abstractmethod
+    @abc.abstractmethod
+
+[html]
+directory = coverage_html
