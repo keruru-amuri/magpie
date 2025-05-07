@@ -49,9 +49,13 @@ jobs:
       run: |
         mypy app tests --ignore-missing-imports
 
-    - name: Test with pytest
+    - name: Run unit and integration tests
       run: |
-        pytest --cov=app --cov-report=xml --cov-report=term tests/
+        pytest --cov=app --cov-report=xml --cov-report=term tests/unit/ tests/integration/
+
+    - name: Run end-to-end tests
+      run: |
+        pytest --cov=app --cov-append --cov-report=xml --cov-report=term tests/e2e/
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3

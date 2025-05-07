@@ -1,0 +1,279 @@
+{
+  "inspection": {
+    "general": {
+      "tools": ["tool-001", "tool-002", "tool-005"],
+      "parts": [],
+      "equipment": []
+    },
+    "hydraulic": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005"],
+      "parts": ["part-001", "part-002", "part-003"],
+      "equipment": ["equip-004"]
+    },
+    "fuel": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-009"],
+      "parts": ["part-001", "part-004"],
+      "equipment": ["equip-009"]
+    },
+    "engine": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-006"],
+      "parts": ["part-006", "part-007"],
+      "equipment": []
+    },
+    "landing_gear": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005"],
+      "parts": ["part-001", "part-002", "part-008"],
+      "equipment": ["equip-001", "equip-002"]
+    },
+    "electrical": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005"],
+      "parts": ["part-009", "part-010"],
+      "equipment": ["equip-005"]
+    },
+    "avionics": {
+      "tools": ["tool-003", "tool-005", "tool-008"],
+      "parts": [],
+      "equipment": ["equip-008"]
+    },
+    "environmental": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005"],
+      "parts": ["part-005"],
+      "equipment": []
+    },
+    "oxygen": {
+      "tools": ["tool-001", "tool-002", "tool-005"],
+      "parts": [],
+      "equipment": ["equip-006"]
+    }
+  },
+  "repair": {
+    "general": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": []
+    },
+    "hydraulic": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-003"],
+      "equipment": ["equip-004"]
+    },
+    "fuel": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007", "tool-009"],
+      "parts": ["part-001", "part-004"],
+      "equipment": ["equip-009"]
+    },
+    "engine": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-006", "tool-007"],
+      "parts": ["part-006", "part-007"],
+      "equipment": ["equip-007"]
+    },
+    "landing_gear": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-008"],
+      "equipment": ["equip-001", "equip-002"]
+    },
+    "electrical": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-007", "tool-008"],
+      "parts": ["part-009", "part-010"],
+      "equipment": ["equip-005"]
+    },
+    "avionics": {
+      "tools": ["tool-003", "tool-005", "tool-007", "tool-008"],
+      "parts": [],
+      "equipment": ["equip-008"]
+    },
+    "environmental": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-007"],
+      "parts": ["part-005"],
+      "equipment": []
+    },
+    "oxygen": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": ["equip-006"]
+    }
+  },
+  "overhaul": {
+    "general": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": []
+    },
+    "hydraulic": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-003"],
+      "equipment": ["equip-004"]
+    },
+    "fuel": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007", "tool-009"],
+      "parts": ["part-001", "part-004"],
+      "equipment": ["equip-009"]
+    },
+    "engine": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-006", "tool-007"],
+      "parts": ["part-006", "part-007"],
+      "equipment": ["equip-007"]
+    },
+    "landing_gear": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-008"],
+      "equipment": ["equip-001", "equip-002"]
+    },
+    "electrical": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-007", "tool-008"],
+      "parts": ["part-009", "part-010"],
+      "equipment": ["equip-005"]
+    },
+    "avionics": {
+      "tools": ["tool-003", "tool-005", "tool-007", "tool-008"],
+      "parts": [],
+      "equipment": ["equip-008"]
+    },
+    "environmental": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-007"],
+      "parts": ["part-005"],
+      "equipment": []
+    },
+    "oxygen": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": ["equip-006"]
+    }
+  },
+  "replacement": {
+    "general": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": []
+    },
+    "hydraulic": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-003"],
+      "equipment": ["equip-004"]
+    },
+    "fuel": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007", "tool-009"],
+      "parts": ["part-001", "part-004"],
+      "equipment": ["equip-009"]
+    },
+    "engine": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-006", "tool-007"],
+      "parts": ["part-006", "part-007"],
+      "equipment": ["equip-007"]
+    },
+    "landing_gear": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-008"],
+      "equipment": ["equip-001", "equip-002"]
+    },
+    "electrical": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-007", "tool-008"],
+      "parts": ["part-009", "part-010"],
+      "equipment": ["equip-005"]
+    },
+    "avionics": {
+      "tools": ["tool-003", "tool-005", "tool-007", "tool-008"],
+      "parts": [],
+      "equipment": ["equip-008"]
+    },
+    "environmental": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-007"],
+      "parts": ["part-005"],
+      "equipment": []
+    },
+    "oxygen": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": ["equip-006"]
+    }
+  },
+  "functional_test": {
+    "general": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005"],
+      "parts": [],
+      "equipment": []
+    },
+    "hydraulic": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-004", "tool-005"],
+      "parts": [],
+      "equipment": ["equip-004"]
+    },
+    "fuel": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-004", "tool-005", "tool-009"],
+      "parts": [],
+      "equipment": ["equip-009"]
+    },
+    "engine": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-006"],
+      "parts": [],
+      "equipment": []
+    },
+    "landing_gear": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-004", "tool-005"],
+      "parts": [],
+      "equipment": ["equip-001", "equip-002"]
+    },
+    "electrical": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005", "tool-008"],
+      "parts": [],
+      "equipment": ["equip-005"]
+    },
+    "avionics": {
+      "tools": ["tool-003", "tool-005", "tool-008"],
+      "parts": [],
+      "equipment": ["equip-008"]
+    },
+    "environmental": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005"],
+      "parts": [],
+      "equipment": []
+    },
+    "oxygen": {
+      "tools": ["tool-001", "tool-002", "tool-003", "tool-005"],
+      "parts": [],
+      "equipment": ["equip-006"]
+    }
+  },
+  "specific_procedures": {
+    "hydraulic_pump_replacement": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-003"],
+      "equipment": ["equip-004"]
+    },
+    "flap_actuator_replacement": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-003"],
+      "equipment": []
+    },
+    "nose_wheel_steering_actuator_replacement": {
+      "tools": ["tool-001", "tool-002", "tool-004", "tool-005", "tool-007"],
+      "parts": ["part-001", "part-002", "part-003"],
+      "equipment": ["equip-001", "equip-002"]
+    },
+    "magneto_replacement": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": ["part-006"],
+      "equipment": []
+    },
+    "carburetor_replacement": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": []
+    },
+    "aileron_cable_replacement": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": []
+    },
+    "flap_rigging": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-007"],
+      "parts": [],
+      "equipment": []
+    },
+    "engine_installation": {
+      "tools": ["tool-001", "tool-002", "tool-005", "tool-006", "tool-007"],
+      "parts": [],
+      "equipment": ["equip-007"]
+    }
+  }
+}

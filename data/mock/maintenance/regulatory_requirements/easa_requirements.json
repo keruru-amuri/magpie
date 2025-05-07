@@ -1,0 +1,146 @@
+[
+  {
+    "id": "reg-easa-001",
+    "authority": "EASA",
+    "reference_id": "Part-145",
+    "title": "Maintenance Organisation Approvals",
+    "description": "Requirements for the approval of maintenance organizations",
+    "content": "This regulation establishes the requirements to be met by an organisation to qualify for the issue or continuation of an approval for the maintenance of aircraft and components.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["maintenance", "organization", "approval"],
+    "related_requirements": ["reg-easa-002", "reg-easa-003"],
+    "effective_date": "2003-11-28",
+    "last_updated": "2021-03-24"
+  },
+  {
+    "id": "reg-easa-002",
+    "authority": "EASA",
+    "reference_id": "Part-M",
+    "title": "Continuing Airworthiness Requirements",
+    "description": "Requirements for ensuring the continuing airworthiness of aircraft",
+    "content": "This regulation establishes the common technical requirements and administrative procedures for ensuring the continuing airworthiness of aircraft, including any component for installation thereto.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["airworthiness", "maintenance", "continuing"],
+    "related_requirements": ["reg-easa-001", "reg-easa-003"],
+    "effective_date": "2003-11-28",
+    "last_updated": "2021-03-24"
+  },
+  {
+    "id": "reg-easa-003",
+    "authority": "EASA",
+    "reference_id": "Part-66",
+    "title": "Certifying Staff",
+    "description": "Requirements for aircraft maintenance licenses",
+    "content": "This regulation establishes the requirements for the issue of an aircraft maintenance licence and conditions of its validity and use, for aeroplanes and helicopters.",
+    "applicability": {
+      "aircraft_types": ["airplane", "helicopter"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["license", "certification", "maintenance", "personnel"],
+    "related_requirements": ["reg-easa-001", "reg-easa-002"],
+    "effective_date": "2003-11-28",
+    "last_updated": "2021-03-24"
+  },
+  {
+    "id": "reg-easa-004",
+    "authority": "EASA",
+    "reference_id": "CS-25",
+    "title": "Certification Specifications for Large Aeroplanes",
+    "description": "Certification specifications for large aeroplanes",
+    "content": "This document contains the certification specifications for large aeroplanes, including airworthiness codes and acceptable means of compliance.",
+    "applicability": {
+      "aircraft_types": ["large_aeroplane"],
+      "aircraft_categories": ["commercial"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["certification", "large", "aeroplane", "airworthiness"],
+    "related_requirements": ["reg-easa-005"],
+    "effective_date": "2003-10-17",
+    "last_updated": "2021-06-23"
+  },
+  {
+    "id": "reg-easa-005",
+    "authority": "EASA",
+    "reference_id": "CS-25.841",
+    "title": "Pressurized cabins",
+    "description": "Requirements for pressurized cabins in large aeroplanes",
+    "content": "Pressurized cabins and compartments to be occupied must be equipped to provide a cabin pressure altitude of not more than 2438 m (8000 ft) at the maximum operating altitude of the aeroplane under normal operating conditions.",
+    "applicability": {
+      "aircraft_types": ["large_aeroplane"],
+      "aircraft_categories": ["commercial"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["pressurization", "cabin", "altitude", "large", "aeroplane"],
+    "related_requirements": ["reg-easa-004"],
+    "effective_date": "2003-10-17",
+    "last_updated": "2021-06-23"
+  },
+  {
+    "id": "reg-easa-006",
+    "authority": "EASA",
+    "reference_id": "AMC 20-8",
+    "title": "Occurrence Reporting",
+    "description": "Acceptable means of compliance for occurrence reporting",
+    "content": "This AMC provides acceptable means of compliance for occurrence reporting according to Regulation (EU) No 376/2014.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["occurrence", "reporting", "safety"],
+    "related_requirements": [],
+    "effective_date": "2003-11-28",
+    "last_updated": "2015-05-15"
+  },
+  {
+    "id": "reg-easa-007",
+    "authority": "EASA",
+    "reference_id": "SIB 2018-04",
+    "title": "Fuel Contamination",
+    "description": "Safety information bulletin on fuel contamination",
+    "content": "This Safety Information Bulletin provides recommendations regarding fuel contamination detection and prevention.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["fuel", "contamination", "safety"],
+    "related_requirements": [],
+    "effective_date": "2018-04-17",
+    "last_updated": "2018-04-17"
+  },
+  {
+    "id": "reg-easa-008",
+    "authority": "EASA",
+    "reference_id": "Part-21",
+    "title": "Certification of Aircraft and Related Products, Parts and Appliances",
+    "description": "Requirements for the certification of aircraft and related products",
+    "content": "This regulation establishes the requirements and procedures for the certification of aircraft and related products, parts and appliances, and of design and production organisations.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["European Union"]
+    },
+    "tags": ["certification", "design", "production"],
+    "related_requirements": ["reg-easa-004"],
+    "effective_date": "2003-09-28",
+    "last_updated": "2021-03-24"
+  }
+]

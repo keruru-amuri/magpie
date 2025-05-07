@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maintenance Equipment",
+  "description": "Schema for maintenance equipment",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "category",
+      "description"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the equipment"
+      },
+      "name": {
+        "type": "string",
+        "description": "Name of the equipment"
+      },
+      "category": {
+        "type": "string",
+        "description": "Category of the equipment (e.g., test equipment, ground support equipment, safety equipment)"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the equipment"
+      },
+      "specifications": {
+        "type": "object",
+        "description": "Specifications of the equipment",
+        "properties": {
+          "dimensions": {
+            "type": "string",
+            "description": "Dimensions of the equipment"
+          },
+          "weight": {
+            "type": "string",
+            "description": "Weight of the equipment"
+          },
+          "power_requirements": {
+            "type": "string",
+            "description": "Power requirements for the equipment"
+          },
+          "calibration_required": {
+            "type": "boolean",
+            "description": "Whether the equipment requires calibration"
+          },
+          "calibration_interval": {
+            "type": "string",
+            "description": "Calibration interval for the equipment"
+          },
+          "additional_specs": {
+            "type": "object",
+            "description": "Additional specifications for the equipment"
+          }
+        }
+      },
+      "manufacturer": {
+        "type": "string",
+        "description": "Manufacturer of the equipment"
+      },
+      "model_number": {
+        "type": "string",
+        "description": "Model number of the equipment"
+      },
+      "image_url": {
+        "type": "string",
+        "description": "URL to an image of the equipment"
+      },
+      "operation_instructions": {
+        "type": "string",
+        "description": "Instructions for operating the equipment"
+      },
+      "safety_precautions": {
+        "type": "array",
+        "description": "Safety precautions for using the equipment",
+        "items": {
+          "type": "string"
+        }
+      },
+      "maintenance_requirements": {
+        "type": "string",
+        "description": "Maintenance requirements for the equipment"
+      },
+      "alternatives": {
+        "type": "array",
+        "description": "Alternative equipment that can be used",
+        "items": {
+          "type": "string"
+        }
+      },
+      "aircraft_compatibility": {
+        "type": "array",
+        "description": "Aircraft types this equipment is compatible with",
+        "items": {
+          "type": "string"
+        }
+      },
+      "system_compatibility": {
+        "type": "array",
+        "description": "Aircraft systems this equipment is compatible with",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -100,3 +100,9 @@ dmypy.json
 # IPython
 profile_default/
 ipython_config.py
+
+# Added by Claude Task Master
+logs
+# Environment variables
+.idea
+.vscode

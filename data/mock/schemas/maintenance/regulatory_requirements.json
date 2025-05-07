@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Regulatory Requirements",
+  "description": "Schema for aviation regulatory requirements",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "authority",
+      "reference_id",
+      "title",
+      "description",
+      "applicability",
+      "tags"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the regulatory requirement"
+      },
+      "authority": {
+        "type": "string",
+        "description": "Regulatory authority (e.g., FAA, EASA)"
+      },
+      "reference_id": {
+        "type": "string",
+        "description": "Reference identifier in the authority's system (e.g., 14 CFR 43.13)"
+      },
+      "title": {
+        "type": "string",
+        "description": "Title of the regulatory requirement"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the regulatory requirement"
+      },
+      "content": {
+        "type": "string",
+        "description": "Full content of the regulatory requirement"
+      },
+      "applicability": {
+        "type": "object",
+        "description": "Applicability of the regulatory requirement",
+        "properties": {
+          "aircraft_types": {
+            "type": "array",
+            "description": "Aircraft types to which this requirement applies",
+            "items": {
+              "type": "string"
+            }
+          },
+          "aircraft_categories": {
+            "type": "array",
+            "description": "Aircraft categories to which this requirement applies",
+            "items": {
+              "type": "string"
+            }
+          },
+          "operation_categories": {
+            "type": "array",
+            "description": "Operation categories to which this requirement applies",
+            "items": {
+              "type": "string"
+            }
+          },
+          "jurisdictions": {
+            "type": "array",
+            "description": "Jurisdictions in which this requirement applies",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "tags": {
+        "type": "array",
+        "description": "Tags for categorizing the regulatory requirement",
+        "items": {
+          "type": "string"
+        }
+      },
+      "related_requirements": {
+        "type": "array",
+        "description": "Related regulatory requirements",
+        "items": {
+          "type": "string"
+        }
+      },
+      "effective_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date when the regulatory requirement became effective"
+      },
+      "last_updated": {
+        "type": "string",
+        "format": "date",
+        "description": "Date when the regulatory requirement was last updated"
+      }
+    }
+  }
+}

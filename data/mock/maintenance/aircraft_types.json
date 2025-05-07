@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ac-001",
+    "name": "Boeing 737",
+    "variants": [
+      "737-700",
+      "737-800",
+      "737-900"
+    ]
+  },
+  {
+    "id": "ac-002",
+    "name": "Airbus A320",
+    "variants": [
+      "A320-200",
+      "A320neo"
+    ]
+  },
+  {
+    "id": "ac-003",
+    "name": "Embraer E190",
+    "variants": [
+      "E190-E2"
+    ]
+  },
+  {
+    "id": "ac-004",
+    "name": "Bombardier CRJ",
+    "variants": [
+      "CRJ-700",
+      "CRJ-900"
+    ]
+  },
+  {
+    "id": "ac-005",
+    "name": "ATR 72",
+    "variants": [
+      "ATR 72-500",
+      "ATR 72-600"
+    ]
+  }
+]

@@ -1,0 +1,268 @@
+{
+  "inspection": {
+    "general": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_inspection": ["sp-015"]
+      }
+    },
+    "hydraulic": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_inspection": ["sp-015"]
+      }
+    },
+    "electrical": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_inspection": ["sp-015"]
+      }
+    },
+    "avionics": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005", "sp-007", "sp-020"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_inspection": ["sp-015"]
+      }
+    },
+    "landing_gear": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006", "sp-010", "sp-011"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_inspection": ["sp-015"]
+      }
+    },
+    "fuel": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-008", "sp-009"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_inspection": ["sp-015"]
+      }
+    },
+    "engine": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-016", "sp-017"],
+      "during_procedure": ["sp-018"],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_inspection": ["sp-015"]
+      }
+    }
+  },
+  "repair": {
+    "general": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "hydraulic": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "electrical": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "avionics": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005", "sp-007", "sp-020"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "landing_gear": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006", "sp-010", "sp-011"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "fuel": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-008", "sp-009"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "engine": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-016", "sp-017"],
+      "during_procedure": ["sp-018"],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    }
+  },
+  "replacement": {
+    "general": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "hydraulic": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "electrical": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "avionics": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005", "sp-007", "sp-020"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "landing_gear": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006", "sp-010", "sp-011"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "fuel": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-008", "sp-009"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    },
+    "engine": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-016", "sp-017"],
+      "during_procedure": ["sp-018"],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": [],
+        "access_panel_removal": ["sp-013"],
+        "component_removal": ["sp-014"]
+      }
+    }
+  },
+  "functional_test": {
+    "general": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {}
+    },
+    "hydraulic": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"]
+      }
+    },
+    "electrical": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {}
+    },
+    "avionics": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-005", "sp-007", "sp-019", "sp-020"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {}
+    },
+    "landing_gear": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-006", "sp-010", "sp-011"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"]
+      }
+    },
+    "fuel": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-008", "sp-009"],
+      "during_procedure": [],
+      "after_procedure": [],
+      "specific_steps": {
+        "preparation": ["sp-012"]
+      }
+    },
+    "engine": {
+      "before_procedure": ["sp-001", "sp-002", "sp-003", "sp-004", "sp-016", "sp-017"],
+      "during_procedure": ["sp-018"],
+      "after_procedure": [],
+      "specific_steps": {}
+    }
+  }
+}

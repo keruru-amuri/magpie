@@ -1,0 +1,31 @@
+{
+  "system_id": "sys-002",
+  "system_name": "Electrical System",
+  "symptoms": [
+    {
+      "id": "sym-006",
+      "description": "Circuit breaker tripping",
+      "severity": "high"
+    },
+    {
+      "id": "sym-007",
+      "description": "Intermittent power loss",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-008",
+      "description": "Unusual noise from electrical components",
+      "severity": "low"
+    },
+    {
+      "id": "sym-009",
+      "description": "Dimming lights",
+      "severity": "low"
+    },
+    {
+      "id": "sym-010",
+      "description": "Burning smell from electrical panel",
+      "severity": "high"
+    }
+  ]
+}

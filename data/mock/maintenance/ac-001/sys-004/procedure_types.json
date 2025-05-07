@@ -1,0 +1,32 @@
+[
+  {
+    "id": "proc-001",
+    "name": "Inspection",
+    "description": "Visual inspection of components",
+    "interval": "Daily"
+  },
+  {
+    "id": "proc-002",
+    "name": "Functional Test",
+    "description": "Testing system functionality",
+    "interval": "Weekly"
+  },
+  {
+    "id": "proc-003",
+    "name": "Replacement",
+    "description": "Component replacement procedure",
+    "interval": "As needed"
+  },
+  {
+    "id": "proc-004",
+    "name": "Adjustment",
+    "description": "Adjusting system parameters",
+    "interval": "Monthly"
+  },
+  {
+    "id": "proc-005",
+    "name": "Overhaul",
+    "description": "Complete system overhaul",
+    "interval": "Yearly"
+  }
+]

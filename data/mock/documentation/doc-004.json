@@ -1,0 +1,45 @@
+{
+  "id": "doc-004",
+  "title": "Service Bulletin SB-2025-01: Hydraulic Pump Pressure Compensator Inspection and Replacement",
+  "type": "bulletin",
+  "version": "1.0",
+  "last_updated": "2025-04-05",
+  "content": "This Service Bulletin provides instructions for the inspection and replacement of the pressure compensator assembly on Parker Hannifin PV3-300 hydraulic pumps installed on Boeing 737-800 aircraft. This bulletin addresses potential premature wear of the pressure compensator spool that may lead to erratic system pressure.",
+  "sections": [
+    {
+      "id": "doc-004-section-1",
+      "title": "Purpose",
+      "content": "This Service Bulletin provides instructions for the inspection and, if necessary, replacement of the pressure compensator assembly on Parker Hannifin PV3-300 hydraulic pumps (P/N: HYD-PUMP-001) installed on Boeing 737-800 aircraft. This bulletin addresses a potential issue with premature wear of the pressure compensator spool that may lead to erratic system pressure and reduced pump performance."
+    },
+    {
+      "id": "doc-004-section-2",
+      "title": "Affected Aircraft",
+      "content": "This Service Bulletin applies to all Boeing 737-800 aircraft with Parker Hannifin PV3-300 hydraulic pumps (P/N: HYD-PUMP-001) installed, with serial numbers in the range of SN10001 through SN12500.\n\nNOTE: Pumps with serial numbers SN12501 and higher incorporate the improved pressure compensator design and are not affected by this Service Bulletin.\n\nAffected Component:\n- Part Number: HYD-PUMP-001\n- Serial Number Range: SN10001 through SN12500\n- Name: Hydraulic Pump, Engine-Driven\n- Manufacturer: Parker Hannifin Corporation\n\nCross-reference: For detailed component information, refer to the Hydraulic Pump Component Maintenance Manual (doc-002)."
+    },
+    {
+      "id": "doc-004-section-3",
+      "title": "Description",
+      "content": "Parker Hannifin has reported instances of premature wear on the pressure compensator spool in certain PV3-300 hydraulic pumps. This wear can result in the following issues:\n\n1. Erratic system pressure fluctuations\n2. Reduced pump efficiency\n3. Increased case drain flow\n4. Potential overheating of the hydraulic system\n5. In extreme cases, inability to maintain required system pressure\n\nThe root cause has been identified as insufficient hardening of the compensator spool surface in pumps manufactured between January 2024 and March 2025 (serial numbers SN10001 through SN12500). Parker Hannifin has implemented an improved manufacturing process for the pressure compensator spool in all pumps with serial numbers SN12501 and higher.\n\nOperators have reported the following symptoms that may indicate a worn pressure compensator spool:\n- Fluctuating hydraulic system pressure indications\n- Slow or erratic operation of hydraulic-powered components\n- Increased hydraulic fluid temperature\n- Increased case drain flow during routine maintenance checks\n\nWARNING: If left unaddressed, a severely worn pressure compensator spool could potentially result in loss of hydraulic system pressure, affecting flight control systems powered by the affected hydraulic system."
+    },
+    {
+      "id": "doc-004-section-4",
+      "title": "Corrective Action",
+      "content": "The following actions are required:\n\n4.1 INSPECTION\n\nPerform a functional check of the hydraulic pump pressure compensator as follows:\n\n1. Connect hydraulic test equipment to the aircraft hydraulic test ports\n2. Operate the hydraulic system at normal pressure (3,000 psi / 20,684 kPa)\n3. Monitor system pressure for 5 minutes\n4. Cycle hydraulic demand by operating flight controls through full range of motion\n5. Monitor case drain flow\n\nAcceptance Criteria:\n- System pressure must remain within 2,850-3,150 psi (19,650-21,718 kPa)\n- Pressure fluctuations must not exceed ±150 psi (±1,034 kPa)\n- Case drain flow must not exceed 1.5 gallons per minute (5.7 liters per minute)\n\n4.2 REPLACEMENT\n\nIf the pump fails the functional check, or if the pump is within the affected serial number range and has accumulated more than 2,000 flight hours since new or overhaul, replace the pressure compensator assembly as follows:\n\nWARNING: Ensure all hydraulic pressure is relieved before performing maintenance on the pump. Failure to do so may result in personal injury or equipment damage.\n\nTools Required:\n- Standard mechanic's tool set\n- Torque wrench (0-25 ft-lb / 0-34 Nm)\n- New pressure compensator assembly (P/N: HYD-COMP-002)\n- New O-rings and backup rings (P/N: HYD-SEAL-KIT-001)\n\nProcedure:\n1. Gain access to the hydraulic pump on the engine\n2. Depressurize the hydraulic system\n3. Clean the area around the pressure compensator\n4. Remove the four bolts securing the compensator to the pump housing\n5. Carefully remove the compensator assembly\n6. Inspect the compensator bore in the pump housing for damage\n7. Install new O-rings and backup rings on the new compensator assembly\n8. Install the new compensator assembly\n9. Torque the four mounting bolts to 18-20 ft-lb (24-27 Nm) in a diagonal pattern\n10. Perform the functional check described in Section 4.1\n\nRefer to the Hydraulic Pump Component Maintenance Manual (doc-002) for detailed disassembly and assembly procedures."
+    },
+    {
+      "id": "doc-004-section-5",
+      "title": "Compliance",
+      "content": "5.1 COMPLIANCE CATEGORIES\n\nThis Service Bulletin is categorized as RECOMMENDED.\n\nThe following compliance times are recommended:\n\nCategory A - URGENT (Safety Issue):\n- Not applicable for this Service Bulletin\n\nCategory B - PRIORITY:\n- For pumps with more than 2,000 flight hours: Within the next 300 flight hours or 60 days, whichever occurs first\n- For pumps with less than 2,000 flight hours: At next scheduled A-check or within 600 flight hours, whichever occurs first\n\nCategory C - ROUTINE:\n- Not applicable for this Service Bulletin\n\n5.2 REPORTING REQUIREMENTS\n\nOperators are requested to report the results of all inspections and replacements to Parker Hannifin Technical Support within 30 days of accomplishment. Include the following information:\n\n1. Aircraft registration number\n2. Pump serial number\n3. Pump time since new or overhaul\n4. Inspection results (pass/fail)\n5. Observed system pressure and fluctuations\n6. Case drain flow measurements\n7. Description of any observed anomalies\n\nSubmit reports to:\nParker Hannifin Technical Support\nEmail: techsupport@parker.com\nReference: SB-2025-01\n\n5.3 DOCUMENTATION\n\nRecord compliance with this Service Bulletin in the aircraft maintenance records. Include the following information:\n\n1. Service Bulletin number and title\n2. Date of accomplishment\n3. Aircraft registration number\n4. Pump serial number\n5. Action taken (inspection only or inspection and replacement)\n6. Name and certificate number of the technician performing the work\n7. Name and certificate number of the inspector approving the work"
+    },
+    {
+      "id": "doc-004-section-6",
+      "title": "Material Information",
+      "content": "6.1 PARTS REQUIRED\n\nThe following parts may be required to comply with this Service Bulletin:\n\nFor Inspection:\n- No parts required\n\nFor Replacement:\n- Pressure Compensator Assembly (P/N: HYD-COMP-002), Quantity: 1\n- O-ring and Seal Kit (P/N: HYD-SEAL-KIT-001), Quantity: 1\n\n6.2 TOOLING REQUIRED\n\nThe following tools are required to comply with this Service Bulletin:\n\nFor Inspection:\n- Hydraulic Test Equipment (P/N: HYD-TEST-002)\n- Pressure Gauge, 0-5,000 psi (P/N: HYD-GAUGE-001)\n- Flow Meter, 0-10 GPM (P/N: HYD-FLOW-001)\n\nFor Replacement:\n- Standard Mechanic's Tool Set\n- Torque Wrench, 0-25 ft-lb (P/N: TOOL-TORQUE-001)\n- O-ring Installation Tool Set (P/N: TOOL-ORING-001)\n\n6.3 AVAILABILITY AND ORDERING\n\nReplacement parts are available from Parker Hannifin authorized distributors. When ordering parts, provide the following information:\n\n1. Aircraft type and registration number\n2. Service Bulletin number (SB-2025-01)\n3. Part number and quantity required\n\nEstimated lead time for replacement parts is 5-7 business days. For AOG (Aircraft On Ground) situations, contact Parker Hannifin Customer Service at +1-800-555-0100 for expedited shipping options."
+    },
+    {
+      "id": "doc-004-section-7",
+      "title": "References",
+      "content": "The following documents contain information related to this Service Bulletin:\n\n1. Boeing 737-800 Aircraft Maintenance Manual (doc-001), Chapter 29 - Hydraulic System\n2. Hydraulic Pump Component Maintenance Manual (doc-002)\n3. Illustrated Parts Catalog (doc-003), Chapter 29 - Hydraulic System\n4. Parker Hannifin Service Letter SL-2025-03, dated 2025-03-15\n5. FAA Advisory Circular AC 43-13-1B, Acceptable Methods, Techniques, and Practices - Aircraft Inspection and Repair\n\nFor additional information or technical assistance, contact:\nParker Hannifin Technical Support\nPhone: +1-800-555-0101\nEmail: techsupport@parker.com\nWebsite: www.parker.com/aerospace"
+    }
+  ]
+}

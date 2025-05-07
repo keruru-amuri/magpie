@@ -14,7 +14,7 @@ class BaseTest:
         """Set up test environment."""
         self.app = app
         self.client = TestClient(self.app)
-        
+
         # Add any common setup here
         yield
         # Add any common teardown here
@@ -40,3 +40,10 @@ class BaseAsyncTest(BaseTest):
         # Add async-specific setup here
         yield
         # Add async-specific teardown here
+
+    @pytest.fixture
+    async def async_client(self):
+        """Create an async test client for the FastAPI application."""
+        from httpx import AsyncClient
+        async with AsyncClient(app=self.app, base_url="http://test") as test_client:
+            yield test_client

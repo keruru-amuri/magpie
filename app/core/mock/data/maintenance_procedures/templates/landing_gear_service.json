@@ -1,0 +1,481 @@
+{
+  "template_id": "MP-LDG-SVC-001",
+  "title": "Landing Gear Service Procedure",
+  "description": "Standard procedure for inspection and servicing of aircraft landing gear systems",
+  "applicability": {
+    "landing_gear_types": ["fixed", "retractable"],
+    "gear_configurations": ["tricycle", "tailwheel", "multi-bogey"],
+    "aircraft_categories": ["commercial", "private", "military"]
+  },
+  "required_qualifications": [
+    {
+      "qualification_id": "A&P-AIRFRM",
+      "name": "A&P Mechanic - Airframe",
+      "description": "FAA Airframe & Powerplant Mechanic certification with Airframe rating"
+    }
+  ],
+  "estimated_duration": {
+    "hours": 3,
+    "minutes": 0
+  },
+  "regulatory_references": [
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 43.13",
+      "description": "Performance rules (general)"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "AC 43.13-1B",
+      "description": "Acceptable Methods, Techniques, and Practices - Aircraft Inspection and Repair"
+    }
+  ],
+  "safety_precautions": [
+    {
+      "precaution_id": "SP-001",
+      "severity": "warning",
+      "description": "Ensure aircraft is properly supported on jacks before performing retraction tests",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-002",
+      "severity": "danger",
+      "description": "Never work under an aircraft supported only by hydraulic jacks without safety stands in place",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-003",
+      "severity": "caution",
+      "description": "Use proper personal protective equipment when handling hydraulic fluids and lubricants",
+      "display_location": "during_procedure"
+    },
+    {
+      "precaution_id": "SP-004",
+      "severity": "warning",
+      "description": "Ensure all personnel are clear of landing gear before performing retraction tests",
+      "display_location": "during_procedure"
+    }
+  ],
+  "required_tools": [
+    {
+      "tool_id": "TL-001",
+      "name": "Aircraft Jack Set",
+      "description": "Hydraulic jacks appropriate for aircraft weight and jack points",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-002",
+      "name": "Safety Stands",
+      "description": "Safety stands rated for aircraft weight",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-003",
+      "name": "Tire Pressure Gauge",
+      "description": "Calibrated tire pressure gauge appropriate for aircraft tire pressures",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-004",
+      "name": "Torque Wrench",
+      "description": "Calibrated torque wrench with appropriate range",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-005",
+      "name": "Hydraulic Servicing Equipment",
+      "description": "Equipment for checking and servicing hydraulic fluid",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-006",
+      "name": "Grease Gun",
+      "description": "Grease gun with appropriate fittings",
+      "optional": false
+    }
+  ],
+  "required_materials": [
+    {
+      "material_id": "MT-001",
+      "name": "Hydraulic Fluid",
+      "description": "Aircraft-approved hydraulic fluid of correct specification",
+      "quantity": "As needed",
+      "optional": false
+    },
+    {
+      "material_id": "MT-002",
+      "name": "Grease",
+      "description": "Aircraft-approved grease of correct specification",
+      "quantity": "As needed",
+      "optional": false
+    },
+    {
+      "material_id": "MT-003",
+      "name": "Cleaning Solvent",
+      "description": "Approved aviation cleaning solvent",
+      "quantity": "As needed",
+      "optional": false
+    },
+    {
+      "material_id": "MT-004",
+      "name": "Lint-free Cloths",
+      "description": "Clean, lint-free cloths for cleaning and inspection",
+      "quantity": "10",
+      "optional": false
+    },
+    {
+      "material_id": "MT-005",
+      "name": "O-rings and Seals",
+      "description": "Replacement o-rings and seals as specified in the aircraft maintenance manual",
+      "quantity": "As needed",
+      "optional": true
+    }
+  ],
+  "procedure_steps": [
+    {
+      "step_id": "STEP-001",
+      "title": "Preparation",
+      "description": "Prepare the aircraft for landing gear service",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-001-01",
+          "description": "Ensure aircraft is on a level surface and properly chocked",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-02",
+          "description": "Verify aircraft weight and balance data for jacking procedure",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-03",
+          "description": "Position jacks at appropriate jack points",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-001-04",
+          "description": "Raise aircraft to appropriate height for landing gear service",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-05",
+          "description": "Install safety stands at appropriate locations",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-002",
+      "title": "Visual Inspection",
+      "description": "Perform visual inspection of landing gear components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-002-01",
+          "description": "Inspect landing gear struts for damage, corrosion, or leaks",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-02",
+          "description": "Inspect wheels for damage, cracks, or corrosion",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-03",
+          "description": "Inspect tires for wear, damage, or proper inflation",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-04",
+          "description": "Inspect brake components for wear, damage, or leaks",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-05",
+          "description": "Inspect landing gear doors for damage, proper fit, and operation",
+          "configuration_dependent": true,
+          "configuration_variables": ["landing_gear_type"],
+          "applicable_configurations": {
+            "landing_gear_type": ["retractable"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-002-06",
+          "description": "Inspect retraction mechanism for damage, wear, or proper operation",
+          "configuration_dependent": true,
+          "configuration_variables": ["landing_gear_type"],
+          "applicable_configurations": {
+            "landing_gear_type": ["retractable"]
+          }
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-003",
+      "title": "Strut Service",
+      "description": "Service landing gear struts",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-003-01",
+          "description": "Check strut extension measurements against specifications",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "landing_gear_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-02",
+          "description": "Service struts with hydraulic fluid as required",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "landing_gear_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-03",
+          "description": "Check and service strut nitrogen pressure as required",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "landing_gear_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-04",
+          "description": "Inspect and clean strut pistons",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-05",
+          "description": "Lubricate strut components according to specifications",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "landing_gear_type"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-004",
+      "title": "Wheel and Tire Service",
+      "description": "Service wheels and tires",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-004-01",
+          "description": "Check tire pressure and adjust as necessary",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-02",
+          "description": "Inspect tire tread for wear beyond limits",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-03",
+          "description": "Inspect wheels for cracks using appropriate inspection method",
+          "configuration_dependent": true,
+          "configuration_variables": ["wheel_material"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-04",
+          "description": "Check wheel bearing condition and lubrication",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-05",
+          "description": "Verify proper torque on all wheel nuts",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "wheel_type"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-005",
+      "title": "Brake System Service",
+      "description": "Service brake system components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-005-01",
+          "description": "Measure brake pad/lining thickness and compare to minimum specifications",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "brake_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-02",
+          "description": "Inspect brake discs/rotors for wear, cracks, or warping",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-03",
+          "description": "Check brake hydraulic lines for leaks, security, and chafing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-04",
+          "description": "Service brake hydraulic fluid as required",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "brake_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-05",
+          "description": "Verify proper operation of parking brake system",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_parking_brake"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-006",
+      "title": "Retraction System Test",
+      "description": "Test landing gear retraction system",
+      "configuration_dependent": true,
+      "configuration_variables": ["landing_gear_type"],
+      "applicable_configurations": {
+        "landing_gear_type": ["retractable"]
+      },
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-006-01",
+          "description": "Verify aircraft is properly supported on jacks with safety stands in place",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-02",
+          "description": "Ensure all personnel are clear of landing gear",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-03",
+          "description": "Connect external hydraulic power source if required",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "hydraulic_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-006-04",
+          "description": "Perform landing gear retraction test according to aircraft maintenance manual",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-006-05",
+          "description": "Verify proper operation of position indicators and warning systems",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-006-06",
+          "description": "Verify proper operation of emergency extension system",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "emergency_extension_type"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-007",
+      "title": "Lubrication",
+      "description": "Lubricate landing gear components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-007-01",
+          "description": "Identify all lubrication points according to aircraft maintenance manual",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "landing_gear_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-02",
+          "description": "Clean all grease fittings before lubrication",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-007-03",
+          "description": "Apply specified grease to all lubrication points",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "landing_gear_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-04",
+          "description": "Wipe excess grease from components",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-007-05",
+          "description": "Verify proper operation of all lubricated components",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-008",
+      "title": "Final Inspection and Documentation",
+      "description": "Perform final inspection and document service",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-008-01",
+          "description": "Perform final visual inspection of all landing gear components",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-02",
+          "description": "Verify all required maintenance tasks have been completed",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-03",
+          "description": "Lower aircraft from jacks according to aircraft maintenance manual",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-04",
+          "description": "Verify proper landing gear extension and weight bearing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-05",
+          "description": "Document all maintenance actions in the appropriate records",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-06",
+          "description": "Complete the service sign-off in the aircraft logbook",
+          "configuration_dependent": false
+        }
+      ]
+    }
+  ],
+  "sign_off_requirements": {
+    "inspector_certification": true,
+    "supervisor_review": false,
+    "quality_assurance_review": false,
+    "documentation_required": [
+      "Aircraft logbook entry",
+      "Maintenance tracking system update",
+      "Discrepancy documentation (if applicable)"
+    ]
+  },
+  "references": [
+    {
+      "reference_id": "REF-001",
+      "title": "Aircraft Maintenance Manual",
+      "section": "Landing Gear Maintenance",
+      "document_id": "AMM-001"
+    },
+    {
+      "reference_id": "REF-002",
+      "title": "Component Maintenance Manual",
+      "section": "Wheel and Brake Assembly",
+      "document_id": "CMM-001"
+    },
+    {
+      "reference_id": "REF-003",
+      "title": "Service Bulletin",
+      "section": "Landing Gear Lubrication",
+      "document_id": "SB-001"
+    }
+  ],
+  "revision_history": [
+    {
+      "revision": "A",
+      "date": "2023-02-10",
+      "description": "Initial release"
+    },
+    {
+      "revision": "B",
+      "date": "2023-07-15",
+      "description": "Updated brake inspection procedures and added additional safety precautions"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Safety Precautions",
+  "description": "Schema for safety precautions, warnings, and cautions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "type",
+      "severity",
+      "description",
+      "hazard_level",
+      "display_location"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the safety precaution"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["precaution", "warning", "caution", "note"],
+        "description": "Type of safety notice"
+      },
+      "severity": {
+        "type": "string",
+        "enum": ["low", "medium", "high", "critical"],
+        "description": "Severity level of the safety precaution"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the safety precaution"
+      },
+      "hazard_level": {
+        "type": "string",
+        "enum": ["information", "caution", "warning", "danger"],
+        "description": "Hazard level of the safety precaution"
+      },
+      "display_location": {
+        "type": "string",
+        "enum": ["before_procedure", "during_procedure", "after_procedure", "specific_step"],
+        "description": "Where the safety precaution should be displayed"
+      },
+      "step_reference": {
+        "type": "string",
+        "description": "Reference to a specific step (if display_location is 'specific_step')"
+      },
+      "icon": {
+        "type": "string",
+        "description": "Icon to display with the safety precaution"
+      },
+      "formatting": {
+        "type": "object",
+        "description": "Formatting options for the safety precaution",
+        "properties": {
+          "color": {
+            "type": "string",
+            "description": "Color to use for the safety precaution"
+          },
+          "bold": {
+            "type": "boolean",
+            "description": "Whether to display the safety precaution in bold"
+          },
+          "italic": {
+            "type": "boolean",
+            "description": "Whether to display the safety precaution in italic"
+          },
+          "underline": {
+            "type": "boolean",
+            "description": "Whether to display the safety precaution with underline"
+          },
+          "box": {
+            "type": "boolean",
+            "description": "Whether to display the safety precaution in a box"
+          }
+        }
+      },
+      "applicable_systems": {
+        "type": "array",
+        "description": "Systems to which this safety precaution applies",
+        "items": {
+          "type": "string"
+        }
+      },
+      "applicable_procedure_types": {
+        "type": "array",
+        "description": "Procedure types to which this safety precaution applies",
+        "items": {
+          "type": "string"
+        }
+      },
+      "applicable_aircraft_types": {
+        "type": "array",
+        "description": "Aircraft types to which this safety precaution applies",
+        "items": {
+          "type": "string"
+        }
+      },
+      "regulatory_references": {
+        "type": "array",
+        "description": "References to regulatory requirements",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

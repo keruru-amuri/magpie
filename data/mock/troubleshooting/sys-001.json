@@ -1,0 +1,31 @@
+{
+  "system_id": "sys-001",
+  "system_name": "Hydraulic System",
+  "symptoms": [
+    {
+      "id": "sym-001",
+      "description": "Pressure fluctuation",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-002",
+      "description": "Fluid leakage",
+      "severity": "high"
+    },
+    {
+      "id": "sym-003",
+      "description": "Slow actuator response",
+      "severity": "low"
+    },
+    {
+      "id": "sym-004",
+      "description": "Unusual noise from hydraulic pump",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-005",
+      "description": "Overheating of hydraulic fluid",
+      "severity": "high"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Troubleshooting",
+  "description": "Schema for troubleshooting data",
+  "type": "object",
+  "required": [
+    "system_id",
+    "system_name",
+    "symptoms"
+  ],
+  "properties": {
+    "system_id": {
+      "type": "string",
+      "description": "Unique identifier for the system"
+    },
+    "system_name": {
+      "type": "string",
+      "description": "Name of the system"
+    },
+    "symptoms": {
+      "type": "array",
+      "description": "Symptoms for the system",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "description",
+          "severity"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the symptom"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the symptom"
+          },
+          "severity": {
+            "type": "string",
+            "description": "Severity of the symptom",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

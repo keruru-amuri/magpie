@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Analysis",
+  "description": "Schema for troubleshooting analysis",
+  "type": "object",
+  "required": [
+    "request",
+    "analysis"
+  ],
+  "properties": {
+    "request": {
+      "type": "object",
+      "required": [
+        "system",
+        "symptoms"
+      ],
+      "properties": {
+        "system": {
+          "type": "string",
+          "description": "System identifier"
+        },
+        "symptoms": {
+          "type": "array",
+          "description": "List of symptoms",
+          "items": {
+            "type": "string"
+          }
+        },
+        "context": {
+          "type": "string",
+          "description": "Additional context"
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "required": [
+        "potential_causes",
+        "recommended_solutions"
+      ],
+      "properties": {
+        "potential_causes": {
+          "type": "array",
+          "description": "Potential causes of the symptoms",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "description",
+              "probability"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Unique identifier for the cause"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the cause"
+              },
+              "probability": {
+                "type": "number",
+                "description": "Probability of the cause (0-1)",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "evidence": {
+                "type": "string",
+                "description": "Evidence supporting the cause"
+              }
+            }
+          }
+        },
+        "recommended_solutions": {
+          "type": "array",
+          "description": "Recommended solutions",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "description",
+              "difficulty",
+              "estimated_time",
+              "steps"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Unique identifier for the solution"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the solution"
+              },
+              "difficulty": {
+                "type": "string",
+                "description": "Difficulty of the solution",
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "estimated_time": {
+                "type": "string",
+                "description": "Estimated time to implement the solution"
+              },
+              "steps": {
+                "type": "array",
+                "description": "Steps to implement the solution",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "additional_resources": {
+          "type": "array",
+          "description": "Additional resources",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "type",
+              "title",
+              "reference"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Unique identifier for the resource"
+              },
+              "type": {
+                "type": "string",
+                "description": "Type of resource"
+              },
+              "title": {
+                "type": "string",
+                "description": "Title of the resource"
+              },
+              "reference": {
+                "type": "string",
+                "description": "Reference to the resource"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

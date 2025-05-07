@@ -1,0 +1,31 @@
+{
+  "system_id": "sys-003",
+  "system_name": "Avionics System",
+  "symptoms": [
+    {
+      "id": "sym-011",
+      "description": "Display flickering",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-012",
+      "description": "Navigation system errors",
+      "severity": "high"
+    },
+    {
+      "id": "sym-013",
+      "description": "Communication system static",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-014",
+      "description": "Incorrect sensor readings",
+      "severity": "high"
+    },
+    {
+      "id": "sym-015",
+      "description": "System reboot during operation",
+      "severity": "high"
+    }
+  ]
+}

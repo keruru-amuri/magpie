@@ -1,0 +1,31 @@
+{
+  "system_id": "sys-004",
+  "system_name": "Landing Gear System",
+  "symptoms": [
+    {
+      "id": "sym-016",
+      "description": "Gear extension/retraction delay",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-017",
+      "description": "Unusual noise during operation",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-018",
+      "description": "Gear position indicator discrepancy",
+      "severity": "high"
+    },
+    {
+      "id": "sym-019",
+      "description": "Gear door not fully closed",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-020",
+      "description": "Gear locking mechanism failure",
+      "severity": "high"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "id": "tool-001",
+    "name": "Socket Set",
+    "category": "Hand Tool",
+    "description": "Standard socket set for aircraft maintenance",
+    "specifications": {
+      "size": "10-19mm",
+      "material": "Chrome Vanadium Steel",
+      "calibration_required": false,
+      "additional_specs": {
+        "drive_size": "1/4 inch, 3/8 inch, 1/2 inch"
+      }
+    },
+    "manufacturer": "Snap-on",
+    "part_number": "EECS1",
+    "usage_instructions": "Select appropriate socket size for the fastener. Attach to ratchet and turn clockwise to tighten, counterclockwise to loosen.",
+    "safety_precautions": [
+      "Wear appropriate hand protection",
+      "Ensure proper fit before applying force"
+    ],
+    "alternatives": ["tool-002"],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["all"]
+  },
+  {
+    "id": "tool-002",
+    "name": "Torque Wrench",
+    "category": "Hand Tool",
+    "description": "Calibrated torque wrench for precise fastener tightening",
+    "specifications": {
+      "size": "Various",
+      "material": "Steel",
+      "calibration_required": true,
+      "calibration_interval": "12 months",
+      "additional_specs": {
+        "torque_range": "5-50 Nm",
+        "accuracy": "±4%"
+      }
+    },
+    "manufacturer": "Snap-on",
+    "part_number": "TECH3FR250",
+    "usage_instructions": "Set desired torque value, attach appropriate socket, and apply force until the wrench clicks or signals the torque has been reached.",
+    "safety_precautions": [
+      "Verify calibration before use",
+      "Do not exceed maximum torque rating",
+      "Do not use to loosen fasteners"
+    ],
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["all"]
+  },
+  {
+    "id": "tool-003",
+    "name": "Multimeter",
+    "category": "Diagnostic Tool",
+    "description": "Digital multimeter for electrical system testing",
+    "specifications": {
+      "size": "Handheld",
+      "weight": "0.5 kg",
+      "calibration_required": true,
+      "calibration_interval": "12 months",
+      "power_requirements": "9V battery",
+      "additional_specs": {
+        "voltage_range": "0-1000V AC/DC",
+        "current_range": "0-10A",
+        "resistance_range": "0-40 MΩ",
+        "safety_rating": "CAT III 600V"
+      }
+    },
+    "manufacturer": "Fluke",
+    "part_number": "117",
+    "usage_instructions": "Select appropriate measurement function and range. Connect probes to circuit and read measurement.",
+    "safety_precautions": [
+      "Verify meter is rated for the measurement category",
+      "Use appropriate test leads",
+      "Do not use in wet conditions",
+      "Disconnect power before measuring resistance"
+    ],
+    "alternatives": ["tool-004"],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["electrical", "avionics"]
+  },
+  {
+    "id": "tool-004",
+    "name": "Pressure Gauge",
+    "category": "Diagnostic Tool",
+    "description": "Pressure gauge for hydraulic and pneumatic system testing",
+    "specifications": {
+      "size": "Handheld",
+      "weight": "0.3 kg",
+      "calibration_required": true,
+      "calibration_interval": "12 months",
+      "additional_specs": {
+        "pressure_range": "0-3000 PSI",
+        "accuracy": "±1%",
+        "connection": "1/4 inch NPT"
+      }
+    },
+    "manufacturer": "Ashcroft",
+    "part_number": "1009",
+    "usage_instructions": "Connect to test port using appropriate adapter. Read pressure value directly from gauge.",
+    "safety_precautions": [
+      "Verify gauge is rated for the pressure being measured",
+      "Wear eye protection",
+      "Relieve system pressure before disconnecting"
+    ],
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["hydraulic", "pneumatic", "fuel"]
+  },
+  {
+    "id": "tool-005",
+    "name": "Inspection Mirror",
+    "category": "Inspection Tool",
+    "description": "Telescoping inspection mirror for viewing inaccessible areas",
+    "specifications": {
+      "size": "Telescoping, 15-75 cm",
+      "weight": "0.1 kg",
+      "material": "Stainless steel handle, glass mirror",
+      "calibration_required": false,
+      "additional_specs": {
+        "mirror_diameter": "5 cm"
+      }
+    },
+    "manufacturer": "Snap-on",
+    "part_number": "GA424",
+    "usage_instructions": "Extend telescoping handle to desired length. Position mirror to view inaccessible area.",
+    "safety_precautions": [
+      "Avoid contact with moving parts",
+      "Handle glass mirror with care"
+    ],
+    "alternatives": ["tool-006"],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["all"]
+  },
+  {
+    "id": "tool-006",
+    "name": "Borescope",
+    "category": "Inspection Tool",
+    "description": "Digital borescope for internal inspection of engines and components",
+    "specifications": {
+      "size": "Handheld with 100 cm probe",
+      "weight": "0.5 kg",
+      "power_requirements": "Rechargeable battery",
+      "calibration_required": false,
+      "additional_specs": {
+        "camera_resolution": "1080p",
+        "probe_diameter": "5.5 mm",
+        "display_size": "4.3 inch"
+      }
+    },
+    "manufacturer": "GE",
+    "part_number": "GEIT-18150",
+    "usage_instructions": "Insert probe into inspection area. View real-time image on display. Capture images or video as needed.",
+    "safety_precautions": [
+      "Ensure engine is shut down and cool before inspection",
+      "Do not force probe if resistance is encountered",
+      "Keep electronic components away from fluids"
+    ],
+    "alternatives": ["tool-005"],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["engine", "fuel", "hydraulic", "pneumatic"]
+  },
+  {
+    "id": "tool-007",
+    "name": "Safety Wire Pliers",
+    "category": "Hand Tool",
+    "description": "Specialized pliers for installing safety wire on fasteners",
+    "specifications": {
+      "size": "20 cm length",
+      "weight": "0.2 kg",
+      "material": "Steel",
+      "calibration_required": false
+    },
+    "manufacturer": "Milbar",
+    "part_number": "25W",
+    "usage_instructions": "Insert safety wire through fastener holes. Grip wire with pliers and twist to create secure lock.",
+    "safety_precautions": [
+      "Wear eye protection",
+      "Wear cut-resistant gloves",
+      "Trim wire ends to prevent injuries"
+    ],
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["all"]
+  },
+  {
+    "id": "tool-008",
+    "name": "Torque Screwdriver",
+    "category": "Hand Tool",
+    "description": "Precision torque screwdriver for avionics and delicate components",
+    "specifications": {
+      "size": "15 cm length",
+      "weight": "0.15 kg",
+      "material": "Steel and composite",
+      "calibration_required": true,
+      "calibration_interval": "12 months",
+      "additional_specs": {
+        "torque_range": "0.1-6 Nm",
+        "accuracy": "±6%"
+      }
+    },
+    "manufacturer": "CDI Torque",
+    "part_number": "151SM",
+    "usage_instructions": "Set desired torque value. Insert appropriate bit. Apply force until the screwdriver clicks or signals the torque has been reached.",
+    "safety_precautions": [
+      "Verify calibration before use",
+      "Do not exceed maximum torque rating"
+    ],
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["avionics", "electrical", "instruments"]
+  },
+  {
+    "id": "tool-009",
+    "name": "Fuel Tester",
+    "category": "Diagnostic Tool",
+    "description": "Tool for sampling and testing aviation fuel",
+    "specifications": {
+      "size": "15 cm length",
+      "weight": "0.1 kg",
+      "material": "Clear acrylic",
+      "calibration_required": false
+    },
+    "manufacturer": "Jeppesen",
+    "part_number": "10001298",
+    "usage_instructions": "Insert tester into fuel tank drain. Collect fuel sample and inspect for water and contaminants.",
+    "safety_precautions": [
+      "Wear appropriate PPE",
+      "Properly dispose of fuel samples",
+      "Keep away from ignition sources"
+    ],
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["fuel"]
+  },
+  {
+    "id": "tool-010",
+    "name": "Aircraft Battery Tester",
+    "category": "Diagnostic Tool",
+    "description": "Specialized tester for aircraft batteries",
+    "specifications": {
+      "size": "Portable",
+      "weight": "2 kg",
+      "power_requirements": "120V AC or internal battery",
+      "calibration_required": true,
+      "calibration_interval": "24 months",
+      "additional_specs": {
+        "voltage_range": "0-30V DC",
+        "current_range": "0-50A"
+      }
+    },
+    "manufacturer": "Concorde",
+    "part_number": "BT2000",
+    "usage_instructions": "Connect tester to battery terminals. Select appropriate test function. Follow on-screen instructions.",
+    "safety_precautions": [
+      "Wear eye protection and gloves",
+      "Ensure proper ventilation",
+      "Follow battery manufacturer's testing procedures"
+    ],
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["electrical"]
+  }
+]

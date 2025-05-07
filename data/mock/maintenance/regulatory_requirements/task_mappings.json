@@ -1,0 +1,210 @@
+{
+  "inspection": {
+    "general": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-003",
+      "reg-easa-002"
+    ],
+    "avionics": [
+      "reg-faa-004",
+      "reg-faa-005",
+      "reg-faa-008"
+    ],
+    "fuel_system": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-007",
+      "reg-easa-007"
+    ],
+    "pressurization": [
+      "reg-faa-006",
+      "reg-easa-005"
+    ],
+    "engine": [
+      "reg-faa-001",
+      "reg-faa-003",
+      "reg-faa-008",
+      "reg-easa-002"
+    ],
+    "landing_gear": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-002"
+    ]
+  },
+  "repair": {
+    "general": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "avionics": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-004",
+      "reg-faa-005",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "fuel_system": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-007",
+      "reg-easa-001",
+      "reg-easa-002",
+      "reg-easa-007"
+    ],
+    "pressurization": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-006",
+      "reg-easa-001",
+      "reg-easa-002",
+      "reg-easa-005"
+    ],
+    "engine": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-003",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "landing_gear": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-001",
+      "reg-easa-002"
+    ]
+  },
+  "overhaul": {
+    "general": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "avionics": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-004",
+      "reg-faa-005",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "fuel_system": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-007",
+      "reg-easa-001",
+      "reg-easa-002",
+      "reg-easa-007"
+    ],
+    "pressurization": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-006",
+      "reg-easa-001",
+      "reg-easa-002",
+      "reg-easa-005"
+    ],
+    "engine": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-003",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "landing_gear": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-001",
+      "reg-easa-002"
+    ]
+  },
+  "replacement": {
+    "general": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "avionics": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-004",
+      "reg-faa-005",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "fuel_system": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-007",
+      "reg-easa-001",
+      "reg-easa-002",
+      "reg-easa-007"
+    ],
+    "pressurization": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-006",
+      "reg-easa-001",
+      "reg-easa-002",
+      "reg-easa-005"
+    ],
+    "engine": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-003",
+      "reg-easa-001",
+      "reg-easa-002"
+    ],
+    "landing_gear": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-001",
+      "reg-easa-002"
+    ]
+  },
+  "functional_test": {
+    "general": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-002"
+    ],
+    "avionics": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-004",
+      "reg-faa-005",
+      "reg-easa-002"
+    ],
+    "fuel_system": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-007",
+      "reg-easa-002",
+      "reg-easa-007"
+    ],
+    "pressurization": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-006",
+      "reg-easa-002",
+      "reg-easa-005"
+    ],
+    "engine": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-faa-003",
+      "reg-easa-002"
+    ],
+    "landing_gear": [
+      "reg-faa-001",
+      "reg-faa-002",
+      "reg-easa-002"
+    ]
+  }
+}

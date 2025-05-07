@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Documentation",
+  "description": "Schema for technical documentation",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "type",
+    "version",
+    "last_updated",
+    "content",
+    "sections"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the documentation"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the documentation"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of documentation (manual, bulletin, directive, catalog)",
+      "enum": [
+        "manual",
+        "bulletin",
+        "directive",
+        "catalog"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the documentation"
+    },
+    "last_updated": {
+      "type": "string",
+      "description": "Date when the documentation was last updated",
+      "format": "date"
+    },
+    "content": {
+      "type": "string",
+      "description": "Main content of the documentation"
+    },
+    "sections": {
+      "type": "array",
+      "description": "Sections of the documentation",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "content"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the section"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the section"
+          },
+          "content": {
+            "type": "string",
+            "description": "Content of the section"
+          }
+        }
+      }
+    }
+  }
+}

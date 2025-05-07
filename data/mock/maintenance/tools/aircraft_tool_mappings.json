@@ -1,0 +1,318 @@
+{
+  "Boeing 737": {
+    "hydraulic": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-004"
+    ],
+    "electrical": [
+      "tool-001",
+      "tool-002",
+      "tool-003",
+      "equip-005"
+    ],
+    "engine": [
+      "tool-001",
+      "tool-002",
+      "tool-006",
+      "equip-007"
+    ],
+    "fuel": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "tool-009",
+      "equip-009"
+    ],
+    "landing_gear": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-001",
+      "equip-002"
+    ],
+    "avionics": [
+      "tool-003",
+      "tool-008",
+      "equip-008"
+    ],
+    "environmental": [
+      "tool-001",
+      "tool-002",
+      "tool-005"
+    ],
+    "oxygen": [
+      "tool-001",
+      "tool-002",
+      "equip-006"
+    ],
+    "specialized": [
+      {
+        "id": "spec-b737-001",
+        "name": "737 Flap Rigging Tool",
+        "description": "Specialized tool for rigging 737 flaps",
+        "procedures": ["flap_rigging", "flap_adjustment"]
+      },
+      {
+        "id": "spec-b737-002",
+        "name": "737 Engine Alignment Tool",
+        "description": "Specialized tool for aligning CFM56 engines on 737",
+        "procedures": ["engine_installation"]
+      },
+      {
+        "id": "spec-b737-003",
+        "name": "737 Rudder Rigging Pin Set",
+        "description": "Pin set for rigging 737 rudder control system",
+        "procedures": ["rudder_rigging", "rudder_adjustment"]
+      }
+    ]
+  },
+  "Airbus A320": {
+    "hydraulic": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-004"
+    ],
+    "electrical": [
+      "tool-001",
+      "tool-002",
+      "tool-003",
+      "equip-005"
+    ],
+    "engine": [
+      "tool-001",
+      "tool-002",
+      "tool-006",
+      "equip-007"
+    ],
+    "fuel": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "tool-009",
+      "equip-009"
+    ],
+    "landing_gear": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-001",
+      "equip-002"
+    ],
+    "avionics": [
+      "tool-003",
+      "tool-008",
+      "equip-008"
+    ],
+    "environmental": [
+      "tool-001",
+      "tool-002",
+      "tool-005"
+    ],
+    "oxygen": [
+      "tool-001",
+      "tool-002",
+      "equip-006"
+    ],
+    "specialized": [
+      {
+        "id": "spec-a320-001",
+        "name": "A320 Flap Rigging Tool",
+        "description": "Specialized tool for rigging A320 flaps",
+        "procedures": ["flap_rigging", "flap_adjustment"]
+      },
+      {
+        "id": "spec-a320-002",
+        "name": "A320 Engine Alignment Tool",
+        "description": "Specialized tool for aligning CFM56/IAE V2500 engines on A320",
+        "procedures": ["engine_installation"]
+      },
+      {
+        "id": "spec-a320-003",
+        "name": "A320 Elevator Rigging Pin Set",
+        "description": "Pin set for rigging A320 elevator control system",
+        "procedures": ["elevator_rigging", "elevator_adjustment"]
+      }
+    ]
+  },
+  "Cessna 172": {
+    "hydraulic": [
+      "tool-001",
+      "tool-002"
+    ],
+    "electrical": [
+      "tool-001",
+      "tool-002",
+      "tool-003",
+      "equip-005"
+    ],
+    "engine": [
+      "tool-001",
+      "tool-002",
+      "tool-006",
+      "tool-007"
+    ],
+    "fuel": [
+      "tool-001",
+      "tool-002",
+      "tool-009"
+    ],
+    "landing_gear": [
+      "tool-001",
+      "tool-002",
+      "equip-001"
+    ],
+    "avionics": [
+      "tool-003",
+      "tool-008",
+      "equip-008"
+    ],
+    "environmental": [
+      "tool-001",
+      "tool-002",
+      "tool-005"
+    ],
+    "specialized": [
+      {
+        "id": "spec-c172-001",
+        "name": "C172 Aileron Rigging Tool",
+        "description": "Specialized tool for rigging C172 ailerons",
+        "procedures": ["aileron_rigging", "aileron_adjustment"]
+      },
+      {
+        "id": "spec-c172-002",
+        "name": "C172 Magneto Timing Tool",
+        "description": "Specialized tool for timing C172 magnetos",
+        "procedures": ["magneto_timing", "engine_timing"]
+      }
+    ]
+  },
+  "Bombardier CRJ": {
+    "hydraulic": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-004"
+    ],
+    "electrical": [
+      "tool-001",
+      "tool-002",
+      "tool-003",
+      "equip-005"
+    ],
+    "engine": [
+      "tool-001",
+      "tool-002",
+      "tool-006",
+      "equip-007"
+    ],
+    "fuel": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "tool-009",
+      "equip-009"
+    ],
+    "landing_gear": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-001",
+      "equip-002"
+    ],
+    "avionics": [
+      "tool-003",
+      "tool-008",
+      "equip-008"
+    ],
+    "environmental": [
+      "tool-001",
+      "tool-002",
+      "tool-005"
+    ],
+    "oxygen": [
+      "tool-001",
+      "tool-002",
+      "equip-006"
+    ],
+    "specialized": [
+      {
+        "id": "spec-crj-001",
+        "name": "CRJ Flap Rigging Tool",
+        "description": "Specialized tool for rigging CRJ flaps",
+        "procedures": ["flap_rigging", "flap_adjustment"]
+      },
+      {
+        "id": "spec-crj-002",
+        "name": "CRJ Engine Alignment Tool",
+        "description": "Specialized tool for aligning CF34 engines on CRJ",
+        "procedures": ["engine_installation"]
+      }
+    ]
+  },
+  "Embraer E190": {
+    "hydraulic": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-004"
+    ],
+    "electrical": [
+      "tool-001",
+      "tool-002",
+      "tool-003",
+      "equip-005"
+    ],
+    "engine": [
+      "tool-001",
+      "tool-002",
+      "tool-006",
+      "equip-007"
+    ],
+    "fuel": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "tool-009",
+      "equip-009"
+    ],
+    "landing_gear": [
+      "tool-001",
+      "tool-002",
+      "tool-004",
+      "equip-001",
+      "equip-002"
+    ],
+    "avionics": [
+      "tool-003",
+      "tool-008",
+      "equip-008"
+    ],
+    "environmental": [
+      "tool-001",
+      "tool-002",
+      "tool-005"
+    ],
+    "oxygen": [
+      "tool-001",
+      "tool-002",
+      "equip-006"
+    ],
+    "specialized": [
+      {
+        "id": "spec-e190-001",
+        "name": "E190 Flap Rigging Tool",
+        "description": "Specialized tool for rigging E190 flaps",
+        "procedures": ["flap_rigging", "flap_adjustment"]
+      },
+      {
+        "id": "spec-e190-002",
+        "name": "E190 Engine Alignment Tool",
+        "description": "Specialized tool for aligning CF34 engines on E190",
+        "procedures": ["engine_installation"]
+      }
+    ]
+  }
+}

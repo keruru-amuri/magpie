@@ -1,0 +1,38 @@
+{
+  "name": "MAGPIE CI",
+  "test_suites": {
+    "Unit Tests": {
+      "type": "unit",
+      "command": "python -m pytest tests/unit",
+      "path": "tests/unit",
+      "timeout": 300,
+      "metadata": {}
+    },
+    "Integration Tests": {
+      "type": "integration",
+      "command": "python -m pytest tests/integration",
+      "path": "tests/integration",
+      "timeout": 600,
+      "metadata": {}
+    },
+    "Performance Tests": {
+      "type": "performance",
+      "command": "python -m pytest tests/performance",
+      "path": "tests/performance",
+      "timeout": 1200,
+      "metadata": {}
+    },
+    "Quality Tests": {
+      "type": "quality",
+      "command": "python -m pytest tests/quality",
+      "path": "tests/quality",
+      "timeout": 900,
+      "metadata": {}
+    }
+  },
+  "notifications": {},
+  "thresholds": {
+    "pass_rate": 0.9,
+    "max_duration": 3600
+  }
+}

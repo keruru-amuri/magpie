@@ -1,0 +1,100 @@
+[
+  {
+    "id": "hydraulic",
+    "name": "Hydraulic System",
+    "description": "Aircraft hydraulic system components and functions",
+    "applicable_aircraft_types": ["all"],
+    "components": [
+      "Hydraulic pumps",
+      "Hydraulic reservoirs",
+      "Hydraulic accumulators",
+      "Hydraulic actuators",
+      "Hydraulic filters",
+      "Hydraulic lines and fittings"
+    ]
+  },
+  {
+    "id": "electrical",
+    "name": "Electrical System",
+    "description": "Aircraft electrical system components and functions",
+    "applicable_aircraft_types": ["all"],
+    "components": [
+      "Generators",
+      "Batteries",
+      "Electrical distribution panels",
+      "Circuit breakers",
+      "Electrical wiring",
+      "Electrical connectors"
+    ]
+  },
+  {
+    "id": "avionics",
+    "name": "Avionics System",
+    "description": "Aircraft avionics system components and functions",
+    "applicable_aircraft_types": ["boeing_737", "airbus_a320", "embraer_e190", "bombardier_crj900"],
+    "components": [
+      "Flight management computers",
+      "Navigation systems",
+      "Communication systems",
+      "Weather radar",
+      "Autopilot systems",
+      "Electronic flight instrument systems"
+    ]
+  },
+  {
+    "id": "fuel",
+    "name": "Fuel System",
+    "description": "Aircraft fuel system components and functions",
+    "applicable_aircraft_types": ["all"],
+    "components": [
+      "Fuel tanks",
+      "Fuel pumps",
+      "Fuel filters",
+      "Fuel lines",
+      "Fuel quantity indicators",
+      "Fuel valves"
+    ]
+  },
+  {
+    "id": "landing_gear",
+    "name": "Landing Gear System",
+    "description": "Aircraft landing gear system components and functions",
+    "applicable_aircraft_types": ["all"],
+    "components": [
+      "Shock absorbers",
+      "Wheels and tires",
+      "Brakes",
+      "Steering systems",
+      "Retraction mechanisms",
+      "Position indicators"
+    ]
+  },
+  {
+    "id": "environmental",
+    "name": "Environmental Control System",
+    "description": "Aircraft environmental control system components and functions",
+    "applicable_aircraft_types": ["boeing_737", "airbus_a320", "embraer_e190", "bombardier_crj900"],
+    "components": [
+      "Air conditioning packs",
+      "Pressurization system",
+      "Temperature control system",
+      "Air distribution system",
+      "Recirculation fans",
+      "Outflow valves"
+    ]
+  },
+  {
+    "id": "flight_controls",
+    "name": "Flight Control System",
+    "description": "Aircraft flight control system components and functions",
+    "applicable_aircraft_types": ["all"],
+    "components": [
+      "Ailerons",
+      "Elevators",
+      "Rudder",
+      "Flaps",
+      "Spoilers",
+      "Control cables and linkages"
+    ]
+  }
+]

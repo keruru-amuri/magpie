@@ -1,0 +1,681 @@
+{
+  "template_id": "MP-AVI-TEST-001",
+  "title": "Avionics System Functional Test Procedure",
+  "description": "Standard procedure for functional testing of aircraft avionics systems",
+  "applicability": {
+    "avionics_types": ["analog", "digital", "glass_cockpit"],
+    "aircraft_categories": ["commercial", "private", "military"]
+  },
+  "required_qualifications": [
+    {
+      "qualification_id": "A&P-AIRFRM",
+      "name": "A&P Mechanic - Airframe",
+      "description": "FAA Airframe & Powerplant Mechanic certification with Airframe rating"
+    },
+    {
+      "qualification_id": "AVIONICS-TECH",
+      "name": "Avionics Technician",
+      "description": "Certified Avionics Technician with appropriate ratings"
+    }
+  ],
+  "estimated_duration": {
+    "hours": 4,
+    "minutes": 0
+  },
+  "regulatory_references": [
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 43.13",
+      "description": "Performance rules (general)"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "AC 43.13-1B",
+      "description": "Acceptable Methods, Techniques, and Practices - Aircraft Inspection and Repair"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 91.411",
+      "description": "Altimeter system and altitude reporting equipment tests and inspections"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 91.413",
+      "description": "ATC transponder tests and inspections"
+    }
+  ],
+  "safety_precautions": [
+    {
+      "precaution_id": "SP-001",
+      "severity": "warning",
+      "description": "Ensure aircraft electrical power is properly controlled during testing",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-002",
+      "severity": "caution",
+      "description": "Use proper ESD protection when handling avionics components",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-003",
+      "severity": "warning",
+      "description": "Ensure all transmitting equipment is in test mode or disabled when appropriate to prevent unintended transmissions",
+      "display_location": "during_procedure"
+    },
+    {
+      "precaution_id": "SP-004",
+      "severity": "caution",
+      "description": "Verify all test equipment is properly calibrated before use",
+      "display_location": "before_procedure"
+    }
+  ],
+  "required_tools": [
+    {
+      "tool_id": "TL-001",
+      "name": "Avionics Test Set",
+      "description": "Calibrated avionics test equipment appropriate for systems being tested",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-002",
+      "name": "Transponder Test Set",
+      "description": "Calibrated transponder test equipment",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-003",
+      "name": "Pitot-Static Test Equipment",
+      "description": "Calibrated pitot-static test equipment",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-004",
+      "name": "Digital Multimeter",
+      "description": "Calibrated digital multimeter",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-005",
+      "name": "Oscilloscope",
+      "description": "Calibrated oscilloscope",
+      "optional": true
+    },
+    {
+      "tool_id": "TL-006",
+      "name": "ESD Protection Kit",
+      "description": "Anti-static wrist straps, mats, and other ESD protection equipment",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-007",
+      "name": "Headset",
+      "description": "Aviation headset for communication system testing",
+      "optional": false
+    }
+  ],
+  "required_materials": [
+    {
+      "material_id": "MT-001",
+      "name": "Cleaning Supplies",
+      "description": "Approved electronics cleaning supplies",
+      "quantity": "As needed",
+      "optional": false
+    },
+    {
+      "material_id": "MT-002",
+      "name": "Test Cables",
+      "description": "Appropriate test cables and adapters for avionics equipment",
+      "quantity": "As needed",
+      "optional": false
+    },
+    {
+      "material_id": "MT-003",
+      "name": "Fuses",
+      "description": "Replacement fuses of appropriate ratings",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-004",
+      "name": "Documentation Media",
+      "description": "USB drive or other media for database updates",
+      "quantity": "1",
+      "optional": true
+    }
+  ],
+  "procedure_steps": [
+    {
+      "step_id": "STEP-001",
+      "title": "Preparation",
+      "description": "Prepare the aircraft and test equipment for avionics testing",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-001-01",
+          "description": "Review aircraft maintenance records for previous avionics issues or modifications",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-02",
+          "description": "Verify test equipment calibration is current",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-03",
+          "description": "Position aircraft in an area free from radio frequency interference",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-04",
+          "description": "Connect external power to aircraft if required",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "power_requirements"]
+        },
+        {
+          "substep_id": "SUBSTEP-001-05",
+          "description": "Establish ESD protection measures",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-002",
+      "title": "Power-Up and Initial Checks",
+      "description": "Power up avionics systems and perform initial checks",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-002-01",
+          "description": "Verify aircraft battery condition before applying power",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-02",
+          "description": "Apply electrical power according to aircraft procedures",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "avionics_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-002-03",
+          "description": "Observe avionics power-up sequence for normal operation",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-002-04",
+          "description": "Verify no fault indications are present after initialization",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-002-05",
+          "description": "Check database currency for navigation systems",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type", "has_navigation_database"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-003",
+      "title": "Communication System Tests",
+      "description": "Test aircraft communication systems",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-003-01",
+          "description": "Verify proper operation of all communication radios",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type", "comm_radio_count"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-02",
+          "description": "Test transmit and receive functions on all frequencies",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-03",
+          "description": "Verify proper operation of audio panel functions",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_audio_panel"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-04",
+          "description": "Test intercom system functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_intercom"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-05",
+          "description": "Verify proper operation of emergency communication functions",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_emergency_comm"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-004",
+      "title": "Navigation System Tests",
+      "description": "Test aircraft navigation systems",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-004-01",
+          "description": "Verify proper operation of VOR receivers",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_vor"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-02",
+          "description": "Test ILS receiver functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_ils"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-03",
+          "description": "Verify proper operation of GPS navigation system",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_gps"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-04",
+          "description": "Test ADF system functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_adf"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-05",
+          "description": "Verify proper operation of DME system",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_dme"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-06",
+          "description": "Test RNAV/FMS functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_rnav_fms"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-005",
+      "title": "Transponder and Altitude Reporting Tests",
+      "description": "Test transponder and altitude reporting systems",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-005-01",
+          "description": "Connect transponder test equipment according to manufacturer instructions",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-02",
+          "description": "Perform Mode A (identification) transponder test",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-03",
+          "description": "Perform Mode C (altitude reporting) transponder test",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_mode_c"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-04",
+          "description": "Perform Mode S transponder test if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_mode_s"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-05",
+          "description": "Test ADS-B Out functionality if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_adsb_out"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-06",
+          "description": "Verify proper encoding of pressure altitude",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_altitude_encoder"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-07",
+          "description": "Complete FAA Form 8610-3 for transponder test certification",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-006",
+      "title": "Pitot-Static System Tests",
+      "description": "Test pitot-static system and associated instruments",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-006-01",
+          "description": "Connect pitot-static test equipment according to manufacturer instructions",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-02",
+          "description": "Perform altimeter accuracy test at multiple altitudes",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-03",
+          "description": "Test altimeter scale error",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-04",
+          "description": "Perform static system leak test",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-05",
+          "description": "Test airspeed indicator accuracy at multiple airspeeds",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-06",
+          "description": "Test vertical speed indicator functionality",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-07",
+          "description": "Complete FAA Form 8610-3 for altimeter system test certification",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-007",
+      "title": "Flight Instrument Tests",
+      "description": "Test electronic flight instruments and displays",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-007-01",
+          "description": "Verify proper operation of attitude indicator or AHRS",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-02",
+          "description": "Test heading indicator or HSI functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-03",
+          "description": "Verify proper operation of turn coordinator or turn and slip indicator",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-04",
+          "description": "Test electronic flight display system",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"],
+          "applicable_configurations": {
+            "avionics_type": ["digital", "glass_cockpit"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-007-05",
+          "description": "Verify proper operation of standby instruments",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_standby_instruments"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-008",
+      "title": "Autopilot System Tests",
+      "description": "Test autopilot system functionality",
+      "configuration_dependent": true,
+      "configuration_variables": ["has_autopilot"],
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-008-01",
+          "description": "Verify proper autopilot engagement and disengagement",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-02",
+          "description": "Test heading mode functionality",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-03",
+          "description": "Test altitude hold mode functionality",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-04",
+          "description": "Test navigation mode functionality",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-05",
+          "description": "Test approach mode functionality if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_approach_mode"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-06",
+          "description": "Verify proper operation of trim system",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_electric_trim"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-07",
+          "description": "Test autopilot disconnect and warning systems",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-009",
+      "title": "Weather System Tests",
+      "description": "Test weather detection and display systems",
+      "configuration_dependent": true,
+      "configuration_variables": ["has_weather_systems"],
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-009-01",
+          "description": "Verify proper operation of weather radar system",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_weather_radar"]
+        },
+        {
+          "substep_id": "SUBSTEP-009-02",
+          "description": "Test lightning detection system functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_lightning_detection"]
+        },
+        {
+          "substep_id": "SUBSTEP-009-03",
+          "description": "Verify proper operation of satellite weather receiver",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_satellite_weather"]
+        },
+        {
+          "substep_id": "SUBSTEP-009-04",
+          "description": "Test weather information display integration",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type", "has_weather_systems"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-010",
+      "title": "Traffic System Tests",
+      "description": "Test traffic detection and display systems",
+      "configuration_dependent": true,
+      "configuration_variables": ["has_traffic_systems"],
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-010-01",
+          "description": "Verify proper operation of TCAS system",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_tcas"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-02",
+          "description": "Test TAS/TIS system functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_tas_tis"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-03",
+          "description": "Verify proper operation of ADS-B In traffic display",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_adsb_in"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-04",
+          "description": "Test traffic alert and warning functions",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_traffic_systems"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-011",
+      "title": "Terrain Awareness System Tests",
+      "description": "Test terrain awareness and warning systems",
+      "configuration_dependent": true,
+      "configuration_variables": ["has_terrain_systems"],
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-011-01",
+          "description": "Verify proper operation of TAWS/EGPWS system",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_taws_egpws"]
+        },
+        {
+          "substep_id": "SUBSTEP-011-02",
+          "description": "Test terrain display functionality",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_terrain_display"]
+        },
+        {
+          "substep_id": "SUBSTEP-011-03",
+          "description": "Verify proper operation of terrain alerting functions",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_terrain_systems"]
+        },
+        {
+          "substep_id": "SUBSTEP-011-04",
+          "description": "Test obstacle database currency and display",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_obstacle_database"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-012",
+      "title": "System Integration Tests",
+      "description": "Test integration between avionics systems",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-012-01",
+          "description": "Verify proper data sharing between navigation systems",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-012-02",
+          "description": "Test integration between autopilot and navigation systems",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_autopilot"]
+        },
+        {
+          "substep_id": "SUBSTEP-012-03",
+          "description": "Verify proper integration of traffic, weather, and terrain data",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type", "has_integrated_displays"]
+        },
+        {
+          "substep_id": "SUBSTEP-012-04",
+          "description": "Test data bus functionality and communication",
+          "configuration_dependent": true,
+          "configuration_variables": ["avionics_type"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-013",
+      "title": "Final Checks and Documentation",
+      "description": "Perform final checks and document test results",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-013-01",
+          "description": "Verify all systems are operating normally after testing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-013-02",
+          "description": "Return all systems to normal operational configuration",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-013-03",
+          "description": "Remove all test equipment and connections",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-013-04",
+          "description": "Document all test results in the appropriate maintenance records",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-013-05",
+          "description": "Complete all required certification forms",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-013-06",
+          "description": "Update aircraft status in maintenance tracking system",
+          "configuration_dependent": false
+        }
+      ]
+    }
+  ],
+  "sign_off_requirements": {
+    "inspector_certification": true,
+    "supervisor_review": false,
+    "quality_assurance_review": false,
+    "documentation_required": [
+      "Aircraft logbook entry",
+      "FAA Form 8610-3 for transponder and altimeter tests",
+      "Maintenance tracking system update",
+      "Discrepancy documentation (if applicable)"
+    ]
+  },
+  "references": [
+    {
+      "reference_id": "REF-001",
+      "title": "Aircraft Maintenance Manual",
+      "section": "Avionics Systems",
+      "document_id": "AMM-001"
+    },
+    {
+      "reference_id": "REF-002",
+      "title": "Avionics Component Maintenance Manual",
+      "section": "System Testing Procedures",
+      "document_id": "CMM-002"
+    },
+    {
+      "reference_id": "REF-003",
+      "title": "FAA Advisory Circular",
+      "section": "AC 43.13-1B Chapter 12",
+      "document_id": "AC-001"
+    }
+  ],
+  "revision_history": [
+    {
+      "revision": "A",
+      "date": "2023-03-05",
+      "description": "Initial release"
+    },
+    {
+      "revision": "B",
+      "date": "2023-08-10",
+      "description": "Updated to include ADS-B testing procedures"
+    }
+  ]
+}

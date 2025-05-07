@@ -1,0 +1,140 @@
+{
+  "id": "proc-boeing737-hydraulic-inspection",
+  "title": "Boeing 737 Hydraulic System Inspection Procedure",
+  "description": "This procedure provides detailed steps for inspecting the hydraulic system on Boeing 737 aircraft.",
+  "aircraft_type": "Boeing 737",
+  "system": "Hydraulic System",
+  "procedure_type": "Inspection",
+  "estimated_time_minutes": 60,
+  "skill_level": "Technician Level 2",
+  "safety_precautions": [
+    "Ensure aircraft is properly grounded",
+    "Wear appropriate personal protective equipment",
+    "Follow all safety protocols in the maintenance manual",
+    "Relieve hydraulic pressure before inspecting components",
+    "Use proper lockout/tagout procedures"
+  ],
+  "tools_required": [
+    {
+      "id": "tool-001",
+      "name": "Flashlight",
+      "specification": "High-intensity LED"
+    },
+    {
+      "id": "tool-002",
+      "name": "Pressure Gauge",
+      "specification": "0-5000 PSI"
+    },
+    {
+      "id": "tool-003",
+      "name": "Inspection Mirror",
+      "specification": "Telescoping with LED light"
+    },
+    {
+      "id": "tool-004",
+      "name": "Hydraulic Fluid Test Kit",
+      "specification": "Boeing approved"
+    }
+  ],
+  "parts_required": [],
+  "equipment_required": [],
+  "steps": [
+    {
+      "step_number": 1,
+      "title": "Preparation",
+      "description": "Ensure aircraft is in a safe state for maintenance. Verify hydraulic system is depressurized.",
+      "cautions": ["Verify aircraft power is off", "Ensure hydraulic pressure is relieved"],
+      "notes": ["Refer to AMM Chapter 29-00-00 for safety precautions"],
+      "verification": "Confirm hydraulic pressure gauges read zero"
+    },
+    {
+      "step_number": 2,
+      "title": "Access Panel Removal",
+      "description": "Remove access panels to gain access to hydraulic system components.",
+      "cautions": ["Support panels during removal", "Store fasteners in organized manner"],
+      "notes": ["Refer to AMM Chapter 29-10-00 for panel locations"],
+      "verification": "All required access panels removed and secured"
+    },
+    {
+      "step_number": 3,
+      "title": "Hydraulic Reservoir Inspection",
+      "description": "Inspect hydraulic reservoirs for proper fluid level, leaks, and contamination.",
+      "cautions": ["Do not overfill reservoirs", "Use only approved hydraulic fluid"],
+      "notes": ["Fluid level should be between MIN and MAX marks when system is unpressurized"],
+      "verification": "Fluid level within limits, no leaks or contamination observed"
+    },
+    {
+      "step_number": 4,
+      "title": "Hydraulic Pump Inspection",
+      "description": "Inspect hydraulic pumps for leaks, proper mounting, and condition of drive couplings.",
+      "cautions": ["Do not attempt to rotate pumps manually"],
+      "notes": ["Check for evidence of overheating or unusual wear"],
+      "verification": "Pumps properly mounted, no leaks or damage observed"
+    },
+    {
+      "step_number": 5,
+      "title": "Hydraulic Lines and Fittings Inspection",
+      "description": "Inspect hydraulic lines and fittings for leaks, chafing, proper routing, and security.",
+      "cautions": ["Do not apply excessive force to fittings"],
+      "notes": ["Pay special attention to areas where lines pass near moving components"],
+      "verification": "All lines properly routed and secured, no leaks or chafing observed"
+    },
+    {
+      "step_number": 6,
+      "title": "Hydraulic Actuator Inspection",
+      "description": "Inspect hydraulic actuators for leaks, proper mounting, and condition of rod ends.",
+      "cautions": ["Do not attempt to move flight control surfaces manually"],
+      "notes": ["Check for evidence of fluid leakage around seals"],
+      "verification": "Actuators properly mounted, no leaks or damage observed"
+    },
+    {
+      "step_number": 7,
+      "title": "Hydraulic Filter Inspection",
+      "description": "Inspect hydraulic filters for proper installation and check filter differential pressure indicators.",
+      "cautions": ["Do not remove filter elements unless replacement is planned"],
+      "notes": ["Red indicators show filter needs replacement"],
+      "verification": "Filters properly installed, no differential pressure indicators showing"
+    },
+    {
+      "step_number": 8,
+      "title": "Hydraulic Fluid Sampling",
+      "description": "Take hydraulic fluid samples for contamination analysis if required by maintenance schedule.",
+      "cautions": ["Use clean sampling equipment", "Label samples properly"],
+      "notes": ["Follow laboratory procedures for sample handling"],
+      "verification": "Samples taken according to maintenance schedule requirements"
+    },
+    {
+      "step_number": 9,
+      "title": "Access Panel Reinstallation",
+      "description": "Reinstall all access panels and secure with proper fasteners.",
+      "cautions": ["Ensure all tools are accounted for before closing panels", "Torque fasteners to specified values"],
+      "notes": ["Refer to AMM Chapter 29-10-00 for fastener torque values"],
+      "verification": "All panels reinstalled and secured properly"
+    },
+    {
+      "step_number": 10,
+      "title": "Documentation",
+      "description": "Complete maintenance records and documentation.",
+      "cautions": ["Ensure all work is properly documented"],
+      "notes": ["Include any discrepancies found during inspection"],
+      "verification": "All documentation completed and signed"
+    }
+  ],
+  "post_procedure_checks": [
+    "Verify all access panels are properly secured",
+    "Ensure all tools and equipment are accounted for",
+    "Verify maintenance records are properly completed"
+  ],
+  "references": [
+    {
+      "title": "Boeing 737 Aircraft Maintenance Manual",
+      "document_number": "AMM-B737",
+      "section": "Chapter 29 - Hydraulic Power"
+    },
+    {
+      "title": "FAA Advisory Circular 43.13-1B",
+      "document_number": "AC 43.13-1B",
+      "section": "Chapter 12 - Aircraft Hydraulic Systems"
+    }
+  ]
+}

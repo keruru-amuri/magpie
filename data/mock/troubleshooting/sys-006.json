@@ -1,0 +1,31 @@
+{
+  "system_id": "sys-006",
+  "system_name": "Environmental Control System",
+  "symptoms": [
+    {
+      "id": "sym-026",
+      "description": "Inconsistent cabin temperature",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-027",
+      "description": "Poor air circulation",
+      "severity": "medium"
+    },
+    {
+      "id": "sym-028",
+      "description": "Unusual odors in cabin air",
+      "severity": "high"
+    },
+    {
+      "id": "sym-029",
+      "description": "Excessive noise from air conditioning packs",
+      "severity": "low"
+    },
+    {
+      "id": "sym-030",
+      "description": "Condensation or moisture accumulation",
+      "severity": "medium"
+    }
+  ]
+}

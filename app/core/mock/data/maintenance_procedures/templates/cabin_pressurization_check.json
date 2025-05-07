@@ -1,0 +1,681 @@
+{
+  "template_id": "MP-PRESS-CHK-001",
+  "title": "Cabin Pressurization System Check Procedure",
+  "description": "Standard procedure for inspection and testing of aircraft cabin pressurization systems",
+  "applicability": {
+    "pressurization_system_types": ["isobaric", "constant_differential", "hybrid"],
+    "aircraft_categories": ["commercial", "private", "military"]
+  },
+  "required_qualifications": [
+    {
+      "qualification_id": "A&P-AIRFRM",
+      "name": "A&P Mechanic - Airframe",
+      "description": "FAA Airframe & Powerplant Mechanic certification with Airframe rating"
+    }
+  ],
+  "estimated_duration": {
+    "hours": 5,
+    "minutes": 0
+  },
+  "regulatory_references": [
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 43.13",
+      "description": "Performance rules (general)"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "AC 43.13-1B",
+      "description": "Acceptable Methods, Techniques, and Practices - Aircraft Inspection and Repair"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 25.841",
+      "description": "Pressurized cabins"
+    }
+  ],
+  "safety_precautions": [
+    {
+      "precaution_id": "SP-001",
+      "severity": "warning",
+      "description": "Ensure all personnel are clear of pressure bulkheads during pressurization tests",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-002",
+      "severity": "caution",
+      "description": "Do not exceed maximum differential pressure limits during testing",
+      "display_location": "during_procedure"
+    },
+    {
+      "precaution_id": "SP-003",
+      "severity": "warning",
+      "description": "Ensure all access panels and doors are properly secured before pressurization tests",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-004",
+      "severity": "caution",
+      "description": "Use hearing protection when operating pressurization system components",
+      "display_location": "during_procedure"
+    },
+    {
+      "precaution_id": "SP-005",
+      "severity": "warning",
+      "description": "Ensure aircraft is properly secured and chocked before pressurization tests",
+      "display_location": "before_procedure"
+    }
+  ],
+  "required_tools": [
+    {
+      "tool_id": "TL-001",
+      "name": "Cabin Pressure Test Equipment",
+      "description": "Calibrated equipment for testing cabin pressure differential",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-002",
+      "name": "Leak Detection Equipment",
+      "description": "Ultrasonic leak detector or equivalent",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-003",
+      "name": "Digital Multimeter",
+      "description": "For electrical component testing",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-004",
+      "name": "Pressure Gauge Set",
+      "description": "Calibrated pressure gauges for system testing",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-005",
+      "name": "Borescope",
+      "description": "For internal inspection of ducts and components",
+      "optional": true
+    },
+    {
+      "tool_id": "TL-006",
+      "name": "External Power Unit",
+      "description": "For powering aircraft systems during testing",
+      "optional": false
+    }
+  ],
+  "required_materials": [
+    {
+      "material_id": "MT-001",
+      "name": "Pressure Vessel Sealant",
+      "description": "Approved sealant for pressure vessel repairs",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-002",
+      "name": "O-rings and Gaskets",
+      "description": "Replacement o-rings and gaskets for pressurization components",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-003",
+      "name": "Air Filter Elements",
+      "description": "Replacement air filter elements",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-004",
+      "name": "Cleaning Supplies",
+      "description": "Approved cleaning supplies for system components",
+      "quantity": "As needed",
+      "optional": false
+    },
+    {
+      "material_id": "MT-005",
+      "name": "Lint-free Cloths",
+      "description": "Clean, lint-free cloths for cleaning and inspection",
+      "quantity": "10",
+      "optional": false
+    }
+  ],
+  "procedure_steps": [
+    {
+      "step_id": "STEP-001",
+      "title": "Preparation",
+      "description": "Prepare the aircraft for pressurization system testing",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-001-01",
+          "description": "Review aircraft maintenance records for previous pressurization system issues",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-02",
+          "description": "Ensure aircraft is properly positioned and secured",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-03",
+          "description": "Connect external power to the aircraft",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "power_requirements"]
+        },
+        {
+          "substep_id": "SUBSTEP-001-04",
+          "description": "Verify test equipment calibration is current",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-05",
+          "description": "Brief all personnel on safety procedures during pressurization testing",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-002",
+      "title": "Visual Inspection of Pressure Vessel",
+      "description": "Inspect the aircraft pressure vessel structure",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-002-01",
+          "description": "Inspect pressure bulkheads for damage, corrosion, or deformation",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-02",
+          "description": "Check pressure vessel skin for damage, corrosion, or improper repairs",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-03",
+          "description": "Inspect structural fasteners in pressure vessel for security and condition",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-04",
+          "description": "Check pressure vessel seals and sealant for deterioration or damage",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-05",
+          "description": "Inspect windows and window seals for condition and security",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-06",
+          "description": "Check door seals and latching mechanisms for condition and security",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-003",
+      "title": "Inspection of Pressurization System Components",
+      "description": "Inspect pressurization system components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-003-01",
+          "description": "Inspect outflow valve(s) for condition and security",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-02",
+          "description": "Check pressure controller components for condition and security",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-03",
+          "description": "Inspect safety/relief valves for condition and security",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-04",
+          "description": "Check pressurization source components (bleed air system or compressors)",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_source_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-05",
+          "description": "Inspect air distribution ducts for damage, security, and proper sealing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-06",
+          "description": "Check pressure sensing lines for damage, security, and proper routing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-07",
+          "description": "Inspect negative pressure relief valve for condition and security",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-004",
+      "title": "Inspection of Pressurization Control System",
+      "description": "Inspect pressurization control system components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-004-01",
+          "description": "Inspect cabin pressure controller for condition and security",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-02",
+          "description": "Check cabin altitude selector/indicator for condition and security",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-03",
+          "description": "Inspect rate control selector/indicator for condition and security",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-04",
+          "description": "Check cabin differential pressure indicator for condition and security",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-05",
+          "description": "Inspect cabin altitude warning system components",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-06",
+          "description": "Check electrical connections to all control components",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-005",
+      "title": "Operational Check of Pressurization Control System",
+      "description": "Perform operational check of pressurization control system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-005-01",
+          "description": "Apply electrical power to the aircraft",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-02",
+          "description": "Set pressurization controller to manual mode",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-03",
+          "description": "Verify outflow valve responds correctly to controller inputs",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-04",
+          "description": "Check operation of cabin altitude selector through full range",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-05",
+          "description": "Verify rate control selector functions through full range",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-06",
+          "description": "Test automatic mode operation if applicable",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_auto_pressurization_mode"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-07",
+          "description": "Verify proper operation of cabin altitude warning system",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-006",
+      "title": "Pressurization Source System Check",
+      "description": "Check operation of pressurization source system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-006-01",
+          "description": "Inspect air conditioning packs for condition and proper operation",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_source_type"],
+          "applicable_configurations": {
+            "pressurization_source_type": ["bleed_air"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-006-02",
+          "description": "Check bleed air system components for leaks or damage",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_source_type"],
+          "applicable_configurations": {
+            "pressurization_source_type": ["bleed_air"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-006-03",
+          "description": "Inspect cabin compressors for condition and proper operation",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_source_type"],
+          "applicable_configurations": {
+            "pressurization_source_type": ["compressor"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-006-04",
+          "description": "Check air distribution ducts for leaks or restrictions",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-05",
+          "description": "Verify proper operation of isolation valves",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_isolation_valves"]
+        },
+        {
+          "substep_id": "SUBSTEP-006-06",
+          "description": "Check air filters for contamination or restrictions",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-007",
+      "title": "Cabin Pressure Leak Check",
+      "description": "Perform cabin pressure leak check",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-007-01",
+          "description": "Ensure all access panels, doors, and windows are properly secured",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-007-02",
+          "description": "Connect cabin pressure test equipment according to manufacturer instructions",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-03",
+          "description": "Pressurize cabin to specified test pressure (typically 75% of maximum differential)",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "max_differential_pressure"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-04",
+          "description": "Monitor pressure decay over specified time period",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-007-05",
+          "description": "Calculate leak rate and compare to maximum allowable",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "max_allowable_leak_rate"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-06",
+          "description": "If leak rate exceeds limits, use leak detection equipment to locate leaks",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-007-07",
+          "description": "Depressurize cabin in controlled manner after test completion",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-008",
+      "title": "Safety Valve Functional Test",
+      "description": "Test operation of safety/relief valves",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-008-01",
+          "description": "Inspect safety/relief valves for condition before testing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-02",
+          "description": "Connect test equipment to safety valve test port if applicable",
+          "configuration_dependent": true,
+          "configuration_variables": ["safety_valve_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-03",
+          "description": "Apply test pressure to verify relief valve opening pressure",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "safety_valve_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-04",
+          "description": "Verify relief valve reseats properly after operation",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-05",
+          "description": "Test negative pressure relief valve operation if separate",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_separate_negative_relief_valve"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-009",
+      "title": "Outflow Valve Functional Test",
+      "description": "Test operation of outflow valve(s)",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-009-01",
+          "description": "Inspect outflow valve for condition before testing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-02",
+          "description": "Apply electrical power to the aircraft",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-03",
+          "description": "Operate outflow valve through full range using manual control",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-04",
+          "description": "Verify valve responds correctly to control inputs",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-05",
+          "description": "Check for smooth operation without binding or excessive noise",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-06",
+          "description": "Verify valve position indicator accurately reflects actual valve position",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_valve_position_indicator"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-010",
+      "title": "Cabin Altitude Warning System Test",
+      "description": "Test operation of cabin altitude warning system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-010-01",
+          "description": "Apply electrical power to the aircraft",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-010-02",
+          "description": "Locate cabin altitude warning system test switch or procedure",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "warning_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-03",
+          "description": "Activate test function and verify proper warning indications",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-010-04",
+          "description": "Verify audible warning functions correctly",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_audible_warning"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-05",
+          "description": "Verify visual warning indicators function correctly",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_visual_warning"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-06",
+          "description": "Test automatic deployment of oxygen masks if applicable",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_auto_oxygen_deployment"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-011",
+      "title": "Pressurization System Operational Test",
+      "description": "Perform operational test of complete pressurization system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-011-01",
+          "description": "Ensure all access panels and doors are properly secured",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-02",
+          "description": "Start engines or connect ground air source as required",
+          "configuration_dependent": true,
+          "configuration_variables": ["pressurization_source_type", "aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-011-03",
+          "description": "Set pressurization controller to normal operation mode",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-04",
+          "description": "Operate pressurization system through simulated flight profile",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "pressurization_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-011-05",
+          "description": "Monitor cabin altitude, rate of change, and differential pressure",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-06",
+          "description": "Verify system maintains proper cabin altitude throughout profile",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-07",
+          "description": "Test system response to simulated emergency descent",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_emergency_descent_mode"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-012",
+      "title": "Final Checks and Documentation",
+      "description": "Perform final checks and document test results",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-012-01",
+          "description": "Return all systems to normal configuration",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-02",
+          "description": "Remove all test equipment and connections",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-03",
+          "description": "Reinstall any components or access panels removed for testing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-04",
+          "description": "Verify all fasteners are properly secured",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-05",
+          "description": "Document all test results in the appropriate maintenance records",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-06",
+          "description": "Complete the inspection sign-off in the aircraft logbook",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-07",
+          "description": "Update aircraft status in maintenance tracking system",
+          "configuration_dependent": false
+        }
+      ]
+    }
+  ],
+  "sign_off_requirements": {
+    "inspector_certification": true,
+    "supervisor_review": false,
+    "quality_assurance_review": false,
+    "documentation_required": [
+      "Aircraft logbook entry",
+      "Maintenance tracking system update",
+      "Pressurization system test results documentation",
+      "Discrepancy documentation (if applicable)"
+    ]
+  },
+  "references": [
+    {
+      "reference_id": "REF-001",
+      "title": "Aircraft Maintenance Manual",
+      "section": "Pressurization System",
+      "document_id": "AMM-001"
+    },
+    {
+      "reference_id": "REF-002",
+      "title": "Component Maintenance Manual",
+      "section": "Pressurization System Components",
+      "document_id": "CMM-004"
+    },
+    {
+      "reference_id": "REF-003",
+      "title": "FAA Advisory Circular",
+      "section": "AC 43.13-1B Chapter 11",
+      "document_id": "AC-001"
+    }
+  ],
+  "revision_history": [
+    {
+      "revision": "A",
+      "date": "2023-05-20",
+      "description": "Initial release"
+    },
+    {
+      "revision": "B",
+      "date": "2023-10-15",
+      "description": "Updated leak check procedures and added additional safety precautions"
+    }
+  ]
+}

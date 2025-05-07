@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maintenance Tools",
+  "description": "Schema for maintenance tools",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "category",
+      "description",
+      "specifications"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the tool"
+      },
+      "name": {
+        "type": "string",
+        "description": "Name of the tool"
+      },
+      "category": {
+        "type": "string",
+        "description": "Category of the tool (e.g., hand tool, power tool, diagnostic tool)"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the tool"
+      },
+      "specifications": {
+        "type": "object",
+        "description": "Specifications of the tool",
+        "properties": {
+          "size": {
+            "type": "string",
+            "description": "Size of the tool"
+          },
+          "weight": {
+            "type": "string",
+            "description": "Weight of the tool"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material of the tool"
+          },
+          "calibration_required": {
+            "type": "boolean",
+            "description": "Whether the tool requires calibration"
+          },
+          "calibration_interval": {
+            "type": "string",
+            "description": "Calibration interval for the tool"
+          },
+          "power_requirements": {
+            "type": "string",
+            "description": "Power requirements for the tool"
+          },
+          "additional_specs": {
+            "type": "object",
+            "description": "Additional specifications for the tool"
+          }
+        }
+      },
+      "manufacturer": {
+        "type": "string",
+        "description": "Manufacturer of the tool"
+      },
+      "part_number": {
+        "type": "string",
+        "description": "Manufacturer part number"
+      },
+      "image_url": {
+        "type": "string",
+        "description": "URL to an image of the tool"
+      },
+      "usage_instructions": {
+        "type": "string",
+        "description": "Instructions for using the tool"
+      },
+      "safety_precautions": {
+        "type": "array",
+        "description": "Safety precautions for using the tool",
+        "items": {
+          "type": "string"
+        }
+      },
+      "alternatives": {
+        "type": "array",
+        "description": "Alternative tools that can be used",
+        "items": {
+          "type": "string"
+        }
+      },
+      "aircraft_compatibility": {
+        "type": "array",
+        "description": "Aircraft types this tool is compatible with",
+        "items": {
+          "type": "string"
+        }
+      },
+      "system_compatibility": {
+        "type": "array",
+        "description": "Aircraft systems this tool is compatible with",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

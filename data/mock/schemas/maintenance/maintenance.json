@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maintenance Procedure",
+  "description": "Schema for maintenance procedure",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "estimated_time",
+    "skill_level",
+    "safety_precautions",
+    "tools_required",
+    "parts_required",
+    "steps",
+    "references"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the procedure"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the procedure"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the procedure"
+    },
+    "estimated_time": {
+      "type": "string",
+      "description": "Estimated time to complete the procedure"
+    },
+    "skill_level": {
+      "type": "string",
+      "description": "Required skill level for the procedure"
+    },
+    "safety_precautions": {
+      "type": "array",
+      "description": "Safety precautions for the procedure",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tools_required": {
+      "type": "array",
+      "description": "Tools required for the procedure",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "specification"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the tool"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the tool"
+          },
+          "specification": {
+            "type": "string",
+            "description": "Specification of the tool"
+          }
+        }
+      }
+    },
+    "parts_required": {
+      "type": "array",
+      "description": "Parts required for the procedure",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "part_number",
+          "quantity"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the part"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the part"
+          },
+          "part_number": {
+            "type": "string",
+            "description": "Part number"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Quantity of the part required"
+          }
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "description": "Steps of the procedure",
+      "items": {
+        "type": "object",
+        "required": [
+          "step_number",
+          "title",
+          "description",
+          "cautions"
+        ],
+        "properties": {
+          "step_number": {
+            "type": "integer",
+            "description": "Step number"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the step"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the step"
+          },
+          "cautions": {
+            "type": "array",
+            "description": "Cautions for the step",
+            "items": {
+              "type": "string"
+            }
+          },
+          "images": {
+            "type": "array",
+            "description": "Images for the step",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "description": "References for the procedure",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the reference"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of reference"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the reference"
+          },
+          "section": {
+            "type": "string",
+            "description": "Section of the reference"
+          },
+          "date": {
+            "type": "string",
+            "description": "Date of the reference",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}

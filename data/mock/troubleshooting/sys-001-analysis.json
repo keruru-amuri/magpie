@@ -1,0 +1,76 @@
+{
+  "request": {
+    "system": "sys-001",
+    "symptoms": [
+      "sym-001",
+      "sym-002"
+    ],
+    "context": "Routine maintenance inspection"
+  },
+  "analysis": {
+    "potential_causes": [
+      {
+        "id": "cause-sys-001-001",
+        "description": "Component wear and tear",
+        "probability": 0.75,
+        "evidence": "Based on the symptoms provided, this is likely caused by normal wear and tear of components."
+      },
+      {
+        "id": "cause-sys-001-002",
+        "description": "Improper maintenance",
+        "probability": 0.45,
+        "evidence": "The symptoms may also indicate improper maintenance procedures during the last service."
+      },
+      {
+        "id": "cause-sys-001-003",
+        "description": "Manufacturing defect",
+        "probability": 0.25,
+        "evidence": "In rare cases, these symptoms could be caused by a manufacturing defect in the components."
+      }
+    ],
+    "recommended_solutions": [
+      {
+        "id": "sol-sys-001-001",
+        "description": "Replace component",
+        "difficulty": "medium",
+        "estimated_time": "2 hours",
+        "steps": [
+          "Step 1: Prepare necessary tools and replacement parts",
+          "Step 2: Remove access panels",
+          "Step 3: Disconnect electrical connections",
+          "Step 4: Remove faulty component",
+          "Step 5: Install new component",
+          "Step 6: Reconnect electrical connections",
+          "Step 7: Perform functional test"
+        ]
+      },
+      {
+        "id": "sol-sys-001-002",
+        "description": "Perform maintenance procedure",
+        "difficulty": "low",
+        "estimated_time": "1 hour",
+        "steps": [
+          "Step 1: Prepare necessary tools",
+          "Step 2: Inspect component for damage",
+          "Step 3: Clean component",
+          "Step 4: Adjust settings as needed",
+          "Step 5: Perform functional test"
+        ]
+      }
+    ],
+    "additional_resources": [
+      {
+        "id": "res-sys-001-001",
+        "type": "documentation",
+        "title": "Component Maintenance Manual",
+        "reference": "CMM-123-456"
+      },
+      {
+        "id": "res-sys-001-002",
+        "type": "video",
+        "title": "Troubleshooting Tutorial",
+        "reference": "VID-789-012"
+      }
+    ]
+  }
+}

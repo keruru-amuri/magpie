@@ -1,0 +1,296 @@
+[
+  {
+    "id": "equip-001",
+    "name": "Aircraft Jack",
+    "category": "Ground Support Equipment",
+    "description": "Hydraulic jack for lifting aircraft during maintenance",
+    "specifications": {
+      "dimensions": "Various sizes",
+      "weight": "20-100 kg depending on capacity",
+      "additional_specs": {
+        "capacity": "5-25 tons",
+        "min_height": "10 inches",
+        "max_height": "45 inches",
+        "type": "Tripod or axle"
+      }
+    },
+    "manufacturer": "Tronair",
+    "model_number": "02-7835C",
+    "operation_instructions": "Position jack at approved jacking point. Ensure aircraft is properly balanced with other jacks. Raise slowly and install safety pins.",
+    "safety_precautions": [
+      "Never exceed rated capacity",
+      "Always use on level, solid surface",
+      "Always use safety pins when aircraft is raised",
+      "Never work under aircraft supported only by jacks"
+    ],
+    "maintenance_requirements": "Inspect hydraulic fluid level monthly. Test operation quarterly. Full inspection and certification annually.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["landing gear", "structural"]
+  },
+  {
+    "id": "equip-002",
+    "name": "Nitrogen Service Cart",
+    "category": "Ground Support Equipment",
+    "description": "Mobile cart for servicing aircraft nitrogen systems",
+    "specifications": {
+      "dimensions": "48 x 24 x 48 inches",
+      "weight": "150 kg",
+      "additional_specs": {
+        "capacity": "50 cubic feet",
+        "max_pressure": "3000 PSI",
+        "regulator_range": "0-400 PSI"
+      }
+    },
+    "manufacturer": "Tronair",
+    "model_number": "14-1600",
+    "operation_instructions": "Connect to aircraft service port using appropriate adapter. Set regulator to specified pressure. Open valve slowly to charge system.",
+    "safety_precautions": [
+      "Wear eye protection",
+      "Secure cylinders properly",
+      "Never exceed maximum rated pressure",
+      "Keep away from heat sources and open flames"
+    ],
+    "maintenance_requirements": "Inspect hoses and connections monthly. Test regulators and gauges quarterly. Hydrostatic test of cylinders every 5 years.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["landing gear", "hydraulic", "pneumatic"]
+  },
+  {
+    "id": "equip-003",
+    "name": "Aircraft Tug",
+    "category": "Ground Support Equipment",
+    "description": "Powered tug for moving aircraft on the ground",
+    "specifications": {
+      "dimensions": "10 x 5 x 4 feet",
+      "weight": "2000 kg",
+      "power_requirements": "Diesel or electric",
+      "additional_specs": {
+        "towing_capacity": "Up to 75,000 lbs",
+        "speed": "0-5 mph",
+        "drive": "4-wheel drive"
+      }
+    },
+    "manufacturer": "TLD",
+    "model_number": "JET-16",
+    "operation_instructions": "Attach tow bar to aircraft and tug. Ensure aircraft brakes are released. Operate at slow speed. Follow proper turning radius limitations.",
+    "safety_precautions": [
+      "Ensure proper training before operation",
+      "Use wing walkers when in confined spaces",
+      "Never exceed aircraft towing speed limits",
+      "Never turn beyond aircraft turning radius limits"
+    ],
+    "maintenance_requirements": "Daily fluid level checks. Weekly lubrication. 250-hour service intervals.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["ground operations"]
+  },
+  {
+    "id": "equip-004",
+    "name": "Hydraulic Mule",
+    "category": "Ground Support Equipment",
+    "description": "Mobile hydraulic power unit for aircraft system testing",
+    "specifications": {
+      "dimensions": "48 x 30 x 40 inches",
+      "weight": "500 kg",
+      "power_requirements": "115/230V AC or diesel",
+      "additional_specs": {
+        "flow_rate": "0-10 GPM",
+        "pressure": "0-3000 PSI",
+        "reservoir_capacity": "10 gallons",
+        "fluid_compatibility": "MIL-PRF-5606, MIL-PRF-83282, Skydrol"
+      }
+    },
+    "manufacturer": "Hydraulics International",
+    "model_number": "H5506-3",
+    "operation_instructions": "Connect to aircraft hydraulic service port using appropriate adapter. Set pressure to specified value. Monitor temperature and pressure during operation.",
+    "safety_precautions": [
+      "Wear eye protection and gloves",
+      "Ensure all connections are secure before pressurizing",
+      "Never exceed aircraft system pressure limits",
+      "Keep clear of moving surfaces powered by hydraulic system"
+    ],
+    "maintenance_requirements": "Check fluid level and condition before each use. Change filters every 500 hours. Full service every 1000 hours.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["hydraulic", "landing gear", "flight controls"]
+  },
+  {
+    "id": "equip-005",
+    "name": "Aircraft Battery Charger",
+    "category": "Electrical Equipment",
+    "description": "Specialized charger for aircraft batteries",
+    "specifications": {
+      "dimensions": "18 x 12 x 10 inches",
+      "weight": "25 kg",
+      "power_requirements": "115/230V AC",
+      "additional_specs": {
+        "output_voltage": "12V/24V selectable",
+        "output_current": "0-50A",
+        "charging_modes": "Constant current, constant voltage, maintenance"
+      }
+    },
+    "manufacturer": "Christie",
+    "model_number": "RF80-M",
+    "operation_instructions": "Connect to battery observing polarity. Select appropriate voltage and charging mode. Monitor charging progress.",
+    "safety_precautions": [
+      "Ensure proper ventilation",
+      "Verify correct voltage selection before connecting",
+      "Disconnect aircraft electrical system before charging",
+      "Keep away from flammable materials"
+    ],
+    "maintenance_requirements": "Inspect cables and connections monthly. Calibrate meters annually.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["electrical"]
+  },
+  {
+    "id": "equip-006",
+    "name": "Oxygen Service Cart",
+    "category": "Ground Support Equipment",
+    "description": "Mobile cart for servicing aircraft oxygen systems",
+    "specifications": {
+      "dimensions": "48 x 24 x 48 inches",
+      "weight": "150 kg",
+      "additional_specs": {
+        "capacity": "50 cubic feet",
+        "max_pressure": "2000 PSI",
+        "regulator_range": "0-400 PSI"
+      }
+    },
+    "manufacturer": "Tronair",
+    "model_number": "14-1700",
+    "operation_instructions": "Connect to aircraft service port using appropriate adapter. Set regulator to specified pressure. Open valve slowly to charge system.",
+    "safety_precautions": [
+      "Keep free of oil and grease",
+      "Wear oxygen-clean gloves when handling connections",
+      "No smoking or open flames within 50 feet",
+      "Use only oxygen-approved components and lubricants"
+    ],
+    "maintenance_requirements": "Inspect hoses and connections monthly. Test regulators and gauges quarterly. Hydrostatic test of cylinders every 5 years.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["oxygen"]
+  },
+  {
+    "id": "equip-007",
+    "name": "Engine Hoist",
+    "category": "Ground Support Equipment",
+    "description": "Specialized hoist for aircraft engine removal and installation",
+    "specifications": {
+      "dimensions": "8 x 6 x 7 feet",
+      "weight": "800 kg",
+      "additional_specs": {
+        "capacity": "3000 lbs",
+        "lift_height": "8 feet",
+        "adjustable_arms": "Yes"
+      }
+    },
+    "manufacturer": "Dedienne Aerospace",
+    "model_number": "CFM56-EHS",
+    "operation_instructions": "Position hoist under engine. Attach to engine mounting points using appropriate hardware. Balance load before lifting. Raise/lower slowly.",
+    "safety_precautions": [
+      "Verify weight of engine before lifting",
+      "Never exceed rated capacity",
+      "Ensure all attachment points are secure",
+      "Keep personnel clear of suspended load",
+      "Use tag lines to control movement"
+    ],
+    "maintenance_requirements": "Inspect cables, hooks, and hydraulic system before each use. Annual certification required.",
+    "alternatives": [],
+    "aircraft_compatibility": ["specific to engine type"],
+    "system_compatibility": ["engine"]
+  },
+  {
+    "id": "equip-008",
+    "name": "Pitot-Static Test Set",
+    "category": "Test Equipment",
+    "description": "Equipment for testing aircraft pitot-static systems",
+    "specifications": {
+      "dimensions": "20 x 15 x 10 inches",
+      "weight": "15 kg",
+      "power_requirements": "115/230V AC or internal battery",
+      "calibration_required": true,
+      "calibration_interval": "12 months",
+      "additional_specs": {
+        "altitude_range": "-2000 to 60,000 feet",
+        "altitude_accuracy": "±2 feet",
+        "airspeed_range": "0-650 knots",
+        "airspeed_accuracy": "±0.5 knots"
+      }
+    },
+    "manufacturer": "Barfield",
+    "model_number": "DPS1000",
+    "operation_instructions": "Connect to aircraft pitot and static ports using appropriate adapters. Seal all other ports. Perform tests according to aircraft maintenance manual.",
+    "safety_precautions": [
+      "Never exceed aircraft limits for rate of climb/descent",
+      "Monitor aircraft instruments during testing",
+      "Ensure all connections are secure before applying pressure/vacuum",
+      "Release pressure/vacuum slowly after testing"
+    ],
+    "maintenance_requirements": "Verify calibration before use. Annual calibration required.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["instruments", "avionics"]
+  },
+  {
+    "id": "equip-009",
+    "name": "Fuel Quantity Test Set",
+    "category": "Test Equipment",
+    "description": "Equipment for testing aircraft fuel quantity indicating systems",
+    "specifications": {
+      "dimensions": "18 x 12 x 8 inches",
+      "weight": "10 kg",
+      "power_requirements": "115/230V AC",
+      "calibration_required": true,
+      "calibration_interval": "12 months",
+      "additional_specs": {
+        "capacitance_range": "0-5000 pF",
+        "resistance_range": "0-1000 ohms",
+        "accuracy": "±0.1%"
+      }
+    },
+    "manufacturer": "Barfield",
+    "model_number": "2811NG",
+    "operation_instructions": "Connect to aircraft fuel quantity system access points. Simulate various fuel levels by adjusting capacitance values. Compare with aircraft indicators.",
+    "safety_precautions": [
+      "Ensure aircraft power is at correct level",
+      "Follow aircraft maintenance manual procedures",
+      "Verify all connections before applying power"
+    ],
+    "maintenance_requirements": "Verify calibration before use. Annual calibration required.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["fuel"]
+  },
+  {
+    "id": "equip-010",
+    "name": "Aircraft Scales",
+    "category": "Ground Support Equipment",
+    "description": "Portable scales for aircraft weighing",
+    "specifications": {
+      "dimensions": "Various",
+      "weight": "100 kg (set)",
+      "calibration_required": true,
+      "calibration_interval": "12 months",
+      "additional_specs": {
+        "capacity": "15,000-30,000 lbs per scale",
+        "accuracy": "±0.1%",
+        "number_of_scales": "3-6 depending on aircraft"
+      }
+    },
+    "manufacturer": "Intercomp",
+    "model_number": "AC30-60",
+    "operation_instructions": "Position scales under aircraft wheels. Level aircraft according to manufacturer's specifications. Record individual wheel weights and calculate center of gravity.",
+    "safety_precautions": [
+      "Ensure aircraft is properly secured",
+      "Perform weighing in enclosed hangar with no wind",
+      "Verify scales are on level surface",
+      "Follow aircraft maintenance manual procedures"
+    ],
+    "maintenance_requirements": "Verify calibration before use. Annual calibration required.",
+    "alternatives": [],
+    "aircraft_compatibility": ["all"],
+    "system_compatibility": ["weight and balance"]
+  }
+]

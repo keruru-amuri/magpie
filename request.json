@@ -1,0 +1,11 @@
+{
+  "procedure_type": "Inspection",
+  "aircraft_type": "Boeing 737",
+  "aircraft_model": "737-800",
+  "system": "Hydraulic",
+  "components": "Pumps, Reservoirs",
+  "configuration": "Standard configuration",
+  "regulatory_requirements": "FAA regulations",
+  "special_considerations": "None",
+  "use_large_model": true
+}

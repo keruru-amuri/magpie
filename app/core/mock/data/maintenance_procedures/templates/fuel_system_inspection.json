@@ -1,0 +1,716 @@
+{
+  "template_id": "MP-FUEL-INSP-001",
+  "title": "Fuel System Inspection Procedure",
+  "description": "Standard procedure for inspection and testing of aircraft fuel systems",
+  "applicability": {
+    "fuel_system_types": ["gravity_feed", "fuel_injected", "pressure_feed"],
+    "fuel_types": ["avgas", "jet_a", "jet_a1"],
+    "aircraft_categories": ["commercial", "private", "military"]
+  },
+  "required_qualifications": [
+    {
+      "qualification_id": "A&P-AIRFRM",
+      "name": "A&P Mechanic - Airframe",
+      "description": "FAA Airframe & Powerplant Mechanic certification with Airframe rating"
+    },
+    {
+      "qualification_id": "A&P-PWRPLNT",
+      "name": "A&P Mechanic - Powerplant",
+      "description": "FAA Airframe & Powerplant Mechanic certification with Powerplant rating"
+    }
+  ],
+  "estimated_duration": {
+    "hours": 4,
+    "minutes": 30
+  },
+  "regulatory_references": [
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 43.13",
+      "description": "Performance rules (general)"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "AC 43.13-1B",
+      "description": "Acceptable Methods, Techniques, and Practices - Aircraft Inspection and Repair"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "AC 20-125",
+      "description": "Water in Aviation Fuels"
+    }
+  ],
+  "safety_precautions": [
+    {
+      "precaution_id": "SP-001",
+      "severity": "danger",
+      "description": "Ensure all ignition sources are eliminated from the work area",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-002",
+      "severity": "warning",
+      "description": "Properly ground aircraft and fuel handling equipment to prevent static electricity",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-003",
+      "severity": "warning",
+      "description": "Use proper personal protective equipment including fuel-resistant gloves and eye protection",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-004",
+      "severity": "caution",
+      "description": "Ensure adequate ventilation in work area to prevent buildup of fuel vapors",
+      "display_location": "during_procedure"
+    },
+    {
+      "precaution_id": "SP-005",
+      "severity": "warning",
+      "description": "Have appropriate fire extinguishing equipment readily available",
+      "display_location": "before_procedure"
+    }
+  ],
+  "required_tools": [
+    {
+      "tool_id": "TL-001",
+      "name": "Fuel System Pressure Tester",
+      "description": "Calibrated fuel system pressure testing equipment",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-002",
+      "name": "Fuel Quantity Tester",
+      "description": "Equipment for testing fuel quantity indicating system",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-003",
+      "name": "Fuel Sampling Cup",
+      "description": "Clear container for fuel sampling and inspection",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-004",
+      "name": "Borescope",
+      "description": "For internal tank inspection",
+      "optional": true
+    },
+    {
+      "tool_id": "TL-005",
+      "name": "Fuel Flow Meter",
+      "description": "For measuring fuel flow rates",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-006",
+      "name": "Digital Multimeter",
+      "description": "For electrical component testing",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-007",
+      "name": "Fuel Tank Entry Tools",
+      "description": "Special tools for fuel tank entry if required",
+      "optional": true
+    },
+    {
+      "tool_id": "TL-008",
+      "name": "Grounding Equipment",
+      "description": "Static grounding wires and clamps",
+      "optional": false
+    }
+  ],
+  "required_materials": [
+    {
+      "material_id": "MT-001",
+      "name": "Fuel Tank Sealant",
+      "description": "Approved sealant for fuel tank repairs",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-002",
+      "name": "Fuel System O-rings",
+      "description": "Replacement o-rings of appropriate specifications",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-003",
+      "name": "Fuel Filter Elements",
+      "description": "Replacement fuel filter elements",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-004",
+      "name": "Fuel System Gaskets",
+      "description": "Replacement gaskets for fuel system components",
+      "quantity": "As needed",
+      "optional": true
+    },
+    {
+      "material_id": "MT-005",
+      "name": "Lint-free Cloths",
+      "description": "Clean, lint-free cloths for cleaning and inspection",
+      "quantity": "10",
+      "optional": false
+    },
+    {
+      "material_id": "MT-006",
+      "name": "Approved Cleaning Solvent",
+      "description": "Solvent approved for fuel system cleaning",
+      "quantity": "As needed",
+      "optional": false
+    }
+  ],
+  "procedure_steps": [
+    {
+      "step_id": "STEP-001",
+      "title": "Preparation and Safety Measures",
+      "description": "Prepare the aircraft and establish safety measures for fuel system inspection",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-001-01",
+          "description": "Ensure aircraft is in a well-ventilated area",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-02",
+          "description": "Verify all electrical power is off",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-03",
+          "description": "Properly ground the aircraft to prevent static electricity",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-04",
+          "description": "Place appropriate fire extinguishing equipment nearby",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-05",
+          "description": "Post 'No Smoking' and 'Fuel System Work' signs in the area",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-06",
+          "description": "Don appropriate personal protective equipment",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-002",
+      "title": "Fuel Sampling and Contamination Check",
+      "description": "Sample fuel from all tanks and drains to check for contamination",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-002-01",
+          "description": "Identify all fuel tank sumps and drain points",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-002-02",
+          "description": "Drain fuel samples from each sump and drain point into clear container",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-03",
+          "description": "Inspect samples for water, particulates, or other contamination",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-04",
+          "description": "Verify fuel is of correct type and color for the aircraft",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-002-05",
+          "description": "Continue draining until samples are free from contamination",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-06",
+          "description": "Properly dispose of drained fuel according to environmental regulations",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-003",
+      "title": "Fuel Tank External Inspection",
+      "description": "Inspect external condition of fuel tanks",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-003-01",
+          "description": "Inspect fuel tank areas for evidence of leaks or stains",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-02",
+          "description": "Check fuel tank vents for obstructions or damage",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-03",
+          "description": "Inspect fuel filler caps for proper sealing and locking",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-04",
+          "description": "Check fuel tank access panels for security and proper sealing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-003-05",
+          "description": "Inspect integral tank areas for signs of structural issues",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_tank_type"],
+          "applicable_configurations": {
+            "fuel_tank_type": ["integral"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-003-06",
+          "description": "Check bladder tank attachment points for security",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_tank_type"],
+          "applicable_configurations": {
+            "fuel_tank_type": ["bladder"]
+          }
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-004",
+      "title": "Fuel Tank Internal Inspection",
+      "description": "Inspect internal condition of fuel tanks where accessible",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-004-01",
+          "description": "Remove appropriate access panels for internal tank inspection",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_tank_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-004-02",
+          "description": "Use borescope to inspect internal tank areas if direct access is not possible",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-03",
+          "description": "Inspect for corrosion, contamination, or foreign objects",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-04",
+          "description": "Check condition of internal baffles and stringers",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_tank_type"],
+          "applicable_configurations": {
+            "fuel_tank_type": ["integral"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-004-05",
+          "description": "Inspect bladder tank material for deterioration or delamination",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_tank_type"],
+          "applicable_configurations": {
+            "fuel_tank_type": ["bladder"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-004-06",
+          "description": "Check fuel quantity sender units for security and condition",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-07",
+          "description": "Inspect fuel pickup screens for contamination or damage",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-005",
+      "title": "Fuel Line and Component Inspection",
+      "description": "Inspect fuel lines and system components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-005-01",
+          "description": "Trace all fuel lines from tanks to engine(s)",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-02",
+          "description": "Inspect fuel lines for leaks, chafing, or damage",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-03",
+          "description": "Check all fuel line connections for security and leaks",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-04",
+          "description": "Inspect fuel selector valve(s) for leaks and proper operation",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-05",
+          "description": "Check fuel pumps for leaks or damage",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-06",
+          "description": "Inspect fuel filters for contamination or damage",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-07",
+          "description": "Check fuel pressure and flow sensors for security and condition",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_system_type"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-006",
+      "title": "Fuel Quantity Indicating System Test",
+      "description": "Test the fuel quantity indicating system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-006-01",
+          "description": "Connect fuel quantity test equipment according to manufacturer instructions",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_quantity_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-006-02",
+          "description": "Apply electrical power to the aircraft",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-03",
+          "description": "Test fuel quantity indicators at empty, 1/4, 1/2, 3/4, and full positions",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-04",
+          "description": "Verify accuracy of fuel quantity indicators against known quantities",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-05",
+          "description": "Check operation of low fuel warning system if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_low_fuel_warning"]
+        },
+        {
+          "substep_id": "SUBSTEP-006-06",
+          "description": "Verify proper operation of fuel totalizer system if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_fuel_totalizer"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-007",
+      "title": "Fuel System Pressure Test",
+      "description": "Perform pressure tests on the fuel system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-007-01",
+          "description": "Connect fuel system pressure test equipment according to manufacturer instructions",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-02",
+          "description": "Pressurize the fuel system to specified test pressure",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-007-03",
+          "description": "Monitor pressure for specified time period to check for leaks",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-007-04",
+          "description": "Inspect all fuel system components for leaks under pressure",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-007-05",
+          "description": "Verify fuel pressure regulator operation at specified pressures",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_system_type"],
+          "applicable_configurations": {
+            "fuel_system_type": ["fuel_injected", "pressure_feed"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-007-06",
+          "description": "Test fuel pump output pressure and flow rate",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_system_type"],
+          "applicable_configurations": {
+            "fuel_system_type": ["fuel_injected", "pressure_feed"]
+          }
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-008",
+      "title": "Fuel System Flow Test",
+      "description": "Test fuel flow through the system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-008-01",
+          "description": "Connect fuel flow test equipment according to manufacturer instructions",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-02",
+          "description": "Operate fuel pumps to establish flow through the system",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-03",
+          "description": "Measure fuel flow rates at various points in the system",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-04",
+          "description": "Verify fuel flow meets minimum requirements for all engines",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "engine_count"]
+        },
+        {
+          "substep_id": "SUBSTEP-008-05",
+          "description": "Test operation of fuel selector valve in all positions",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-008-06",
+          "description": "Verify proper crossfeed operation if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_crossfeed"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-009",
+      "title": "Fuel Vent System Test",
+      "description": "Test the fuel tank venting system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-009-01",
+          "description": "Locate all fuel tank vents",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_tank_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-009-02",
+          "description": "Verify vents are clear of obstructions",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-03",
+          "description": "Test vent system for proper pressure relief",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-04",
+          "description": "Check vent system for proper vacuum relief",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-009-05",
+          "description": "Verify vent flame arrestors are clean and functional if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_vent_flame_arrestors"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-010",
+      "title": "Fuel System Electrical Component Test",
+      "description": "Test electrical components of the fuel system",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-010-01",
+          "description": "Test operation of electric fuel pumps",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_electric_fuel_pumps"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-02",
+          "description": "Verify proper operation of fuel pump switches and controls",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_electric_fuel_pumps"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-03",
+          "description": "Test fuel quantity transmitters for proper resistance values",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_quantity_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-04",
+          "description": "Check fuel pressure and flow sensors for proper operation",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_fuel_pressure_sensors", "has_fuel_flow_sensors"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-05",
+          "description": "Test fuel temperature sensors if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_fuel_temperature_sensors"]
+        },
+        {
+          "substep_id": "SUBSTEP-010-06",
+          "description": "Verify proper operation of fuel heaters if equipped",
+          "configuration_dependent": true,
+          "configuration_variables": ["has_fuel_heaters"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-011",
+      "title": "Fuel Filter Inspection and Replacement",
+      "description": "Inspect and replace fuel filters as required",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-011-01",
+          "description": "Locate all fuel filters in the system",
+          "configuration_dependent": true,
+          "configuration_variables": ["aircraft_model", "fuel_system_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-011-02",
+          "description": "Remove and inspect main fuel filter elements",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-03",
+          "description": "Check filter elements for contamination or damage",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-04",
+          "description": "Replace filter elements as required",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-05",
+          "description": "Inspect and clean fuel strainers",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-011-06",
+          "description": "Reinstall filters with new gaskets or seals as required",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-012",
+      "title": "Reassembly and Final Checks",
+      "description": "Reassemble components and perform final system checks",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-012-01",
+          "description": "Reinstall all access panels and components",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-02",
+          "description": "Verify all fasteners are properly secured",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-03",
+          "description": "Refill fuel tanks with appropriate fuel type",
+          "configuration_dependent": true,
+          "configuration_variables": ["fuel_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-012-04",
+          "description": "Perform final leak check of entire fuel system",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-05",
+          "description": "Verify proper operation of all fuel system components",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-06",
+          "description": "Document all inspection findings and maintenance actions",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-012-07",
+          "description": "Complete the inspection sign-off in the aircraft logbook",
+          "configuration_dependent": false
+        }
+      ]
+    }
+  ],
+  "sign_off_requirements": {
+    "inspector_certification": true,
+    "supervisor_review": false,
+    "quality_assurance_review": false,
+    "documentation_required": [
+      "Aircraft logbook entry",
+      "Maintenance tracking system update",
+      "Discrepancy documentation (if applicable)",
+      "Fuel system test results documentation"
+    ]
+  },
+  "references": [
+    {
+      "reference_id": "REF-001",
+      "title": "Aircraft Maintenance Manual",
+      "section": "Fuel System",
+      "document_id": "AMM-001"
+    },
+    {
+      "reference_id": "REF-002",
+      "title": "Component Maintenance Manual",
+      "section": "Fuel System Components",
+      "document_id": "CMM-003"
+    },
+    {
+      "reference_id": "REF-003",
+      "title": "FAA Advisory Circular",
+      "section": "AC 43.13-1B Chapter 8",
+      "document_id": "AC-001"
+    }
+  ],
+  "revision_history": [
+    {
+      "revision": "A",
+      "date": "2023-04-12",
+      "description": "Initial release"
+    },
+    {
+      "revision": "B",
+      "date": "2023-09-05",
+      "description": "Updated fuel system pressure test procedures and added additional safety precautions"
+    }
+  ]
+}

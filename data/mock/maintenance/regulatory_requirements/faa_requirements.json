@@ -1,0 +1,146 @@
+[
+  {
+    "id": "reg-faa-001",
+    "authority": "FAA",
+    "reference_id": "14 CFR 43.13",
+    "title": "Performance rules (general)",
+    "description": "General performance rules for maintenance, preventive maintenance, rebuilding, and alteration",
+    "content": "Each person performing maintenance, preventive maintenance, or alteration on an aircraft, engine, propeller, or appliance shall use the methods, techniques, and practices prescribed in the current manufacturer's maintenance manual or Instructions for Continued Airworthiness prepared by its manufacturer, or other methods, techniques, and practices acceptable to the Administrator, except as noted in §43.16.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private", "military"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["maintenance", "general", "performance", "standards"],
+    "related_requirements": ["reg-faa-002", "reg-faa-003"],
+    "effective_date": "1962-02-01",
+    "last_updated": "2020-01-15"
+  },
+  {
+    "id": "reg-faa-002",
+    "authority": "FAA",
+    "reference_id": "AC 43.13-1B",
+    "title": "Acceptable Methods, Techniques, and Practices - Aircraft Inspection and Repair",
+    "description": "Advisory circular providing acceptable methods, techniques, and practices for aircraft inspection and repair",
+    "content": "This advisory circular (AC) contains methods, techniques, and practices acceptable to the Administrator for the inspection and repair of nonpressurized areas of civil aircraft, only when there are no manufacturer repair or maintenance instructions. This data generally pertains to minor repairs. The repairs identified in this AC may only be used as a basis for FAA approval for major repairs.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["inspection", "repair", "maintenance", "advisory"],
+    "related_requirements": ["reg-faa-001", "reg-faa-004"],
+    "effective_date": "1998-09-08",
+    "last_updated": "2018-03-27"
+  },
+  {
+    "id": "reg-faa-003",
+    "authority": "FAA",
+    "reference_id": "14 CFR 43.15",
+    "title": "Additional performance rules for inspections",
+    "description": "Additional performance rules for inspections, including annual, 100-hour, and progressive inspections",
+    "content": "Each person performing an inspection required by part 91, 125, or 135 of this chapter shall perform the inspection so as to determine whether the aircraft, or portion(s) thereof under inspection, meets all applicable airworthiness requirements.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["inspection", "annual", "100-hour", "progressive"],
+    "related_requirements": ["reg-faa-001", "reg-faa-002"],
+    "effective_date": "1962-02-01",
+    "last_updated": "2019-05-20"
+  },
+  {
+    "id": "reg-faa-004",
+    "authority": "FAA",
+    "reference_id": "14 CFR 91.411",
+    "title": "Altimeter system and altitude reporting equipment tests and inspections",
+    "description": "Requirements for altimeter system and altitude reporting equipment tests and inspections",
+    "content": "No person may operate an airplane, or helicopter, in controlled airspace under IFR unless the altimeter system and altitude reporting equipment have been tested and inspected within the preceding 24 calendar months.",
+    "applicability": {
+      "aircraft_types": ["airplane", "helicopter"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["IFR"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["altimeter", "altitude", "reporting", "inspection", "test", "IFR"],
+    "related_requirements": ["reg-faa-005"],
+    "effective_date": "1989-08-18",
+    "last_updated": "2016-11-10"
+  },
+  {
+    "id": "reg-faa-005",
+    "authority": "FAA",
+    "reference_id": "14 CFR 91.413",
+    "title": "ATC transponder tests and inspections",
+    "description": "Requirements for ATC transponder tests and inspections",
+    "content": "No person may use an ATC transponder that is specified in 91.215(a), 121.345(c), or §135.143(c) of this chapter unless, within the preceding 24 calendar months, the ATC transponder has been tested and inspected and found to comply with appendix F of part 43 of this chapter.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["transponder", "ATC", "inspection", "test"],
+    "related_requirements": ["reg-faa-004"],
+    "effective_date": "1989-08-18",
+    "last_updated": "2016-11-10"
+  },
+  {
+    "id": "reg-faa-006",
+    "authority": "FAA",
+    "reference_id": "14 CFR 25.841",
+    "title": "Pressurized cabins",
+    "description": "Requirements for pressurized cabins in transport category aircraft",
+    "content": "Pressurized cabins and compartments to be occupied must be equipped to provide a cabin pressure altitude of not more than 8,000 feet at the maximum operating altitude of the airplane under normal operating conditions.",
+    "applicability": {
+      "aircraft_types": ["transport"],
+      "aircraft_categories": ["commercial"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["pressurization", "cabin", "altitude", "transport"],
+    "related_requirements": [],
+    "effective_date": "1965-02-01",
+    "last_updated": "2017-07-15"
+  },
+  {
+    "id": "reg-faa-007",
+    "authority": "FAA",
+    "reference_id": "AC 20-125",
+    "title": "Water in Aviation Fuels",
+    "description": "Advisory circular on water in aviation fuels",
+    "content": "This advisory circular provides information on the hazards of water in aviation fuel, types of water contamination, and methods for detection and removal of water from fuel systems.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private", "military"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["fuel", "water", "contamination", "inspection"],
+    "related_requirements": [],
+    "effective_date": "1985-12-10",
+    "last_updated": "2015-09-22"
+  },
+  {
+    "id": "reg-faa-008",
+    "authority": "FAA",
+    "reference_id": "AC 43-204",
+    "title": "Visual Inspection for Aircraft",
+    "description": "Advisory circular on visual inspection for aircraft",
+    "content": "This advisory circular provides guidance on visual inspection methods for aircraft structures, systems, and components.",
+    "applicability": {
+      "aircraft_types": ["all"],
+      "aircraft_categories": ["commercial", "private"],
+      "operation_categories": ["all"],
+      "jurisdictions": ["United States"]
+    },
+    "tags": ["inspection", "visual", "maintenance"],
+    "related_requirements": ["reg-faa-001", "reg-faa-002"],
+    "effective_date": "1997-04-10",
+    "last_updated": "2017-06-15"
+  }
+]

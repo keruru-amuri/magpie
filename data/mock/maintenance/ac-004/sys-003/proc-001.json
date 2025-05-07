@@ -1,0 +1,101 @@
+{
+  "id": "maint-ac-004-sys-003-proc-001",
+  "title": "Inspection Procedure for Avionics System on Bombardier CRJ",
+  "description": "This procedure provides instructions for performing inspection on the avionics system of Bombardier CRJ aircraft.",
+  "estimated_time": "1 hour",
+  "skill_level": "Technician Level 2",
+  "safety_precautions": [
+    "Ensure aircraft is properly grounded",
+    "Wear appropriate personal protective equipment",
+    "Follow all safety protocols in the maintenance manual",
+    "Use proper lifting techniques when handling heavy components"
+  ],
+  "tools_required": [
+    {
+      "id": "tool-001",
+      "name": "Socket Set",
+      "specification": "Standard, 10-19mm"
+    },
+    {
+      "id": "tool-002",
+      "name": "Torque Wrench",
+      "specification": "Calibrated, 5-50 Nm"
+    },
+    {
+      "id": "tool-003",
+      "name": "Inspection Mirror",
+      "specification": "Telescoping"
+    }
+  ],
+  "parts_required": [],
+  "steps": [
+    {
+      "step_number": 1,
+      "title": "Preparation",
+      "description": "Gather all necessary tools and parts. Ensure aircraft is in a safe state for maintenance.",
+      "cautions": [
+        "Verify aircraft is properly secured"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 2,
+      "title": "Access Panel Removal",
+      "description": "Remove access panel to gain access to the system components.",
+      "cautions": [
+        "Support panel during removal"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 3,
+      "title": "Component Inspection",
+      "description": "Inspect components for damage, wear, or leakage.",
+      "cautions": [
+        "Document any findings"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 4,
+      "title": "Detailed Inspection",
+      "description": "Perform detailed inspection of all subcomponents.",
+      "cautions": [
+        "Use proper inspection techniques"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 5,
+      "title": "Reassembly",
+      "description": "Reinstall access panel and secure all fasteners.",
+      "cautions": [
+        "Torque fasteners to specified values"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 6,
+      "title": "Documentation",
+      "description": "Complete maintenance records and documentation.",
+      "cautions": [
+        "Ensure all work is properly documented"
+      ],
+      "images": []
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-001",
+      "type": "manual",
+      "title": "Aircraft Maintenance Manual",
+      "section": "Chapter 34 - Avionics System"
+    },
+    {
+      "id": "ref-002",
+      "type": "technical_order",
+      "title": "Technical Order TO-ac-004-sys-003",
+      "date": "2025-01-15"
+    }
+  ]
+}

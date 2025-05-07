@@ -1,0 +1,45 @@
+{
+  "id": "doc-007",
+  "title": "Service Bulletin SB-A320-24-001: Battery Contactor Inspection and Replacement",
+  "type": "bulletin",
+  "version": "1.0",
+  "last_updated": "2025-03-15",
+  "content": "This Service Bulletin provides instructions for the inspection and replacement of the main battery contactors on Airbus A320 aircraft. This bulletin addresses potential welding of contactor contacts that may lead to inability to disconnect the battery from the electrical system.",
+  "sections": [
+    {
+      "id": "doc-007-section-1",
+      "title": "Purpose",
+      "content": "This Service Bulletin provides instructions for the inspection and, if necessary, replacement of the main battery contactors (P/N: BAT-CONT-001) installed on Airbus A320 aircraft. This bulletin addresses a potential issue with welding of contactor contacts that may lead to inability to disconnect the battery from the electrical system, creating a potential fire hazard during maintenance or emergency situations."
+    },
+    {
+      "id": "doc-007-section-2",
+      "title": "Affected Aircraft",
+      "content": "This Service Bulletin applies to all Airbus A320 aircraft with main battery contactors (P/N: BAT-CONT-001) manufactured by ElectroSwitch Inc. with date codes between 2024-01 and 2024-06.\n\nNOTE: Contactors with date codes 2024-07 and later incorporate the improved contact material and are not affected by this Service Bulletin.\n\nAffected Component:\n- Part Number: BAT-CONT-001\n- Date Code Range: 2024-01 through 2024-06\n- Name: Contactor, Battery, Main\n- Manufacturer: ElectroSwitch Inc.\n\nCross-reference: For detailed component information, refer to the Airbus A320 Aircraft Maintenance Manual (doc-006)."
+    },
+    {
+      "id": "doc-007-section-3",
+      "title": "Description",
+      "content": "ElectroSwitch Inc. has reported instances of contact welding in certain BAT-CONT-001 battery contactors. This condition can result in the following issues:\n\n1. Inability to disconnect the battery from the aircraft electrical system\n2. Overheating of the contactor during operation\n3. Potential electrical arcing during attempted disconnection\n4. In extreme cases, risk of electrical fire\n\nThe root cause has been identified as insufficient silver content in the contact material used in contactors manufactured between January 2024 and June 2024 (date codes 2024-01 through 2024-06). ElectroSwitch has implemented an improved contact material with higher silver content in all contactors with date codes 2024-07 and later.\n\nOperators have reported the following symptoms that may indicate a defective contactor:\n- Battery remains connected to the system when the battery switch is turned OFF\n- Abnormal heating of the contactor housing during operation\n- Discoloration or heat damage to the contactor housing\n- Erratic battery disconnect operation\n\nWARNING: If left unaddressed, a welded battery contactor could prevent disconnection of the battery during an electrical emergency or maintenance, potentially resulting in electrical arcing, damage to equipment, or fire."
+    },
+    {
+      "id": "doc-007-section-4",
+      "title": "Corrective Action",
+      "content": "The following actions are required:\n\n4.1 INSPECTION\n\nPerform a functional check of the battery contactor as follows:\n\n1. Access the battery compartment in the avionics bay\n2. Connect a digital multimeter set to the resistance (ohms) function across the main terminals of the battery contactor\n3. With the Battery Master Switch in the ON position, verify continuity across the contactor (resistance less than 0.01 ohms)\n4. Turn the Battery Master Switch to the OFF position\n5. Verify that the contactor opens (resistance greater than 1 megohm)\n6. Repeat steps 3-5 three times\n\nIn addition, inspect the contactor for the following:\n1. Check the date code on the contactor label\n2. Inspect the contactor housing for discoloration or heat damage\n3. Check for any signs of electrical arcing or burning\n\n4.2 REPLACEMENT\n\nIf the contactor fails the functional check, or if the contactor has a date code between 2024-01 and 2024-06, replace the contactor as follows:\n\nWARNING: Ensure all aircraft electrical power is OFF and the battery is disconnected before replacing the contactor. Failure to do so may result in personal injury or equipment damage.\n\nTools Required:\n- Standard mechanic's tool set\n- Torque wrench (0-20 Nm)\n- New battery contactor (P/N: BAT-CONT-002)\n- Heat shrink tubing assortment\n- Crimping tool for electrical terminals\n\nProcedure:\n1. Disconnect and remove the aircraft battery\n2. Tag and disconnect all wires from the contactor, noting their positions\n3. Remove the mounting bolts securing the contactor to the battery compartment\n4. Remove the contactor from the aircraft\n5. Install the new contactor (P/N: BAT-CONT-002) in the same position\n6. Secure the contactor with the mounting bolts and torque to 8-10 Nm\n7. Reconnect all wires to their original positions on the contactor\n8. Reinstall the aircraft battery\n9. Perform the functional check described in Section 4.1\n\nRefer to the Airbus A320 Aircraft Maintenance Manual (doc-006) for detailed battery removal and installation procedures."
+    },
+    {
+      "id": "doc-007-section-5",
+      "title": "Compliance",
+      "content": "5.1 COMPLIANCE CATEGORIES\n\nThis Service Bulletin is categorized as MANDATORY.\n\nThe following compliance times are required:\n\nCategory A - URGENT (Safety Issue):\n- For aircraft with more than 1,000 flight hours since contactor installation: Within the next 50 flight hours or 10 days, whichever occurs first\n\nCategory B - PRIORITY:\n- For aircraft with less than 1,000 flight hours since contactor installation: At next A-check or within 300 flight hours, whichever occurs first\n\n5.2 REPORTING REQUIREMENTS\n\nOperators are required to report the results of all inspections and replacements to ElectroSwitch Technical Support within 30 days of accomplishment. Include the following information:\n\n1. Aircraft registration number\n2. Contactor date code\n3. Contactor time since installation\n4. Inspection results (pass/fail)\n5. Description of any observed anomalies\n\nSubmit reports to:\nElectroSwitch Technical Support\nEmail: techsupport@electroswitch.com\nReference: SB-A320-24-001\n\n5.3 DOCUMENTATION\n\nRecord compliance with this Service Bulletin in the aircraft maintenance records. Include the following information:\n\n1. Service Bulletin number and title\n2. Date of accomplishment\n3. Aircraft registration number\n4. Contactor date code\n5. Action taken (inspection only or inspection and replacement)\n6. Name and certificate number of the technician performing the work\n7. Name and certificate number of the inspector approving the work"
+    },
+    {
+      "id": "doc-007-section-6",
+      "title": "Material Information",
+      "content": "6.1 PARTS REQUIRED\n\nThe following parts may be required to comply with this Service Bulletin:\n\nFor Inspection:\n- No parts required\n\nFor Replacement:\n- Battery Contactor (P/N: BAT-CONT-002), Quantity: 1\n- Terminal Kit (P/N: TERM-KIT-001), Quantity: 1 (if terminal damage is found)\n\n6.2 TOOLING REQUIRED\n\nThe following tools are required to comply with this Service Bulletin:\n\nFor Inspection:\n- Digital Multimeter (P/N: DMM-001 or equivalent)\n- Battery Contactor Test Adapter (P/N: BAT-TEST-001)\n\nFor Replacement:\n- Standard Mechanic's Tool Set\n- Torque Wrench, 0-20 Nm (P/N: TORQ-020 or equivalent)\n- Crimping Tool (P/N: CRIMP-001 or equivalent)\n- Heat Gun (P/N: HEAT-001 or equivalent)\n\n6.3 AVAILABILITY AND ORDERING\n\nReplacement parts are available from Airbus authorized distributors. When ordering parts, provide the following information:\n\n1. Aircraft type and registration number\n2. Service Bulletin number (SB-A320-24-001)\n3. Part number and quantity required\n\nEstimated lead time for replacement parts is 3-5 business days. For AOG (Aircraft On Ground) situations, contact ElectroSwitch Customer Service at +1-800-555-7000 for expedited shipping options."
+    },
+    {
+      "id": "doc-007-section-7",
+      "title": "References",
+      "content": "The following documents contain information related to this Service Bulletin:\n\n1. Airbus A320 Aircraft Maintenance Manual (doc-006), Chapter 24 - Electrical Power\n2. Airbus A320 Illustrated Parts Catalog, Chapter 24 - Electrical Power\n3. ElectroSwitch Component Maintenance Manual for Battery Contactor (P/N: BAT-CONT-001/002)\n4. ElectroSwitch Service Letter SL-2024-05, dated 2024-06-15\n5. EASA Safety Information Bulletin SIB-2024-10\n\nFor additional information or technical assistance, contact:\nElectroSwitch Technical Support\nPhone: +1-800-555-7001\nEmail: techsupport@electroswitch.com\nWebsite: www.electroswitch.com/aerospace"
+    }
+  ]
+}

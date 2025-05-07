@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maintenance Parts",
+  "description": "Schema for maintenance parts",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "category",
+      "part_number",
+      "description"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the part"
+      },
+      "name": {
+        "type": "string",
+        "description": "Name of the part"
+      },
+      "category": {
+        "type": "string",
+        "description": "Category of the part (e.g., mechanical, electrical, hydraulic)"
+      },
+      "part_number": {
+        "type": "string",
+        "description": "Manufacturer part number"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the part"
+      },
+      "specifications": {
+        "type": "object",
+        "description": "Specifications of the part",
+        "properties": {
+          "dimensions": {
+            "type": "string",
+            "description": "Dimensions of the part"
+          },
+          "weight": {
+            "type": "string",
+            "description": "Weight of the part"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material of the part"
+          },
+          "additional_specs": {
+            "type": "object",
+            "description": "Additional specifications for the part"
+          }
+        }
+      },
+      "manufacturer": {
+        "type": "string",
+        "description": "Manufacturer of the part"
+      },
+      "image_url": {
+        "type": "string",
+        "description": "URL to an image of the part"
+      },
+      "installation_instructions": {
+        "type": "string",
+        "description": "Instructions for installing the part"
+      },
+      "shelf_life": {
+        "type": "string",
+        "description": "Shelf life of the part"
+      },
+      "storage_requirements": {
+        "type": "string",
+        "description": "Storage requirements for the part"
+      },
+      "alternatives": {
+        "type": "array",
+        "description": "Alternative parts that can be used",
+        "items": {
+          "type": "string"
+        }
+      },
+      "aircraft_compatibility": {
+        "type": "array",
+        "description": "Aircraft types this part is compatible with",
+        "items": {
+          "type": "string"
+        }
+      },
+      "system_compatibility": {
+        "type": "array",
+        "description": "Aircraft systems this part is compatible with",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "inspection",
+    "name": "Inspection",
+    "description": "Visual inspection of hydraulic system components",
+    "interval": "Daily",
+    "estimated_time_minutes": 60,
+    "skill_level": "Technician Level 2"
+  },
+  {
+    "id": "functional_test",
+    "name": "Functional Test",
+    "description": "Testing hydraulic system functionality",
+    "interval": "Weekly",
+    "estimated_time_minutes": 120,
+    "skill_level": "Technician Level 3"
+  },
+  {
+    "id": "replacement",
+    "name": "Component Replacement",
+    "description": "Replacement of hydraulic system components",
+    "interval": "As needed",
+    "estimated_time_minutes": 180,
+    "skill_level": "Technician Level 3"
+  },
+  {
+    "id": "servicing",
+    "name": "Servicing",
+    "description": "Servicing hydraulic system (fluid replenishment, etc.)",
+    "interval": "Monthly",
+    "estimated_time_minutes": 90,
+    "skill_level": "Technician Level 2"
+  },
+  {
+    "id": "troubleshooting",
+    "name": "Troubleshooting",
+    "description": "Diagnosing hydraulic system issues",
+    "interval": "As needed",
+    "estimated_time_minutes": 120,
+    "skill_level": "Technician Level 3"
+  }
+]

@@ -1,0 +1,114 @@
+{
+  "id": "maint-ac-002-sys-002-proc-003",
+  "title": "Replacement Procedure for Electrical System on Airbus A320",
+  "description": "This procedure provides instructions for performing replacement on the electrical system of Airbus A320 aircraft.",
+  "estimated_time": "2 hours",
+  "skill_level": "Technician Level 2",
+  "safety_precautions": [
+    "Ensure aircraft is properly grounded",
+    "Wear appropriate personal protective equipment",
+    "Follow all safety protocols in the maintenance manual",
+    "Ensure all power is disconnected before working on electrical components"
+  ],
+  "tools_required": [
+    {
+      "id": "tool-001",
+      "name": "Socket Set",
+      "specification": "Standard, 10-19mm"
+    },
+    {
+      "id": "tool-002",
+      "name": "Torque Wrench",
+      "specification": "Calibrated, 5-50 Nm"
+    },
+    {
+      "id": "tool-003",
+      "name": "Multimeter",
+      "specification": "Digital, CAT III 600V"
+    }
+  ],
+  "parts_required": [
+    {
+      "id": "part-001",
+      "name": "Connector",
+      "part_number": "CN-ac-002-sys-002",
+      "quantity": 2
+    },
+    {
+      "id": "part-002",
+      "name": "Electrical Tape",
+      "part_number": "ET-ac-002",
+      "quantity": 1
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 1,
+      "title": "Preparation",
+      "description": "Gather all necessary tools and parts. Ensure aircraft is in a safe state for maintenance.",
+      "cautions": [
+        "Verify aircraft power is off"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 2,
+      "title": "Access Panel Removal",
+      "description": "Remove access panel to gain access to the system components.",
+      "cautions": [
+        "Support panel during removal"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 3,
+      "title": "Component Removal",
+      "description": "Remove component from the system.",
+      "cautions": [
+        "Use proper tools for removal"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 4,
+      "title": "New Component Installation",
+      "description": "Install new component into the system.",
+      "cautions": [
+        "Ensure proper alignment during installation"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 5,
+      "title": "Reassembly",
+      "description": "Reinstall access panel and secure all fasteners.",
+      "cautions": [
+        "Torque fasteners to specified values"
+      ],
+      "images": []
+    },
+    {
+      "step_number": 6,
+      "title": "Documentation",
+      "description": "Complete maintenance records and documentation.",
+      "cautions": [
+        "Ensure all work is properly documented"
+      ],
+      "images": []
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-001",
+      "type": "manual",
+      "title": "Aircraft Maintenance Manual",
+      "section": "Chapter 24 - Electrical System"
+    },
+    {
+      "id": "ref-002",
+      "type": "service_bulletin",
+      "title": "Service Bulletin SB-ac-002-sys-002",
+      "date": "2025-01-15"
+    }
+  ]
+}

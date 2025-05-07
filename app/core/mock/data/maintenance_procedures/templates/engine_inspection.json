@@ -1,0 +1,350 @@
+{
+  "template_id": "MP-ENG-INSP-001",
+  "title": "Engine Visual Inspection Procedure",
+  "description": "Standard procedure for visual inspection of aircraft engines",
+  "applicability": {
+    "engine_types": ["turbofan", "turboprop", "piston"],
+    "aircraft_categories": ["commercial", "private", "military"]
+  },
+  "required_qualifications": [
+    {
+      "qualification_id": "A&P-PWRPLNT",
+      "name": "A&P Mechanic - Powerplant",
+      "description": "FAA Airframe & Powerplant Mechanic certification with Powerplant rating"
+    }
+  ],
+  "estimated_duration": {
+    "hours": 2,
+    "minutes": 30
+  },
+  "regulatory_references": [
+    {
+      "authority": "FAA",
+      "reference_id": "14 CFR 43.15",
+      "description": "Additional performance rules for inspections"
+    },
+    {
+      "authority": "FAA",
+      "reference_id": "AC 43-204",
+      "description": "Visual Inspection for Aircraft"
+    }
+  ],
+  "safety_precautions": [
+    {
+      "precaution_id": "SP-001",
+      "severity": "warning",
+      "description": "Ensure engine is cool before inspection to prevent burns",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-002",
+      "severity": "caution",
+      "description": "Ensure ignition is off and secured before inspection",
+      "display_location": "before_procedure"
+    },
+    {
+      "precaution_id": "SP-003",
+      "severity": "warning",
+      "description": "Use proper eye protection when inspecting with flashlight or borescope",
+      "display_location": "during_procedure"
+    }
+  ],
+  "required_tools": [
+    {
+      "tool_id": "TL-001",
+      "name": "Flashlight",
+      "description": "High-intensity inspection flashlight",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-002",
+      "name": "Inspection Mirror",
+      "description": "Extendable inspection mirror with LED light",
+      "optional": false
+    },
+    {
+      "tool_id": "TL-003",
+      "name": "Borescope",
+      "description": "Digital borescope with recording capability",
+      "optional": true,
+      "notes": "Required for detailed internal inspection"
+    },
+    {
+      "tool_id": "TL-004",
+      "name": "Digital Camera",
+      "description": "Camera for documenting findings",
+      "optional": true
+    }
+  ],
+  "required_materials": [
+    {
+      "material_id": "MT-001",
+      "name": "Cleaning Solvent",
+      "description": "Approved aviation cleaning solvent",
+      "quantity": "As needed",
+      "optional": false
+    },
+    {
+      "material_id": "MT-002",
+      "name": "Lint-free Cloths",
+      "description": "Clean, lint-free cloths for cleaning and inspection",
+      "quantity": "10",
+      "optional": false
+    }
+  ],
+  "procedure_steps": [
+    {
+      "step_id": "STEP-001",
+      "title": "Preparation",
+      "description": "Prepare the aircraft and engine for inspection",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-001-01",
+          "description": "Ensure aircraft is secured and properly grounded",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-02",
+          "description": "Verify engine has cooled sufficiently for safe inspection",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-03",
+          "description": "Verify ignition is off and secured",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-001-04",
+          "description": "Remove necessary cowling and access panels",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type", "aircraft_model"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-002",
+      "title": "External Visual Inspection",
+      "description": "Inspect external engine components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-002-01",
+          "description": "Inspect engine mounts for security, cracks, or deformation",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-02",
+          "description": "Inspect all visible wiring for condition, routing, and security",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-03",
+          "description": "Inspect fuel lines for leaks, security, and chafing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-04",
+          "description": "Inspect oil lines for leaks, security, and chafing",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-002-05",
+          "description": "Inspect exhaust system for cracks, security, and leaks",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-003",
+      "title": "Intake and Exhaust Inspection",
+      "description": "Inspect engine intake and exhaust components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-003-01",
+          "description": "Inspect air intake for obstructions, damage, or foreign objects",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-02",
+          "description": "Inspect inlet guide vanes for damage or excessive wear",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"],
+          "applicable_configurations": {
+            "engine_type": ["turbofan", "turboprop"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-003-03",
+          "description": "Inspect exhaust nozzle for cracks, distortion, or missing hardware",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-003-04",
+          "description": "Inspect thrust reverser system for damage or improper operation",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type", "has_thrust_reverser"],
+          "applicable_configurations": {
+            "engine_type": ["turbofan"],
+            "has_thrust_reverser": true
+          }
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-004",
+      "title": "Accessory Section Inspection",
+      "description": "Inspect engine accessory section components",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-004-01",
+          "description": "Inspect accessory gearbox for leaks or damage",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-02",
+          "description": "Inspect generators/alternators for security and condition",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-03",
+          "description": "Inspect fuel pumps for leaks or damage",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-004-04",
+          "description": "Inspect oil pumps and filters for leaks or contamination",
+          "configuration_dependent": false
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-005",
+      "title": "Borescope Inspection",
+      "description": "Perform borescope inspection of internal engine components",
+      "optional": true,
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-005-01",
+          "description": "Prepare borescope equipment and verify operation",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-02",
+          "description": "Remove appropriate borescope access plugs",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type", "engine_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-03",
+          "description": "Inspect compressor blades for damage, erosion, or foreign object damage",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"],
+          "applicable_configurations": {
+            "engine_type": ["turbofan", "turboprop"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-005-04",
+          "description": "Inspect combustion chamber for cracks, distortion, or carbon buildup",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"]
+        },
+        {
+          "substep_id": "SUBSTEP-005-05",
+          "description": "Inspect turbine blades for damage, erosion, or distortion",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"],
+          "applicable_configurations": {
+            "engine_type": ["turbofan", "turboprop"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-005-06",
+          "description": "Inspect cylinder walls, valves, and pistons for damage or excessive wear",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type"],
+          "applicable_configurations": {
+            "engine_type": ["piston"]
+          }
+        },
+        {
+          "substep_id": "SUBSTEP-005-07",
+          "description": "Record and document any findings with images or video",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-005-08",
+          "description": "Reinstall borescope access plugs with appropriate torque",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type", "engine_model"]
+        }
+      ]
+    },
+    {
+      "step_id": "STEP-006",
+      "title": "Reassembly and Documentation",
+      "description": "Reassemble engine components and document inspection results",
+      "substeps": [
+        {
+          "substep_id": "SUBSTEP-006-01",
+          "description": "Reinstall all removed cowling and access panels",
+          "configuration_dependent": true,
+          "configuration_variables": ["engine_type", "aircraft_model"]
+        },
+        {
+          "substep_id": "SUBSTEP-006-02",
+          "description": "Verify all fasteners are properly secured",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-03",
+          "description": "Document all inspection findings in the appropriate maintenance records",
+          "configuration_dependent": false
+        },
+        {
+          "substep_id": "SUBSTEP-006-04",
+          "description": "Complete the inspection sign-off in the aircraft logbook",
+          "configuration_dependent": false
+        }
+      ]
+    }
+  ],
+  "sign_off_requirements": {
+    "inspector_certification": true,
+    "supervisor_review": false,
+    "quality_assurance_review": false,
+    "documentation_required": [
+      "Aircraft logbook entry",
+      "Maintenance tracking system update",
+      "Discrepancy documentation (if applicable)"
+    ]
+  },
+  "references": [
+    {
+      "reference_id": "REF-001",
+      "title": "Aircraft Maintenance Manual",
+      "section": "Engine Inspection Procedures",
+      "document_id": "AMM-001"
+    },
+    {
+      "reference_id": "REF-002",
+      "title": "Engine Maintenance Manual",
+      "section": "Visual Inspection Procedures",
+      "document_id": "EMM-001"
+    }
+  ],
+  "revision_history": [
+    {
+      "revision": "A",
+      "date": "2023-01-15",
+      "description": "Initial release"
+    },
+    {
+      "revision": "B",
+      "date": "2023-06-22",
+      "description": "Updated borescope inspection procedures and added additional safety precautions"
+    }
+  ]
+}

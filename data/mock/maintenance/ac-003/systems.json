@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sys-001",
+    "name": "Hydraulic System",
+    "description": "Aircraft hydraulic system components and functions"
+  },
+  {
+    "id": "sys-002",
+    "name": "Electrical System",
+    "description": "Aircraft electrical system components and functions"
+  },
+  {
+    "id": "sys-003",
+    "name": "Avionics System",
+    "description": "Aircraft avionics system components and functions"
+  },
+  {
+    "id": "sys-004",
+    "name": "Landing Gear System",
+    "description": "Aircraft landing gear system components and functions"
+  },
+  {
+    "id": "sys-005",
+    "name": "Fuel System",
+    "description": "Aircraft fuel system components and functions"
+  }
+]

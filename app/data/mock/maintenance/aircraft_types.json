@@ -1,0 +1,37 @@
+[
+  {
+    "id": "boeing_737",
+    "name": "Boeing 737",
+    "variants": ["737-700", "737-800", "737-900"],
+    "category": "commercial",
+    "description": "The Boeing 737 is a narrow-body aircraft produced by Boeing Commercial Airplanes at its Renton Factory in Washington."
+  },
+  {
+    "id": "airbus_a320",
+    "name": "Airbus A320",
+    "variants": ["A320-200", "A320neo"],
+    "category": "commercial",
+    "description": "The Airbus A320 family is a series of narrow-body airliners developed and produced by Airbus."
+  },
+  {
+    "id": "embraer_e190",
+    "name": "Embraer E190",
+    "variants": ["E190-E2"],
+    "category": "regional",
+    "description": "The Embraer E-Jet family is a series of narrow-body short to medium-range twin-engine jet airliners."
+  },
+  {
+    "id": "cessna_172",
+    "name": "Cessna 172",
+    "variants": ["172S", "172R"],
+    "category": "general_aviation",
+    "description": "The Cessna 172 Skyhawk is a four-seat, single-engine, high-wing, fixed-wing aircraft."
+  },
+  {
+    "id": "bombardier_crj900",
+    "name": "Bombardier CRJ900",
+    "variants": ["CRJ900ER", "CRJ900LR"],
+    "category": "regional",
+    "description": "The Bombardier CRJ900 is a regional jet designed and manufactured by Bombardier Aerospace."
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Documentation List",
+  "description": "Schema for list of technical documentation",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "type",
+      "version",
+      "last_updated"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the documentation"
+      },
+      "title": {
+        "type": "string",
+        "description": "Title of the documentation"
+      },
+      "type": {
+        "type": "string",
+        "description": "Type of documentation (manual, bulletin, directive, catalog)",
+        "enum": [
+          "manual",
+          "bulletin",
+          "directive",
+          "catalog"
+        ]
+      },
+      "version": {
+        "type": "string",
+        "description": "Version of the documentation"
+      },
+      "last_updated": {
+        "type": "string",
+        "description": "Date when the documentation was last updated",
+        "format": "date"
+      }
+    }
+  }
+}

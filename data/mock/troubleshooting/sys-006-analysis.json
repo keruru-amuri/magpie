@@ -1,0 +1,104 @@
+{
+  "request": {
+    "system": "sys-006",
+    "symptoms": [
+      "sym-026",
+      "sym-027"
+    ],
+    "context": "Routine maintenance inspection"
+  },
+  "analysis": {
+    "potential_causes": [
+      {
+        "id": "cause-sys-006-001",
+        "description": "Clogged air filters",
+        "probability": 0.85,
+        "evidence": "Poor air circulation and inconsistent cabin temperature are classic symptoms of clogged air filters in the environmental control system."
+      },
+      {
+        "id": "cause-sys-006-002",
+        "description": "Faulty temperature control valve",
+        "probability": 0.65,
+        "evidence": "Inconsistent cabin temperature can be caused by a temperature control valve that is not functioning properly."
+      },
+      {
+        "id": "cause-sys-006-003",
+        "description": "Damaged air ducts",
+        "probability": 0.45,
+        "evidence": "Poor air circulation could be caused by damaged or disconnected air ducts in the distribution system."
+      },
+      {
+        "id": "cause-sys-006-004",
+        "description": "Malfunctioning recirculation fan",
+        "probability": 0.40,
+        "evidence": "A malfunctioning recirculation fan can lead to poor air circulation throughout the cabin."
+      }
+    ],
+    "recommended_solutions": [
+      {
+        "id": "sol-sys-006-001",
+        "description": "Inspect and replace air filters",
+        "difficulty": "low",
+        "estimated_time": "1 hour",
+        "steps": [
+          "Step 1: Locate air filter access panels",
+          "Step 2: Remove access panels",
+          "Step 3: Inspect air filters for contamination",
+          "Step 4: Replace filters if necessary",
+          "Step 5: Reinstall access panels",
+          "Step 6: Perform system test"
+        ]
+      },
+      {
+        "id": "sol-sys-006-002",
+        "description": "Inspect and repair temperature control valve",
+        "difficulty": "medium",
+        "estimated_time": "3 hours",
+        "steps": [
+          "Step 1: Locate temperature control valve",
+          "Step 2: Disconnect electrical connections",
+          "Step 3: Remove valve assembly",
+          "Step 4: Inspect valve for damage or wear",
+          "Step 5: Replace valve if necessary",
+          "Step 6: Reinstall valve assembly",
+          "Step 7: Reconnect electrical connections",
+          "Step 8: Perform system test"
+        ]
+      },
+      {
+        "id": "sol-sys-006-003",
+        "description": "Inspect air distribution ducts",
+        "difficulty": "medium",
+        "estimated_time": "4 hours",
+        "steps": [
+          "Step 1: Remove interior panels to access air ducts",
+          "Step 2: Visually inspect ducts for damage or disconnection",
+          "Step 3: Repair or replace damaged sections",
+          "Step 4: Ensure all connections are secure",
+          "Step 5: Reinstall interior panels",
+          "Step 6: Perform system test"
+        ]
+      }
+    ],
+    "additional_resources": [
+      {
+        "id": "res-sys-006-001",
+        "type": "documentation",
+        "title": "Environmental Control System Maintenance Manual",
+        "reference": "MM-ECS-123"
+      },
+      {
+        "id": "res-sys-006-002",
+        "type": "video",
+        "title": "Air Filter Replacement Tutorial",
+        "reference": "VID-ECS-456"
+      },
+      {
+        "id": "res-sys-006-003",
+        "type": "service_bulletin",
+        "title": "Temperature Control Valve Inspection Procedure",
+        "reference": "SB-ECS-789"
+      }
+    ]
+  }
+}

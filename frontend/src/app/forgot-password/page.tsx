@@ -1,0 +1,29 @@
+'use client';
+
+import React from 'react';
+import ForgotPasswordForm from '../../components/auth/ForgotPasswordForm';
+
+export default function ForgotPasswordPage() {
+  return (
+    <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
+      <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-12">
+        <ForgotPasswordForm />
+      </div>
+      
+      {/* Background image or branding */}
+      <div className="hidden lg:block lg:w-1/2 bg-cover bg-center" style={{ backgroundImage: 'url(/images/aircraft-maintenance.jpg)' }}>
+        <div className="h-full w-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-white p-12">
+          <h1 className="text-4xl font-bold mb-4">MAGPIE Platform</h1>
+          <p className="text-xl mb-8 text-center">
+            Password Recovery
+          </p>
+          <div className="max-w-md">
+            <p className="mb-4">
+              We'll help you get back into your account. Enter your email address and we'll send you instructions to reset your password.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -14,6 +14,9 @@ MAGPIE (MAG Platform for Intelligent Execution) is a multiagent LLM platform des
 - **Database**: PostgreSQL with Supabase
 - **Caching**: Redis
 - **AI Integration**: Azure OpenAI API (GPT-4.1)
+  - Small model: GPT-4.1-nano
+  - Medium model: GPT-4.1-mini
+  - Large model: GPT-4.1
 - **Deployment**: Docker containers on Azure
 - **CI/CD**: GitHub Actions
 
@@ -70,6 +73,12 @@ This project follows PEP 8 style guidelines. To check your code:
 ```bash
 flake8 app tests
 ```
+
+### Examples
+
+Check out the `examples` directory for sample code demonstrating how to use various features of the MAGPIE platform:
+
+- **Azure OpenAI Integration**: See `examples/azure_openai_example.py` for examples of using the Azure OpenAI API integration.
 
 ## License
 

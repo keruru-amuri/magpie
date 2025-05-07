@@ -1,0 +1,40 @@
+{
+  "id": "doc-001",
+  "title": "Boeing 737-800 Aircraft Maintenance Manual",
+  "type": "manual",
+  "version": "1.0",
+  "last_updated": "2025-01-15",
+  "content": "This Aircraft Maintenance Manual (AMM) provides detailed procedures for maintaining the Boeing 737-800 aircraft. It contains essential information for maintenance personnel to ensure the aircraft remains in an airworthy condition. The manual is organized by ATA chapters and includes detailed illustrations, diagrams, and step-by-step procedures.",
+  "sections": [
+    {
+      "id": "doc-001-section-1",
+      "title": "Introduction",
+      "content": "This Aircraft Maintenance Manual (AMM) contains information necessary for the maintenance of the Boeing 737-800 aircraft. It is organized according to the Air Transport Association (ATA) specification 100 chapter system. This manual is intended for use by properly trained and qualified maintenance personnel. All maintenance procedures must be performed in accordance with this manual and applicable regulatory requirements. The manual is regularly updated to incorporate the latest service information. Always ensure you are using the most current revision."
+    },
+    {
+      "id": "doc-001-section-2",
+      "title": "Safety Precautions",
+      "content": "WARNING: Before performing any maintenance procedure, ensure that all necessary safety precautions are taken. Failure to observe safety precautions may result in personal injury, damage to equipment, or both.\n\nCAUTION: Always follow proper lockout/tagout procedures when working on electrical or hydraulic systems.\n\nThe following general safety precautions must be observed:\n1. Always wear appropriate personal protective equipment (PPE)\n2. Ensure the aircraft is properly grounded before maintenance\n3. Disable all electrical power before working on electrical systems\n4. Relieve all hydraulic pressure before working on hydraulic systems\n5. Use proper lifting techniques and equipment when handling heavy components\n6. Follow all warnings and cautions in the specific maintenance procedures"
+    },
+    {
+      "id": "doc-001-section-3",
+      "title": "Hydraulic System Description",
+      "content": "The Boeing 737-800 hydraulic system consists of three independent systems: System A, System B, and Standby. Each system operates at a nominal pressure of 3,000 psi (20,684 kPa).\n\nSystem A is powered by two engine-driven pumps (one on each engine) and provides power to:\n- Inboard flight controls\n- Leading edge slats and flaps\n- Landing gear extension/retraction\n- Normal brakes\n- Engine thrust reversers\n\nSystem B is powered by two electric motor-driven pumps and provides power to:\n- Outboard flight controls\n- Trailing edge flaps\n- Alternate brakes\n- Nose wheel steering\n\nThe Standby system is powered by an electric motor-driven pump and provides backup power to:\n- Rudder control\n- Alternate brakes\n- Standby nose wheel steering\n\nCross-reference: For detailed component information, refer to the Illustrated Parts Catalog (doc-003)."
+    },
+    {
+      "id": "doc-001-section-4",
+      "title": "Hydraulic System Maintenance Procedures",
+      "content": "4.1 HYDRAULIC FLUID SAMPLING AND TESTING\n\nWARNING: Hydraulic fluid can cause skin and eye irritation. Wear appropriate PPE including gloves and eye protection.\n\nTools Required:\n- Clean sampling bottle\n- Hydraulic fluid test kit (P/N: HYD-TEST-001)\n\nProcedure:\n1. Ensure the hydraulic system is depressurized\n2. Locate the sampling port on the hydraulic reservoir\n3. Clean the area around the sampling port with a lint-free cloth\n4. Connect the sampling bottle to the sampling port\n5. Collect approximately 100 ml of hydraulic fluid\n6. Seal the sampling bottle and label with aircraft registration, system (A, B, or Standby), and date\n7. Test the fluid using the hydraulic fluid test kit according to manufacturer's instructions\n8. Record the test results in the aircraft maintenance log\n\n4.2 HYDRAULIC RESERVOIR SERVICING\n\nCAUTION: Do not overfill the hydraulic reservoir. Overfilling may cause fluid to overflow when the system heats up during operation.\n\nTools Required:\n- Hydraulic servicing cart (P/N: HYD-CART-002)\n- Approved hydraulic fluid (Skydrol LD-4 or equivalent)\n\nProcedure:\n1. Ensure the hydraulic system is depressurized\n2. Locate the hydraulic reservoir fill port\n3. Clean the area around the fill port with a lint-free cloth\n4. Remove the fill cap\n5. Connect the hydraulic servicing cart to the fill port\n6. Add hydraulic fluid until the level indicator shows 'FULL' at ambient temperature\n7. Disconnect the servicing cart and replace the fill cap\n8. Check for leaks around the fill port\n9. Record the servicing in the aircraft maintenance log\n\nCross-reference: For detailed troubleshooting procedures, refer to Section 5 of this manual."
+    },
+    {
+      "id": "doc-001-section-5",
+      "title": "Hydraulic System Troubleshooting",
+      "content": "5.1 TROUBLESHOOTING GUIDE\n\nThis section provides guidance for identifying and resolving common hydraulic system issues.\n\nSymptom: Low hydraulic pressure in System A\nPossible Causes:\n1. Low fluid level in reservoir\n   - Check fluid level and replenish if necessary\n2. Engine-driven pump failure\n   - Check pump operation and replace if necessary\n3. Pressure relief valve malfunction\n   - Inspect and adjust or replace valve\n4. External leak in system\n   - Perform visual inspection of all hydraulic lines and components\n\nSymptom: Slow operation of hydraulic components\nPossible Causes:\n1. Restricted hydraulic filter\n   - Check filter differential pressure and replace if necessary\n2. Pump wear\n   - Check pump output and replace if below specifications\n3. Internal leakage in actuators\n   - Test actuator and repair or replace as necessary\n\nSymptom: Hydraulic system overheating\nPossible Causes:\n1. Heat exchanger malfunction\n   - Check heat exchanger operation and clean or replace as necessary\n2. Continuous relief valve operation\n   - Check system pressure and adjust relief valve\n3. Excessive internal leakage\n   - Isolate components and check for internal leakage\n\nCAUTION: Always refer to the appropriate Service Bulletin (SB-2025-01, doc-004) for the latest troubleshooting information and updates to maintenance procedures."
+    },
+    {
+      "id": "doc-001-section-6",
+      "title": "Inspection Requirements",
+      "content": "6.1 SCHEDULED INSPECTIONS\n\nThe following inspections must be performed at the specified intervals:\n\nDaily Inspection:\n- Visual check for hydraulic leaks\n- Check hydraulic reservoir fluid levels\n\n7-Day Inspection:\n- Check hydraulic system pressure gauges\n- Inspect hydraulic lines for chafing or damage\n\n30-Day Inspection:\n- Sample and test hydraulic fluid\n- Check hydraulic filter differential pressure indicators\n\n6-Month Inspection:\n- Perform functional test of all hydraulic systems\n- Check hydraulic pump performance\n- Inspect hydraulic actuators for leaks\n\nAnnual Inspection:\n- Replace hydraulic filters\n- Perform detailed inspection of all hydraulic components\n- Check relief valve settings\n\nNOTE: Additional inspections may be required by Airworthiness Directives (refer to AD-2025-02, doc-005) or Service Bulletins (refer to SB-2025-01, doc-004)."
+    }
+  ]
+}

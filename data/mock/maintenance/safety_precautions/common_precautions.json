@@ -1,0 +1,366 @@
+[
+  {
+    "id": "sp-001",
+    "type": "precaution",
+    "severity": "medium",
+    "description": "Ensure aircraft is properly grounded before beginning work",
+    "hazard_level": "caution",
+    "display_location": "before_procedure",
+    "icon": "ground",
+    "formatting": {
+      "color": "orange",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["all"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-002",
+    "type": "precaution",
+    "severity": "medium",
+    "description": "Wear appropriate personal protective equipment (PPE)",
+    "hazard_level": "caution",
+    "display_location": "before_procedure",
+    "icon": "ppe",
+    "formatting": {
+      "color": "orange",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["all"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.132"]
+  },
+  {
+    "id": "sp-003",
+    "type": "precaution",
+    "severity": "medium",
+    "description": "Follow all safety protocols in the maintenance manual",
+    "hazard_level": "caution",
+    "display_location": "before_procedure",
+    "icon": "manual",
+    "formatting": {
+      "color": "orange",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["all"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-004",
+    "type": "precaution",
+    "severity": "medium",
+    "description": "Use proper lifting techniques when handling heavy components",
+    "hazard_level": "caution",
+    "display_location": "before_procedure",
+    "icon": "lifting",
+    "formatting": {
+      "color": "orange",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["all"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.178"]
+  },
+  {
+    "id": "sp-005",
+    "type": "warning",
+    "severity": "high",
+    "description": "Ensure all power is disconnected before working on electrical components",
+    "hazard_level": "warning",
+    "display_location": "before_procedure",
+    "icon": "electricity",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["electrical", "avionics"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.333"]
+  },
+  {
+    "id": "sp-006",
+    "type": "warning",
+    "severity": "high",
+    "description": "Relieve all hydraulic pressure before disconnecting lines",
+    "hazard_level": "warning",
+    "display_location": "before_procedure",
+    "icon": "pressure",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["hydraulic", "landing_gear"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.147"]
+  },
+  {
+    "id": "sp-007",
+    "type": "caution",
+    "severity": "medium",
+    "description": "Use anti-static wrist straps when handling avionics components",
+    "hazard_level": "caution",
+    "display_location": "before_procedure",
+    "icon": "esd",
+    "formatting": {
+      "color": "yellow",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["avionics", "electrical"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-008",
+    "type": "warning",
+    "severity": "high",
+    "description": "Ensure adequate ventilation when working with fuel systems",
+    "hazard_level": "warning",
+    "display_location": "before_procedure",
+    "icon": "ventilation",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["fuel"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.106"]
+  },
+  {
+    "id": "sp-009",
+    "type": "warning",
+    "severity": "critical",
+    "description": "No smoking or open flames in the work area",
+    "hazard_level": "danger",
+    "display_location": "before_procedure",
+    "icon": "no_smoking",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["fuel"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.106"]
+  },
+  {
+    "id": "sp-010",
+    "type": "warning",
+    "severity": "high",
+    "description": "Use proper landing gear safety pins before working on landing gear",
+    "hazard_level": "warning",
+    "display_location": "before_procedure",
+    "icon": "safety_pin",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["landing_gear"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-011",
+    "type": "warning",
+    "severity": "critical",
+    "description": "Never position yourself under unsecured landing gear components",
+    "hazard_level": "danger",
+    "display_location": "before_procedure",
+    "icon": "danger",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["landing_gear"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.147"]
+  },
+  {
+    "id": "sp-012",
+    "type": "caution",
+    "severity": "medium",
+    "description": "Verify system pressure is relieved before beginning work",
+    "hazard_level": "caution",
+    "display_location": "specific_step",
+    "step_reference": "preparation",
+    "icon": "pressure",
+    "formatting": {
+      "color": "yellow",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["hydraulic", "pneumatic", "fuel"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-013",
+    "type": "caution",
+    "severity": "medium",
+    "description": "Support panel during removal",
+    "hazard_level": "caution",
+    "display_location": "specific_step",
+    "step_reference": "access_panel_removal",
+    "icon": "support",
+    "formatting": {
+      "color": "yellow",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["all"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-014",
+    "type": "caution",
+    "severity": "medium",
+    "description": "Use proper tools for removal",
+    "hazard_level": "caution",
+    "display_location": "specific_step",
+    "step_reference": "component_removal",
+    "icon": "tools",
+    "formatting": {
+      "color": "yellow",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["all"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-015",
+    "type": "caution",
+    "severity": "medium",
+    "description": "Document any findings",
+    "hazard_level": "caution",
+    "display_location": "specific_step",
+    "step_reference": "component_inspection",
+    "icon": "document",
+    "formatting": {
+      "color": "yellow",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["all"],
+    "applicable_procedure_types": ["inspection"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  },
+  {
+    "id": "sp-016",
+    "type": "warning",
+    "severity": "high",
+    "description": "Ensure engine is cool before inspection to prevent burns",
+    "hazard_level": "warning",
+    "display_location": "before_procedure",
+    "icon": "hot_surface",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["engine"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.147"]
+  },
+  {
+    "id": "sp-017",
+    "type": "warning",
+    "severity": "high",
+    "description": "Ensure ignition is off and secured before inspection",
+    "hazard_level": "warning",
+    "display_location": "before_procedure",
+    "icon": "ignition",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["engine"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.147"]
+  },
+  {
+    "id": "sp-018",
+    "type": "warning",
+    "severity": "high",
+    "description": "Use proper eye protection when inspecting with flashlight or borescope",
+    "hazard_level": "warning",
+    "display_location": "during_procedure",
+    "icon": "eye_protection",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["engine"],
+    "applicable_procedure_types": ["inspection"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.133"]
+  },
+  {
+    "id": "sp-019",
+    "type": "warning",
+    "severity": "high",
+    "description": "Ensure aircraft electrical power is properly controlled during testing",
+    "hazard_level": "warning",
+    "display_location": "before_procedure",
+    "icon": "electricity",
+    "formatting": {
+      "color": "red",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["avionics", "electrical"],
+    "applicable_procedure_types": ["functional_test"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65", "OSHA-1910.333"]
+  },
+  {
+    "id": "sp-020",
+    "type": "caution",
+    "severity": "medium",
+    "description": "Use proper ESD protection when handling avionics components",
+    "hazard_level": "caution",
+    "display_location": "before_procedure",
+    "icon": "esd",
+    "formatting": {
+      "color": "yellow",
+      "bold": true,
+      "box": true
+    },
+    "applicable_systems": ["avionics"],
+    "applicable_procedure_types": ["all"],
+    "applicable_aircraft_types": ["all"],
+    "regulatory_references": ["FAA-AC-43.13-1B", "EASA-145.A.65"]
+  }
+]

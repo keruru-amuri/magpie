@@ -1,0 +1,65 @@
+[
+  {
+    "id": "doc-001",
+    "title": "Boeing 737-800 Aircraft Maintenance Manual",
+    "type": "manual",
+    "version": "1.0",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "id": "doc-002",
+    "title": "Hydraulic Pump Component Maintenance Manual",
+    "type": "manual",
+    "version": "2.1",
+    "last_updated": "2025-02-20"
+  },
+  {
+    "id": "doc-003",
+    "title": "Boeing 737-800 Illustrated Parts Catalog - Chapter 29: Hydraulic Power",
+    "type": "catalog",
+    "version": "1.5",
+    "last_updated": "2025-03-10"
+  },
+  {
+    "id": "doc-004",
+    "title": "Service Bulletin SB-2025-01: Hydraulic Pump Pressure Compensator Inspection and Replacement",
+    "type": "bulletin",
+    "version": "1.0",
+    "last_updated": "2025-04-05"
+  },
+  {
+    "id": "doc-005",
+    "title": "Airworthiness Directive AD-2025-02: Mandatory Inspection and Replacement of Hydraulic Pump Pressure Compensator",
+    "type": "directive",
+    "version": "1.0",
+    "last_updated": "2025-04-10"
+  },
+  {
+    "id": "doc-006",
+    "title": "Airbus A320 Aircraft Maintenance Manual",
+    "type": "manual",
+    "version": "1.2",
+    "last_updated": "2025-02-10"
+  },
+  {
+    "id": "doc-007",
+    "title": "Service Bulletin SB-A320-24-001: Battery Contactor Inspection and Replacement",
+    "type": "bulletin",
+    "version": "1.0",
+    "last_updated": "2025-03-15"
+  },
+  {
+    "id": "doc-008",
+    "title": "Airworthiness Directive AD-2025-05: Mandatory Inspection and Replacement of Main Battery Contactors",
+    "type": "directive",
+    "version": "1.0",
+    "last_updated": "2025-04-20"
+  },
+  {
+    "id": "doc-009",
+    "title": "Airbus A320 Illustrated Parts Catalog - Chapter 24: Electrical Power",
+    "type": "catalog",
+    "version": "1.3",
+    "last_updated": "2025-03-25"
+  }
+]
