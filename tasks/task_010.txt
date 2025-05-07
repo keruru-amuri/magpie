@@ -1,0 +1,82 @@
+# Task ID: 10
+# Title: Develop Troubleshooting Advisor agent
+# Status: done
+# Dependencies: 5, 6, 17
+# Priority: high
+# Description: Create a specialized agent for diagnosing aircraft system issues and providing step-by-step troubleshooting guidance.
+# Details:
+Create a mock database of common aircraft system faults. Implement symptom analysis and cause identification logic. Develop step-by-step troubleshooting guidance generation. Create integration with maintenance history. Implement solution recommendation with parts and tools required. Develop diagnostic decision trees. Create a system for probability-based fault ranking. Implement safety precaution inclusion in troubleshooting steps.
+
+# Test Strategy:
+Test diagnostic accuracy with mock fault scenarios. Verify troubleshooting step clarity and correctness. Test integration with maintenance history. Validate parts and tools recommendations. Measure diagnostic accuracy metrics.
+
+# Subtasks:
+## 1. Create Mock Aircraft System Fault Database [done]
+### Dependencies: None
+### Description: Design and implement a structured database of common aircraft system faults with associated symptoms, causes, and resolution steps
+### Details:
+Implementation details:
+1. Define a comprehensive data schema for fault records including: fault ID, affected system/component, symptoms, potential causes, troubleshooting steps, required parts/tools, and safety precautions
+2. Populate the database with at least 50 common aircraft system faults across different systems (electrical, hydraulic, avionics, engines, etc.)
+3. For each fault, include multiple possible symptoms, causes, and detailed resolution steps
+4. Store the database in a suitable format (JSON, SQL, etc.) that can be easily queried
+5. Implement basic CRUD operations for the database
+6. Create utility functions to query faults by system, symptom, or component
+7. Testing approach: Verify database integrity with unit tests that validate the schema and query functionality
+
+## 2. Implement Symptom Analysis and Cause Identification Logic [done]
+### Dependencies: 10.1
+### Description: Develop algorithms to analyze reported symptoms and identify potential causes based on the fault database
+### Details:
+Implementation details:
+1. Create a symptom classification system that categorizes symptoms by system and severity
+2. Implement a pattern matching algorithm that correlates reported symptoms with known fault patterns
+3. Develop a probability-based ranking system for potential causes based on symptom matching
+4. Create a fault diagnosis engine that can process multiple symptoms simultaneously
+5. Implement confidence scoring for each potential cause identification
+6. Build a query interface that accepts symptom descriptions and returns ranked potential causes
+7. Develop filtering mechanisms based on aircraft type, component age, and environmental factors
+8. Testing approach: Create test cases with various symptom combinations and verify that the system correctly identifies known causes from the database
+
+## 3. Develop Diagnostic Decision Trees and Troubleshooting Guidance Generator [done]
+### Dependencies: 10.1, 10.2
+### Description: Create a system that generates step-by-step troubleshooting procedures using decision trees based on identified potential causes
+### Details:
+Implementation details:
+1. Design a decision tree data structure for representing troubleshooting workflows
+2. Implement algorithms to traverse decision trees based on diagnostic inputs
+3. Create a troubleshooting step generator that produces clear, sequential instructions
+4. Develop conditional logic handling for branching troubleshooting paths
+5. Implement safety precaution integration that automatically includes relevant warnings at appropriate steps
+6. Create a mechanism to estimate time and complexity for each troubleshooting path
+7. Build a formatting system that presents troubleshooting steps in a clear, consistent format
+8. Testing approach: Validate generated troubleshooting sequences against predefined expected outcomes for various fault scenarios
+
+## 4. Create Maintenance History Integration System [done]
+### Dependencies: 10.2
+### Description: Develop functionality to incorporate aircraft maintenance history into the troubleshooting process for more accurate diagnostics
+### Details:
+Implementation details:
+1. Create a mock maintenance history database schema with records of past issues, repairs, and component replacements
+2. Implement an integration layer that can query and analyze maintenance history data
+3. Develop algorithms that factor in recurring issues and recent repairs when ranking potential causes
+4. Create a component reliability analyzer that considers component age and failure patterns
+5. Implement a system to flag components that have exceeded recommended service intervals
+6. Build correlation detection between maintenance events and subsequent failures
+7. Develop a reporting mechanism that highlights relevant maintenance history during troubleshooting
+8. Testing approach: Test with mock maintenance histories to verify the system correctly adjusts diagnostic probabilities based on historical patterns
+
+## 5. Implement Solution Recommendation with Parts and Tools Required [done]
+### Dependencies: 10.1, 10.3, 10.4
+### Description: Create a system that generates comprehensive solution recommendations including required parts, tools, estimated time, and procedures
+### Details:
+Implementation details:
+1. Develop a solution template system with standardized formats for different types of repairs
+2. Create a parts inventory database with part numbers, descriptions, and compatibility information
+3. Implement a tools requirement analyzer that identifies necessary tools for each repair procedure
+4. Build an estimation engine for repair time based on procedure complexity and required steps
+5. Develop a parts substitution system that can recommend alternative parts when exact matches are unavailable
+6. Implement a documentation generator that creates printable/exportable repair instructions
+7. Create a validation system that ensures all safety procedures and requirements are included in recommendations
+8. Testing approach: Verify that generated solution recommendations include all necessary parts, tools, and steps by comparing against predefined benchmark solutions for common issues
+

@@ -1,0 +1,232 @@
+# Task ID: 6
+# Title: Implement context management system
+# Status: done
+# Dependencies: 2, 5
+# Priority: medium
+# Description: Create a system for maintaining conversation history and context across multiple interactions with the platform.
+# Details:
+Design a context storage schema in the database. Implement context window management to prevent token limit overflows. Create a context retrieval system based on conversation ID. Develop context summarization for long conversations. Implement context pruning strategies. Create a system for context sharing between agents. Add metadata tagging for context segments. Implement context persistence with Redis caching for active conversations and database storage for historical data.
+
+# Test Strategy:
+Test context retrieval accuracy. Verify context window management with large conversations. Test summarization quality. Validate context sharing between agents. Measure performance of context retrieval system.
+
+# Subtasks:
+## 1. Design context data model and database schema [done]
+### Dependencies: None
+### Description: Create a comprehensive data model for storing conversation context, including schema design for both Redis caching and persistent database storage.
+### Details:
+1. Define the context data structure with fields for conversation ID, timestamp, user ID, message content, message type, and metadata tags.
+2. Design a database schema with appropriate tables for conversations, messages, and context metadata.
+3. Create schema for Redis caching with appropriate key structures and TTL settings.
+4. Document the data model relationships between conversations, messages, and context segments.
+5. Include fields for context priority, relevance scores, and summarization flags.
+6. Implement database migrations for the new schema.
+7. Test the schema with sample data to verify it supports all required context operations.
+8. Testing approach: Create unit tests that validate schema constraints and relationships.
+
+## 2. Implement conversation history storage and retrieval [done]
+### Dependencies: 6.1
+### Description: Develop the core functionality to store and retrieve conversation history using the defined data model.
+### Details:
+1. Create data access layer classes for conversation context operations.
+2. Implement methods for storing new messages in the context history.
+3. Develop efficient query methods to retrieve context by conversation ID.
+4. Implement Redis caching for active conversations with appropriate serialization.
+5. Create fallback mechanisms to load from database when cache misses occur.
+6. Add methods for context persistence - moving data from cache to database.
+7. Implement pagination for retrieving large conversation histories.
+8. Testing approach: Write integration tests that verify storage and retrieval operations work correctly across cache and database layers.
+
+## 3. Develop context window management and pruning strategies [done]
+### Dependencies: 6.2
+### Description: Create mechanisms to manage context window size and implement intelligent pruning to prevent token limit overflows.
+### Details:
+1. Implement token counting functionality for context segments.
+2. Create configurable context window size limits based on model requirements.
+3. Develop prioritization algorithms to determine which context to keep and which to prune.
+4. Implement time-based, relevance-based, and importance-based pruning strategies.
+5. Create a sliding window mechanism that maintains the most relevant context within token limits.
+6. Add functionality to tag certain context as 'persistent' to prevent pruning of critical information.
+7. Develop monitoring for context window usage metrics.
+8. Testing approach: Create tests with large conversation histories to verify pruning strategies maintain appropriate context while respecting token limits.
+
+## 4. Implement context summarization and metadata tagging [done]
+### Dependencies: 6.2, 6.3
+### Description: Develop functionality to summarize long conversations and add metadata tags to context segments for improved retrieval.
+### Details:
+1. Implement an algorithm to identify when conversations become too long for full context inclusion.
+2. Create summarization functionality that condenses conversation history while preserving key information.
+3. Develop a metadata tagging system for context segments (topics, entities, sentiment, etc.).
+4. Implement relevance scoring for context segments based on recency, user interactions, and content.
+5. Create a system for context sharing between different agents or conversation threads.
+6. Add functionality to merge related context from different conversations when appropriate.
+7. Develop methods to extract and highlight key information from context.
+8. Testing approach: Test summarization quality with various conversation types and verify metadata tagging improves context retrieval accuracy.
+
+## 5. Implement user preference tracking and comprehensive testing [done]
+### Dependencies: 6.1, 6.2, 6.3, 6.4
+### Description: Add functionality to track and incorporate user preferences into context management and create comprehensive tests for the entire system.
+### Details:
+1. Extend the context model to include user preference data.
+2. Implement mechanisms to extract and store user preferences from conversations.
+3. Create functionality to prioritize context based on user preferences.
+4. Develop a system to apply user preferences across different conversations.
+5. Create comprehensive end-to-end tests covering all context management functionality.
+6. Implement performance testing for large context operations.
+7. Add stress tests for concurrent context operations and cache invalidation.
+8. Create a test suite that validates context retention across system restarts and cache failures.
+9. Testing approach: Develop automated test scenarios that simulate real user conversation patterns and verify context is maintained appropriately.
+
+## 6. Implement Test Infrastructure for Agent Components [done]
+### Dependencies: 3.7
+### Description: Extend the test infrastructure to support integration tests for agent components, building on the foundation created for the orchestrator component.
+### Details:
+This subtask extends the test infrastructure to support integration tests for agent components, building on the foundation created for the orchestrator component.
+
+Tasks to complete:
+1. Extend the test configuration module to support agent component testing
+2. Create mock implementations of agent-specific dependencies
+3. Implement test fixtures for common agent test scenarios
+4. Ensure all agent component integration tests pass
+
+Implementation details:
+1. Extend the `test_config.py` module with functions for setting up agent-specific test dependencies
+2. Create mock implementations for agent-specific external services:
+   ```python
+   class MockDocumentationService:
+       async def search_documents(self, query, filters=None):
+           # Return predefined search results for testing
+           return [
+               {"title": "Test Document 1", "content": "This is test content 1", "relevance": 0.9},
+               {"title": "Test Document 2", "content": "This is test content 2", "relevance": 0.8}
+           ]
+   
+   class MockTroubleshootingService:
+       async def diagnose_issue(self, symptoms, context=None):
+           # Return predefined diagnosis for testing
+           return {
+               "issue": "Test Issue",
+               "confidence": 0.85,
+               "recommendations": ["Test Recommendation 1", "Test Recommendation 2"]
+           }
+   
+   class MockMaintenanceService:
+       async def generate_procedure(self, task, aircraft_type, context=None):
+           # Return predefined procedure for testing
+           return {
+               "title": "Test Procedure",
+               "steps": ["Step 1", "Step 2", "Step 3"],
+               "tools_required": ["Tool 1", "Tool 2"]
+           }
+   ```
+3. Create test fixtures for common agent test scenarios:
+   ```python
+   @pytest.fixture
+   def mock_documentation_agent():
+       # Create a mock documentation agent for testing
+       agent = DocumentationAgent(
+           llm_service=MockLLMService(),
+           document_service=MockDocumentationService()
+       )
+       return agent
+   
+   @pytest.fixture
+   def mock_troubleshooting_agent():
+       # Create a mock troubleshooting agent for testing
+       agent = TroubleshootingAgent(
+           llm_service=MockLLMService(),
+           troubleshooting_service=MockTroubleshootingService()
+       )
+       return agent
+   
+   @pytest.fixture
+   def mock_maintenance_agent():
+       # Create a mock maintenance agent for testing
+       agent = MaintenanceAgent(
+           llm_service=MockLLMService(),
+           maintenance_service=MockMaintenanceService()
+       )
+       return agent
+   ```
+4. Update integration tests to use the mocks and fixtures
+
+This subtask builds on the test infrastructure created for the orchestrator component and extends it to support agent component testing. It will ensure that all agent component integration tests pass and provide a solid foundation for future test infrastructure improvements.
+
+## 7. Implement End-to-End Tests for Context Management and Agent Components [done]
+### Dependencies: None
+### Description: Develop comprehensive end-to-end tests to verify that the context management system and agent components function correctly together, ensuring seamless workflows from context handling to agent responses.
+### Details:
+This subtask focuses on creating comprehensive end-to-end tests that verify the entire system works together correctly, from context management to agent responses.
+
+Tasks to complete:
+1. Design test scenarios that cover the full workflow from context creation to agent response
+2. Implement automated end-to-end tests for these scenarios
+3. Create tests for error handling and edge cases
+4. Ensure tests are integrated into the CI/CD pipeline
+
+Implementation details:
+1. Create test scenarios that simulate real user interactions:
+   - Creating a new conversation and adding messages
+   - Retrieving context for an existing conversation
+   - Processing context through different agent types
+   - Handling context window management during long conversations
+   - Testing context summarization and pruning
+
+2. Implement end-to-end tests using pytest:
+   ```python
+   @pytest.mark.asyncio
+   async def test_full_conversation_workflow():
+       # Set up test environment
+       conversation_repo = ConversationRepository()
+       context_service = ContextService()
+       agent_factory = AgentFactory()
+       
+       # Create a new conversation
+       conversation = conversation_repo.create(user_id=1, title="Test Conversation")
+       
+       # Add messages to the conversation
+       system_message = conversation_repo.add_message(
+           conversation_id=conversation.id,
+           role=MessageRole.SYSTEM,
+           content="You are a helpful assistant."
+       )
+       
+       user_message = conversation_repo.add_message(
+           conversation_id=conversation.id,
+           role=MessageRole.USER,
+           content="I need information about Boeing 737 maintenance."
+       )
+       
+       # Get context for the conversation
+       context = conversation_repo.get_conversation_context(
+           conversation_id=conversation.id,
+           max_tokens=4000
+       )
+       
+       # Create an agent and process the query
+       agent = agent_factory.create_agent(AgentType.DOCUMENTATION)
+       result = await agent.process_query(
+           query="Tell me about landing gear maintenance",
+           conversation_id=conversation.id,
+           context={"conversation_history": context}
+       )
+       
+       # Verify the result
+       assert "response" in result
+       assert "sources" in result
+       assert len(result["sources"]) > 0
+   ```
+
+3. Create tests for error handling and edge cases:
+   - Test with invalid conversation IDs
+   - Test with empty context
+   - Test with context exceeding token limits
+   - Test with malformed messages
+
+4. Ensure tests are integrated into the CI/CD pipeline:
+   - Configure pytest to run end-to-end tests separately from unit tests
+   - Set up test data fixtures for consistent testing
+   - Implement proper cleanup after tests
+
+This subtask will ensure that all components of the context management system and agent components work together correctly, providing a solid foundation for the MAGPIE platform.
+

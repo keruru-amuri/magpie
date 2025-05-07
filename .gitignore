@@ -79,12 +79,15 @@ $RECYCLE.BIN/
 .docker/
 
 # Task files
-tasks.json
-tasks/
+# tasks.json
+# tasks/
+
+# Scripts folder (commented out to include in git)
+# scripts/
 
 # Local development
 docker-compose.override.yml
-.env.local
+# .env.local (commented out to include in git)
 .env.development.local
 .env.test.local
 .env.production.local

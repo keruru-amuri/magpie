@@ -1,0 +1,489 @@
+# Task ID: 16
+# Title: Develop MAGPIE Platform Frontend with Agent Interface
+# Status: done
+# Dependencies: 13
+# Priority: medium
+# Description: Create a responsive frontend for the MAGPIE platform that provides a unified interface for interacting with the three specialized agents through an orchestrator, including user authentication, conversation history, and visualization features.
+# Details:
+Develop a comprehensive frontend for the MAGPIE platform using Next.js with TypeScript. The implementation should include:
+
+1. Project Setup:
+   - Initialize a Next.js TypeScript project with proper folder structure following App Router conventions
+   - Configure linting and code formatting
+   - Set up Tailwind CSS for styling with Headless UI for accessible components and Heroicons
+   - Utilize Next.js built-in routing capabilities
+
+2. UI Components:
+   - Create a main dashboard with unified orchestrator interface
+   - Design conversation interface that intelligently routes queries to appropriate specialized agents
+   - Implement responsive layouts for desktop and mobile devices
+   - Create a navigation system between different platform sections
+   - Design and implement a user profile and settings page
+
+3. Backend API Integration:
+   - Implement API service layer for communication with backend
+   - Create data models for agent responses and conversations
+   - Set up WebSocket connections for real-time agent responses if needed
+   - Implement error handling and loading states
+
+4. Authentication System:
+   - Create login and registration forms
+   - Implement JWT token management
+   - Add protected routes for authenticated users
+   - Implement password reset functionality
+   - Add session management and timeout handling
+
+5. Agent-Specific Visualizations:
+   - Technical Documentation Assistant: Document tree visualization and code snippet formatting
+   - Troubleshooting Advisor: Decision tree or flowchart visualization for troubleshooting steps
+   - Maintenance Procedure Generator: Step-by-step procedure visualization with optional checklist functionality
+   - Orchestrator: Unified visualization that adapts based on the agent handling the query
+
+6. Conversation History:
+   - Implement persistent storage of conversation history
+   - Create UI for browsing and searching past conversations
+   - Add functionality to continue previous conversations
+
+The frontend should follow accessibility guidelines (WCAG 2.1) and implement proper state management using Context API or Redux. The project has been renamed from 'frontend' to 'frontend-old', and a new Next.js project has been created.
+
+# Test Strategy:
+Testing should be comprehensive and include:
+
+1. Unit Testing:
+   - Test all UI components using React Testing Library
+   - Verify component rendering and state management
+   - Test utility functions and hooks
+   - Ensure proper error handling in API service layer
+
+2. Integration Testing:
+   - Test authentication flow from login to protected routes
+   - Verify API integration with mock services
+   - Test conversation flow with orchestrator and each agent type
+   - Validate state persistence between page navigations
+
+3. End-to-End Testing:
+   - Use Cypress or Playwright to test complete user journeys
+   - Test responsive design across multiple viewport sizes
+   - Verify authentication flows with actual backend integration
+   - Test visualization rendering with sample agent responses
+   - Test orchestrator query routing to appropriate specialized agents
+
+4. Accessibility Testing:
+   - Run automated accessibility tests using axe or similar tools
+   - Perform keyboard navigation testing
+   - Verify screen reader compatibility
+   - Test Headless UI components for accessibility compliance
+
+5. Performance Testing:
+   - Measure and optimize initial load time
+   - Test rendering performance with large conversation histories
+   - Verify smooth animations and transitions
+   - Test Next.js-specific optimizations like Server Components and image optimization
+
+6. Cross-browser Testing:
+   - Verify functionality in Chrome, Firefox, Safari, and Edge
+   - Test on iOS and Android mobile browsers
+
+All tests should be automated where possible and integrated into the CI/CD pipeline.
+
+# Subtasks:
+## 1. Set up React TypeScript project and implement basic UI structure [done]
+### Dependencies: None
+### Description: Initialize the React TypeScript project, configure build tools, set up the CSS framework, and implement the basic application shell with routing.
+### Details:
+Implementation details:
+1. Create a new React TypeScript project using Create React App or Vite with TypeScript template
+2. Configure ESLint and Prettier for code quality
+3. Set up Tailwind CSS or Material UI for styling
+4. Create the folder structure following best practices:
+   - src/
+     - components/ (shared UI components)
+     - pages/ (route-specific components)
+     - hooks/ (custom hooks)
+     - services/ (API calls)
+     - utils/ (utility functions)
+     - context/ (React Context)
+     - types/ (TypeScript types/interfaces)
+     - assets/ (images, icons, etc.)
+5. Configure React Router with basic routes:
+   - Home/Dashboard
+   - Login/Register
+   - Agent interaction pages
+   - User profile
+   - Settings
+6. Implement a responsive application shell with:
+   - Header with navigation
+   - Sidebar for desktop view
+   - Bottom navigation for mobile view
+   - Main content area
+7. Create placeholder pages for each route
+
+Testing approach:
+- Unit tests for routing configuration
+- Snapshot tests for basic layout components
+- Responsive design testing across different viewport sizes
+- Accessibility testing using axe-core or similar tools
+<info added on 2025-05-06T12:59:35.994Z>
+Implementation details:
+1. Initialized Next.js project with TypeScript template
+2. Configured ESLint with Next.js-specific rules and Prettier integration
+3. Set up Tailwind CSS with custom theme configuration
+4. Implemented App Router structure:
+   - app/
+     - (main)/
+       - layout.tsx (root layout with header/footer)
+       - page.tsx (home/dashboard)
+     - auth/
+       - login/page.tsx
+       - register/page.tsx
+     - agents/
+       - [agentId]/page.tsx
+     - profile/page.tsx
+     - settings/page.tsx
+5. Component architecture:
+   - components/
+     - layout/ (Header, Footer, LayoutWrapper)
+     - ui/ (Button, Card, Input)
+     - chat/ (ChatInterface, MessageBubble, TypingIndicator)
+     - orchestrator/ (AgentIndicator, AgentRouter)
+6. Implemented responsive layout system with:
+   - Mobile-first breakpoints
+   - Dynamic sidebar navigation
+   - Viewport-aware chat interface
+7. Created mock agent routing system with:
+   - Query-based agent selection
+   - Mock API endpoints
+   - Type-safe agent response typing
+
+Testing approach:
+- Next.js routing integration tests
+- Component snapshot testing with Jest
+- Responsive design verification using Chromatic
+- Chat interface interaction tests with Testing Library
+- Accessibility audits using axe-core
+
+<update type="progress" timestamp="2025-05-06T12:59:27Z">
+Implemented unified chat interface demonstrating orchestrator-first architecture with mock agent routing based on user queries. Established core UI components following atomic design principles while maintaining Next.js App Router conventions.
+</update>
+</info added on 2025-05-06T12:59:35.994Z>
+
+## 2. Implement authentication system and user management [done]
+### Dependencies: 16.1
+### Description: Create the authentication flow including login, registration, password reset, and protected routes with JWT token management.
+### Details:
+Implementation details:
+1. Create authentication context using React Context API to manage auth state globally
+2. Implement JWT token storage and management:
+   - Store tokens securely in localStorage or HTTP-only cookies
+   - Set up automatic token refresh mechanism
+   - Handle token expiration
+3. Create authentication-related components:
+   - Login form with validation
+   - Registration form with validation
+   - Password reset request form
+   - Password reset confirmation form
+4. Implement protected route HOC or component to restrict access to authenticated routes
+5. Create user profile page with:
+   - Display user information
+   - Edit profile functionality
+   - Change password option
+6. Implement session management:
+   - Timeout detection for inactive users
+   - Automatic logout functionality
+   - Session persistence across page refreshes
+7. Add loading and error states for all authentication operations
+
+Testing approach:
+- Unit tests for authentication context and token management
+- Component tests for forms including validation
+- Integration tests for the complete authentication flow
+- Test protected routes to ensure proper access control
+- Test error handling for authentication failures
+<info added on 2025-05-06T13:01:36.197Z>
+Implementation details:
+1. Create authentication context using React Context API to manage auth state globally
+2. Implement JWT token storage and management:
+   - Store tokens securely in HTTP-only cookies (preferred) or localStorage with encryption
+   - Set up automatic token refresh using Next.js API routes
+   - Handle token expiration through Next.js middleware
+3. Create authentication components:
+   - Login/Registration forms with Formik/Yup validation
+   - Password reset flow with email verification
+   - Protected route wrapper using Next.js middleware
+4. Next.js specific implementations:
+   - Use Next.js middleware for route protection and role-based access
+   - Implement authentication endpoints via Next.js API routes (/api/auth/*)
+   - Session management using NextAuth.js with JWT strategy
+   - Server-side session validation for protected pages
+5. User profile management:
+   - CSR components for profile editing/password changes
+   - SSR user data loading via getServerSideProps
+   - Secure API calls with Axios interceptors
+6. Enhanced security measures:
+   - CSRF protection for authentication endpoints
+   - Rate limiting on auth API routes
+   - Secure cookie configuration (SameSite, HttpOnly)
+7. NextAuth.js integration options:
+   - Configure providers (credentials, OAuth)
+   - Custom JWT callbacks for token management
+   - Session persistence strategies
+8. Error handling:
+   - Global error boundaries for auth components
+   - API route error standardization
+   - Toast notifications for auth failures
+
+Testing approach:
+- Unit tests for Next.js API routes
+- Middleware behavior tests
+- Cypress E2E tests for auth flows
+- Security tests for cookie/token handling
+- NextAuth.js configuration tests
+
+<update type="enhancement" timestamp="2025-05-06T13:01:27Z">
+Added Next.js specific authentication patterns including middleware route protection, API route implementation, and NextAuth.js integration strategies. Updated token storage recommendations to prioritize HTTP-only cookies and added server-side session validation patterns.
+</update>
+</info added on 2025-05-06T13:01:36.197Z>
+
+## 3. Develop orchestrator interface and unified dashboard [done]
+### Dependencies: 16.1, 16.2
+### Description: Create the main dashboard and unified UI components for interacting with the orchestrator that intelligently routes queries to the appropriate specialized agents.
+### Details:
+Implementation details:
+1. Design and implement the main dashboard with unified orchestrator interface:
+   - Single conversation entry point that routes to appropriate agents
+   - Recent conversations section
+   - Quick action buttons
+   - Usage statistics or metrics
+2. Create shared conversation components:
+   - Chat message component (user and agent messages)
+   - Message input area with support for text, code, and potentially file uploads
+   - Typing indicator for agent responses
+   - Message timestamp and status indicators
+   - Agent type indicator showing which specialized agent is responding
+3. Implement orchestrator intelligence UI elements:
+   - Query intent detection feedback
+   - Seamless transition between different agent types in the same conversation
+   - Context-aware suggestions based on conversation history
+   - Confidence indicators for agent selection
+4. Create responsive layouts for all interfaces using Tailwind CSS
+5. Implement keyboard shortcuts for common actions
+6. Integrate Headless UI components for accessible UI elements
+7. Use Heroicons for consistent iconography throughout the application
+
+Testing approach:
+- Unit tests for individual components
+- Integration tests for component interaction
+- User interaction testing with mock data
+- Accessibility testing for all interactive elements
+- Responsive design testing
+<info added on 2025-05-06T12:59:56.987Z>
+Implementation details:
+1. Design and implement the main dashboard with unified orchestrator interface:
+   - Central chat interface with single input point for all queries
+   - Dynamic context panels that adapt content based on detected query type (code/text/file analysis)
+   - Agent indicator badges showing active specialist agent (e.g., 'Code Expert', 'Research Assistant')
+   - Confidence meter visualization for orchestrator's routing decisions
+   - Seamless conversation continuity when switching between agents
+
+2. Create intelligent conversation components:
+   - Context-aware message bubbles showing agent specialization
+   - Auto-expanding input area supporting markdown/code blocks/file uploads
+   - Real-time typing indicators with agent type identification
+   - Response quality indicators (confidence scores/accuracy estimates)
+   - Automated context summary generation between agent handoffs
+
+3. Implement orchestrator feedback UI:
+   - Visual query intent detection display
+   - Routing decision audit trail accessible via hover/click
+   - Multi-agent collaboration indicators when responses combine multiple specialists
+   - Context preservation controls during complex queries
+
+4. Build responsive layouts using Tailwind CSS:
+   - Priority+ pattern for critical interface elements
+   - Dynamic sidebar that transforms based on active agent type
+   - Mobile-optimized conversation flow
+   - Keyboard-navigable interface with shortcut overlays
+
+5. Integrate UI libraries:
+   - Headless UI for accessible dropdowns/modals
+   - Heroicons v2 for consistent interface icons
+   - Custom agent-type color coding system
+   - Animated transition between agent responses
+
+Testing approach:
+- Agent routing simulation tests with mock query types
+- Context preservation validation across agent switches
+- Confidence indicator accuracy testing against known queries
+- Cross-device responsive behavior verification
+- Screen reader compatibility audits for all dynamic elements
+
+<update reason="orchestrator-first approach" timestamp="2025-05-06T12:59:48Z">
+Added dynamic context panels, confidence visualization, and agent specialization indicators. Removed explicit agent selection requirements. Enhanced details on context preservation and multi-agent collaboration UI elements.
+</update>
+</info added on 2025-05-06T12:59:56.987Z>
+
+## 4. Implement API service layer and backend integration [done]
+### Dependencies: 16.2, 16.3
+### Description: Create services for communicating with the backend API, handle data fetching, WebSocket connections, and implement proper error handling and loading states.
+### Details:
+Implementation details:
+1. Create API service modules for different endpoints:
+   - Authentication service (login, register, etc.)
+   - User service (profile, settings)
+   - Agent service (conversation, history)
+   - Orchestrator service (query routing, agent selection)
+2. Implement data models/interfaces for:
+   - User data
+   - Agent responses
+   - Conversation history
+   - Application settings
+   - Orchestrator metadata
+3. Set up Axios or Fetch API with:
+   - Base configuration
+   - Request/response interceptors
+   - Authentication header injection
+   - Error handling
+4. Implement WebSocket connection for real-time agent responses:
+   - Connection management
+   - Message handling
+   - Reconnection logic
+5. Create custom hooks for data fetching:
+   - useOrchestrator hook for unified agent interactions
+   - useConversation hook for managing conversation state
+   - useUser hook for user data
+6. Implement loading and error states:
+   - Loading indicators/skeletons
+   - Error messages and retry mechanisms
+   - Offline detection and handling
+7. Add request caching where appropriate
+8. Utilize Next.js data fetching methods where applicable
+
+Testing approach:
+- Unit tests for API services with mocked responses
+- Tests for WebSocket connection handling
+- Integration tests with mock server
+- Test error handling and recovery
+- Test loading state management
+
+## 5. Develop agent-specific visualizations and conversation history management [done]
+### Dependencies: 16.3, 16.4
+### Description: Implement specialized visualizations for each agent type, unified orchestrator visualizations, and create a system for storing, displaying, and managing conversation history.
+### Details:
+Implementation details:
+1. Implement Technical Documentation Assistant visualizations:
+   - Document tree visualization component
+   - Code snippet formatter with syntax highlighting
+   - Documentation section navigator
+   - Search result highlighter
+2. Create Troubleshooting Advisor visualizations:
+   - Interactive decision tree/flowchart for troubleshooting steps
+   - Problem-solution relationship diagrams
+   - System component visualizer
+   - Status indicators for resolved/unresolved issues
+3. Develop Maintenance Procedure Generator visualizations:
+   - Step-by-step procedure cards with expandable details
+   - Interactive checklist with completion tracking
+   - Equipment diagram with highlighted components
+   - Timeline visualization for maintenance schedule
+4. Implement unified orchestrator visualizations:
+   - Adaptive display that changes based on the active agent
+   - Smooth transitions between visualization types
+   - Context retention when switching between agent types
+   - Multi-agent response visualization for complex queries
+5. Implement conversation history management:
+   - Local storage for recent conversations
+   - API integration for retrieving past conversations
+   - Search functionality for finding specific conversations
+   - Filtering options (by date, detected intent, agent type, etc.)
+6. Create conversation continuation functionality:
+   - Resume button on past conversations
+   - Context restoration when continuing a conversation
+   - Option to fork a new conversation from an existing one
+7. Implement export/share functionality for conversations and generated content
+
+Testing approach:
+- Unit tests for visualization components
+- Integration tests for conversation history management
+- Performance testing for rendering large conversation histories
+- Visual regression tests for visualizations
+- End-to-end tests for the complete conversation flow including history
+- Test orchestrator visualization transitions
+
+## 6. Migrate from frontend-old to Next.js App Router structure [done]
+### Dependencies: 16.1
+### Description: Migrate the existing frontend codebase to the new Next.js project with App Router conventions and implement TypeScript best practices.
+### Details:
+Implementation details:
+1. Set up the new Next.js project structure following App Router conventions:
+   - app/ (for App Router pages and layouts)
+   - components/ (for shared UI components)
+   - lib/ (for utility functions and hooks)
+   - public/ (for static assets)
+   - styles/ (for global styles)
+2. Implement TypeScript best practices:
+   - Enable strict mode in tsconfig.json
+   - Create proper type annotations for props and state
+   - Use TypeScript utility types where appropriate
+   - Avoid using 'any' type
+   - Implement error handling with custom types
+3. Configure Next.js specific features:
+   - Set up Server Components and Client Components appropriately
+   - Configure image optimization with next/image
+   - Implement metadata for SEO
+   - Set up API routes in the app/api directory
+4. Migrate components from frontend-old:
+   - Refactor class components to functional components with hooks
+   - Update routing to use Next.js App Router
+   - Adapt state management to the new architecture
+5. Implement Tailwind CSS with Headless UI:
+   - Configure Tailwind with appropriate plugins
+   - Set up theme customization
+   - Integrate Headless UI components
+   - Add Heroicons library
+
+Testing approach:
+- Unit tests for migrated components
+- Integration tests for new Next.js specific features
+- Visual regression tests to ensure UI consistency
+- Performance testing before and after migration
+- Accessibility testing with the new component library
+
+## 7. Migrate from frontend-old to Next.js App Router structure [done]
+### Dependencies: 16.1
+### Description: Migrate the existing frontend codebase to the new Next.js project with App Router conventions and implement TypeScript best practices.
+### Details:
+Implementation details:
+1. Set up the new Next.js project structure following App Router conventions:
+   - app/ (for App Router pages and layouts)
+   - components/ (for shared UI components)
+   - lib/ (for utility functions and hooks)
+   - public/ (for static assets)
+   - styles/ (for global styles)
+2. Implement TypeScript best practices:
+   - Enable strict mode in tsconfig.json
+   - Create proper type annotations for props and state
+   - Use TypeScript utility types where appropriate
+   - Avoid using 'any' type
+   - Implement error handling with custom types
+3. Configure Next.js specific features:
+   - Set up Server Components and Client Components appropriately
+   - Configure image optimization with next/image
+   - Implement metadata for SEO
+   - Set up API routes in the app/api directory
+4. Migrate components from frontend-old:
+   - Refactor class components to functional components with hooks
+   - Update routing to use Next.js App Router
+   - Adapt state management to the new architecture
+5. Implement Tailwind CSS with Headless UI:
+   - Configure Tailwind with appropriate plugins
+   - Set up theme customization
+   - Integrate Headless UI components
+   - Add Heroicons library
+
+Testing approach:
+- Unit tests for migrated components
+- Integration tests for new Next.js specific features
+- Visual regression tests to ensure UI consistency
+- Performance testing before and after migration
+- Accessibility testing with the new component library
+

@@ -1,0 +1,54 @@
+# Task ID: 19
+# Title: Implement Real-Time WebSocket Communication Between Frontend and Backend
+# Status: in-progress
+# Dependencies: None
+# Priority: medium
+# Description: Develop a WebSocket server in the FastAPI backend to handle real-time chat messages, typing indicators, and agent responses, and update the Next.js frontend to use WebSockets for live communication instead of mock data.
+# Details:
+Set up a robust WebSocket server in the FastAPI backend, following best practices for connection management, authentication, and message broadcasting. Implement endpoints to support real-time chat messages, typing indicators, and agent responses, ensuring compatibility with the existing MAGPIE architecture. Use a connection manager to track active connections and broadcast messages as needed. Secure WebSocket connections using token-based authentication. On the frontend, refactor the chat and agent interaction components in Next.js to establish and manage WebSocket connections, handle incoming events, and update the UI in real time. Remove or replace mock data infrastructure with live WebSocket-driven data flows. Ensure the implementation is modular, maintainable, and well-documented for future extensibility.
+
+# Test Strategy:
+Verify backend WebSocket endpoints by simulating multiple concurrent clients and ensuring correct handling of chat messages, typing indicators, and agent responses. Test authentication and connection lifecycle (connect, disconnect, reconnect). On the frontend, confirm that chat and agent components update in real time in response to backend events, and that UI states (e.g., typing indicators) are synchronized across clients. Perform integration tests to ensure end-to-end real-time communication works as expected, and conduct regression tests to confirm no disruption to existing MAGPIE platform features.
+
+# Subtasks:
+## 1. Create WebSocket Connection Manager in FastAPI Backend [done]
+### Dependencies: None
+### Description: Implement a ConnectionManager class to handle WebSocket connections, including methods for connection acceptance, disconnection, and message broadcasting.
+### Details:
+Develop a robust ConnectionManager class that maintains a list of active WebSocket connections. Implement methods for connecting new clients, disconnecting existing ones, and broadcasting messages to all connected clients. This component will serve as the foundation for the WebSocket server implementation.
+
+## 2. Implement Secure WebSocket Endpoints with Authentication [done]
+### Dependencies: 19.1
+### Description: Create WebSocket endpoints in FastAPI for chat messages, typing indicators, and agent responses with token-based authentication.
+### Details:
+Develop WebSocket endpoints that utilize the ConnectionManager. Implement token-based authentication using FastAPI's dependency injection system to secure connections. Create separate endpoints or message types for different functionalities: chat messages, typing indicators, and agent responses. Ensure proper error handling for authentication failures and connection issues.
+
+## 3. Develop WebSocket Client in Next.js Frontend [done]
+### Dependencies: 19.2
+### Description: Create a WebSocket client service in the Next.js frontend to establish and manage connections to the backend WebSocket server.
+### Details:
+Implement a WebSocket client service that handles connection establishment, reconnection logic, message sending, and event listening. Include authentication token handling to secure the connection. Create methods for sending different types of messages (chat messages, typing indicators) and handling incoming messages from the server.
+
+## 4. Refactor UI Components to Use WebSocket Data [done]
+### Dependencies: 19.3
+### Description: Update chat and agent interaction components to consume real-time data from WebSocket connections instead of mock data.
+### Details:
+Refactor existing UI components to subscribe to WebSocket events and update their state accordingly. Replace static or mock data sources with dynamic WebSocket-driven data flows. Implement UI updates for incoming messages, typing indicators, and agent responses. Ensure smooth transitions and proper error handling for connection issues.
+
+## 5. Integrate WebSocket System with MAGPIE Architecture [pending]
+### Dependencies: 19.2, 19.4
+### Description: Ensure the WebSocket implementation integrates properly with the existing MAGPIE architecture and document the system for future extensibility.
+### Details:
+Integrate the WebSocket server with the existing MAGPIE backend architecture, ensuring compatibility with current authentication systems and data models. Create comprehensive documentation covering the WebSocket implementation, including connection flow, message formats, authentication requirements, and error handling. Implement logging for WebSocket events to facilitate debugging and monitoring.
+
+## 6. Fix Backend Compatibility Issues for WebSocket Implementation [done]
+### Dependencies: None
+### Description: Resolve compatibility issues with the backend server that are preventing it from starting properly. This includes fixing the OpenAI client initialization error and ensuring the WebSocket endpoints can be properly registered.
+### Details:
+The backend server is failing to start due to an error in the OpenAI client initialization: 'TypeError: Client.__init__() got an unexpected keyword argument 'proxies''. This is likely due to a version mismatch or configuration issue with the OpenAI library. We need to:
+
+1. Investigate the error in app/services/azure_openai.py
+2. Update the OpenAI client initialization to be compatible with the current version
+3. Ensure the WebSocket endpoints are properly registered
+4. Test the backend server to make sure it starts correctly
+

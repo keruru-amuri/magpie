@@ -1,0 +1,484 @@
+# Task ID: 3
+# Title: Implement authentication and authorization system
+# Status: done
+# Dependencies: 2
+# Priority: high
+# Description: Create a secure authentication system with role-based access control for different user types in the MRO organization.
+# Details:
+Implement JWT-based authentication. Create user registration and login endpoints. Set up role-based access control for different user types (technicians, engineers, managers). Implement password hashing using bcrypt. Create middleware for validating authentication tokens. Set up refresh token mechanism. Implement API key authentication for service-to-service communication. Add rate limiting for API endpoints. Create user profile management endpoints.
+
+# Test Strategy:
+Test authentication flow with valid and invalid credentials. Verify token validation and expiration. Test access control for different user roles. Ensure secure password storage. Test rate limiting functionality.
+
+# Subtasks:
+## 1. Implement User Registration and Secure Password Handling [done]
+### Dependencies: None
+### Description: Create user registration endpoints with secure password handling using bcrypt for hashing and validation
+### Details:
+Implementation details:
+1. Create a user schema/model with fields for username, email, password (hashed), roles, and profile information
+2. Implement password hashing using bcrypt with appropriate salt rounds
+3. Create a user registration endpoint that validates input data, hashes passwords, and stores user information
+4. Implement email validation logic to ensure unique and valid email addresses
+5. Add password strength validation requirements (min length, complexity)
+6. Create error handling for duplicate users and invalid registration attempts
+7. Testing approach: Write unit tests for password hashing functions and integration tests for the registration endpoint with valid and invalid data
+
+## 2. Implement JWT Authentication and Login System [done]
+### Dependencies: 3.1
+### Description: Create login endpoints that authenticate users and issue JWT tokens for session management
+### Details:
+Implementation details:
+1. Implement a login endpoint that validates credentials against stored hashed passwords
+2. Create JWT token generation logic with appropriate payload (user ID, roles)
+3. Set up token expiration and JWT signing with secure keys
+4. Implement refresh token mechanism for extending sessions
+5. Create middleware for validating authentication tokens on protected routes
+6. Implement logout functionality to invalidate tokens
+7. Add secure cookie handling for token storage if needed
+8. Testing approach: Write integration tests for login flows, token validation, and refresh token mechanisms
+
+## 3. Implement Role-Based Access Control System [done]
+### Dependencies: 3.2
+### Description: Create a role-based authorization system to control access to different parts of the application based on user roles
+### Details:
+Implementation details:
+1. Define role hierarchy and permissions for different user types (technicians, engineers, managers)
+2. Create authorization middleware that validates user roles against required permissions
+3. Implement role assignment during user creation and role management endpoints
+4. Create helper functions to check permissions in controllers
+5. Add role validation to existing endpoints
+6. Implement route protection based on roles
+7. Testing approach: Write unit tests for permission checking logic and integration tests that verify different roles can access appropriate endpoints
+
+## 4. Implement User Profile Management and API Security [done]
+### Dependencies: 3.2, 3.3
+### Description: Create endpoints for user profile management and implement additional API security measures
+### Details:
+Implementation details:
+1. Create endpoints for viewing and updating user profiles
+2. Implement API key authentication for service-to-service communication
+3. Add rate limiting middleware for API endpoints to prevent abuse
+4. Implement request validation middleware
+5. Create password reset functionality with secure tokens
+6. Add audit logging for authentication events
+7. Implement account lockout after failed login attempts
+8. Testing approach: Write integration tests for profile management endpoints and security measures
+
+## 5. Create Comprehensive Authentication Test Suite [done]
+### Dependencies: 3.1, 3.2, 3.3, 3.4
+### Description: Develop end-to-end testing for the entire authentication system and security audit
+### Details:
+Implementation details:
+1. Create end-to-end tests covering the full authentication flow
+2. Implement security testing for common vulnerabilities (CSRF, XSS, injection)
+3. Create performance tests for authentication endpoints
+4. Set up CI pipeline for security testing
+5. Document the authentication system with API examples
+6. Perform token security validation
+7. Create test cases for edge cases and error scenarios
+8. Testing approach: Use a combination of automated tests, security scanning tools, and manual testing of critical flows
+
+## 6. Fix Authentication Test Infrastructure [done]
+### Dependencies: None
+### Description: Fix the test infrastructure for authentication and authorization tests. This includes setting up proper database mocking, configuring Redis for the test environment, and ensuring all integration tests pass.
+### Details:
+This subtask addresses the issues with the integration tests for the authentication and authorization system. The current implementation has passing unit tests but failing integration tests due to infrastructure issues.
+
+Tasks to complete:
+1. Fix the database setup in the test environment
+2. Configure Redis for the test environment or create a mock Redis implementation
+3. Set up proper mock data for testing
+4. Ensure all integration tests pass
+
+The main issues to address are:
+- Redis connection errors in the test environment
+- Database setup and configuration
+- Mock data for testing
+
+This subtask is necessary to ensure the authentication and authorization system is fully tested and working correctly.
+<info added on 2025-05-04T12:38:36.121Z>
+This subtask addresses the issues with the integration tests for the authentication and authorization system by implementing in-memory solutions for external dependencies. The current implementation will be modified to use self-contained test environments.
+
+Key updates:
+1. **SQLite In-Memory Database**: Configure Django test settings to use SQLite in-memory database for all database operations, replacing production database configurations during testing
+2. **In-Memory Redis Mock**: Implement a lightweight Redis mock using Python's built-in dict or libraries like fakeredis for caching tests, eliminating external Redis dependencies
+3. **Dependency Mocking Strategy**:
+   - Use unittest.mock.patch for external API calls
+   - Create service layer mocks for third-party authentication providers
+   - Implement in-memory email backend for verification testing
+4. **Test Environment Isolation**:
+   - Ensure complete environment separation using pytest fixtures
+   - Implement automatic cleanup of in-memory stores between tests
+   - Configure test doubles for all external services
+
+Required changes to existing tests:
+- Update test cases to use in-memory database backend
+- Replace Redis client references with mock implementations
+- Modify integration tests to verify behavior against mocked services
+- Add cleanup routines to ensure test independence
+</info added on 2025-05-04T12:38:36.121Z>
+
+## 7. Implement Test Infrastructure for Orchestrator Component [done]
+### Dependencies: None
+### Description: Create the necessary test infrastructure to support integration tests for the orchestrator component, focusing on database mocking, external service mocking, and repository interface consistency.
+### Details:
+This subtask addresses the critical test infrastructure needs for the orchestrator component integration tests. The current implementation has passing unit tests but failing integration tests due to infrastructure issues.
+
+Tasks to complete:
+1. Create a test configuration module that sets up all necessary mocks and test databases
+2. Implement in-memory database setup for tests using SQLite
+3. Create a mock LLM service for Azure OpenAI API calls
+4. Fix repository interfaces to ensure consistency (e.g., add missing methods like `delete_conversation`)
+5. Update integration tests to use the mocks
+6. Ensure all orchestrator integration tests pass
+
+Implementation details:
+1. Create a `test_config.py` module with functions for setting up test dependencies
+2. Implement an in-memory SQLite database for testing:
+   ```python
+   # Create an in-memory SQLite database for testing
+   TEST_DATABASE_URL = "sqlite:///:memory:"
+   test_engine = create_engine(TEST_DATABASE_URL)
+   TestSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=test_engine)
+   ```
+3. Create a mock LLM service for Azure OpenAI:
+   ```python
+   class MockLLMService:
+       async def generate_chat_completion(self, messages, model=None, temperature=None, max_tokens=None):
+           # Return a predefined response for testing
+           return {
+               "choices": [
+                   {
+                       "message": {
+                           "role": "assistant",
+                           "content": "This is a mock response for testing"
+                       }
+                   }
+               ]
+           }
+       
+       async def classify_request(self, query, options):
+           # Return a predefined classification for testing
+           return {
+               "agent_type": "documentation",
+               "confidence": 0.9,
+               "reasoning": "This is a mock classification for testing"
+           }
+   ```
+4. Update the ConversationRepository to include missing methods:
+   ```python
+   def delete_conversation(self, conversation_id: str) -> bool:
+       """
+       Delete a conversation and all its messages.
+       
+       Args:
+           conversation_id: Conversation ID
+           
+       Returns:
+           bool: True if the conversation was deleted, False if not found
+       """
+       # Implementation here
+   ```
+5. Create test fixtures for common test scenarios
+6. Update integration tests to use the mocks and fixtures
+
+This subtask is focused on the critical infrastructure needed to make the orchestrator integration tests pass. It will provide a foundation for future test infrastructure improvements.
+<info added on 2025-05-04T14:07:33.729Z>
+This subtask addresses the critical test infrastructure needs for the orchestrator component integration tests. The current implementation has passing unit tests but failing integration tests due to infrastructure issues.
+
+**Current Progress**
+1. Implemented test configuration module (conftest_orchestrator.py) with:
+   - Mock LLM service with predefined responses
+   - Agent repository mock
+   - Conversation repository mock
+   - Orchestrator test configuration
+2. Added missing `delete_conversation` method to ConversationRepository
+3. Updated integration tests to use mock implementations
+
+**Immediate Next Steps**
+1. **Async Fixture Resolution**
+   - Implement proper async session handling
+   - Ensure database connection persistence across test phases
+   - Add async context managers for test transactions
+
+2. **SQLite In-Memory Optimization**
+   - Configure connection pooling for SQLite in-memory DB
+   - Implement schema migration between test runs
+   - Add automatic rollback after each test
+
+3. **Test Infrastructure Enhancements**
+   - Create transaction-aware test fixtures
+   - Implement automatic mock verification
+   - Add integration test coverage metrics
+
+**Implementation Details**
+```python
+# Example async fixture implementation
+@pytest.fixture
+def async_session_factory():
+    engine = create_async_engine('sqlite+aiosqlite:///:memory:')
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    return sessionmaker(engine, class_=AsyncSession)
+
+# Mock LLM service enhancement
+class EnhancedMockLLMService(MockLLMService):
+    def __init__(self):
+        self.call_log = []
+        
+    async def generate_chat_completion(self, *args, **kwargs):
+        self.call_log.append(('generate', args, kwargs))
+        return await super().generate_chat_completion(*args, **kwargs)
+```
+
+**Remaining Challenges**
+- Database connection persistence between test setup/execution phases
+- Async session management in parameterized tests
+- Mock state reset between test cases
+
+**Test Coverage Targets**
+- 100% repository layer coverage
+- 90% service layer coverage
+- 80% API endpoint coverage
+</info added on 2025-05-04T14:07:33.729Z>
+<info added on 2025-05-04T14:07:58.720Z>
+**Current Implementation Status**
+
+**Completed Work**
+1. Test configuration module (conftest_orchestrator.py) operational with:
+   - Mock LLM service with predefined responses
+   - Agent repository mock
+   - Conversation repository mock
+   - Orchestrator test configuration
+2. Added missing `delete_conversation` method to ConversationRepository
+3. Updated integration tests to use mock implementations
+
+**Active Challenges**
+- Async session management in parameterized tests
+- Database connection persistence between test phases
+- Mock state reset between test cases
+
+**Immediate Next Steps**
+1. **Async Fixture Optimization**
+   - Implement async context managers for session handling
+   - Add transaction-aware test fixtures
+   - Fix coroutine handling in test client
+
+2. **SQLite In-Memory Configuration**
+   - Configure connection pooling with `sqlite+aiosqlite:///:memory:`
+   - Implement automatic schema migration between tests
+   - Add transaction rollback hooks
+
+3. **Test Infrastructure Enhancements**
+   - Create scenario-based test fixtures
+   - Implement mock verification system
+   - Add test coverage metrics
+
+**Implementation Blueprint**
+```python
+# Enhanced async session management
+@pytest.fixture(scope="module")
+async def async_session_factory():
+    engine = create_async_engine('sqlite+aiosqlite:///:memory:', poolclass=StaticPool)
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    return sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
+
+# Transaction-aware test fixture
+@pytest.fixture
+async def db_session(async_session_factory):
+    async with async_session_factory() as session:
+        async with session.begin():
+            yield session
+            await session.rollback()
+```
+
+**Test Coverage Targets**
+- Repository Layer: 100% CRUD operation coverage
+- Service Layer: 90% business logic coverage
+- API Layer: 80% endpoint validation coverage
+
+**Remaining Work Items**
+1. Implement automatic mock state reset
+2. Add integration test for concurrent operations
+3. Create failure scenario test cases
+4. Implement test performance metrics
+5. Add documentation for test infrastructure usage
+</info added on 2025-05-04T14:07:58.720Z>
+<info added on 2025-05-04T14:09:55.554Z>
+**Current Implementation Status**
+
+**Completed Work**
+1. Test configuration module (conftest_orchestrator.py) operational with:
+   - Mock LLM service with predefined responses
+   - Agent repository mock
+   - Conversation repository mock
+   - Orchestrator test configuration
+2. Added missing `delete_conversation` method to ConversationRepository
+3. Updated integration tests to use mock implementations
+
+**Active Challenges**
+- Async session management in parameterized tests
+- Database connection persistence between test phases
+- Mock state reset between test cases
+
+**Immediate Next Steps**
+1. **Async Fixture Optimization**
+   - Implement async context managers for session handling
+   - Add transaction-aware test fixtures
+   - Fix coroutine handling in test client
+
+2. **SQLite In-Memory Configuration**
+   - Configure connection pooling with `sqlite+aiosqlite:///:memory:`
+   - Implement automatic schema migration between tests
+   - Add transaction rollback hooks
+
+3. **Test Infrastructure Enhancements**
+   - Create scenario-based test fixtures
+   - Implement mock verification system
+   - Add test coverage metrics
+
+**Implementation Blueprint**
+```python
+# Enhanced async session management
+@pytest.fixture(scope="module")
+async def async_session_factory():
+    engine = create_async_engine('sqlite+aiosqlite:///:memory:', poolclass=StaticPool)
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    return sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
+
+# Transaction-aware test fixture
+@pytest.fixture
+async def db_session(async_session_factory):
+    async with async_session_factory() as session:
+        async with session.begin():
+            yield session
+            await session.rollback()
+```
+
+**Test Coverage Targets**
+- Repository Layer: 100% CRUD operation coverage
+- Service Layer: 90% business logic coverage
+- API Layer: 80% endpoint validation coverage
+
+**Remaining Work Items**
+1. Implement automatic mock state reset
+2. Add integration test for concurrent operations
+3. Create failure scenario test cases
+4. Implement test performance metrics
+5. Add documentation for test infrastructure usage
+
+<info added on 2025-05-04T14:07:58.720Z>
+**Recent Progress Update**
+- Successfully implemented mock LLM service with call logging capabilities
+- Added transaction-aware fixtures for database session management
+- Resolved basic async session handling through StaticPool configuration
+
+**Critical Path Items**
+1. **Connection Persistence**
+   - Implement shared connection pool for in-memory database
+   - Add session lifecycle management hooks
+   - Develop connection recycling strategy
+
+2. **Mock State Management**
+   - Create automatic reset mechanism between tests
+   - Implement call verification utilities
+   - Add mock expectation configuration
+
+3. **Test Reliability**
+   - Develop transaction rollback verification
+   - Add database state validation hooks
+   - Implement async test timeout handling
+
+**Enhanced Test Patterns**
+```python
+# Mock verification utility
+class MockVerifier:
+    def __init__(self, mock_service):
+        self.mock = mock_service
+        
+    def assert_called_once_with(self, method_name, *args, **kwargs):
+        # Implementation for verifying mock calls
+        pass
+
+# Failure scenario fixture
+@pytest.fixture
+def db_failure():
+    engine = create_async_engine('sqlite+aiosqlite:///:memory:', 
+                               connect_args={'timeout': 0.1})
+    return engine
+```
+
+**Quality Assurance Measures**
+- Implement test flakiness detection
+- Add performance benchmarking for critical paths
+- Develop test dependency visualization tools
+</info added on 2025-05-04T14:09:55.554Z>
+<info added on 2025-05-04T14:10:29.554Z>
+**Implementation Blueprint**
+
+**Database Mocking Configuration**
+1. **SQLite In-Memory Setup**
+   ```python
+   # Configure persistent connection pool
+   engine = create_async_engine('sqlite+aiosqlite:///:memory:',
+                              poolclass=StaticPool,
+                              connect_args={'timeout': 30})
+   ```
+2. **Transaction Management**
+   - Implement nested transactions with automatic rollback
+   - Add session lifecycle hooks for connection recycling
+   - Create atomic test fixtures with per-test isolation
+
+**Async Fixture Resolution**
+1. **Coroutine Handling**
+   ```python
+   @pytest.fixture
+   async def mock_orchestrator():
+       # Mark fixture with async context
+       async with AsyncClient(app) as client:
+           yield client
+   ```
+2. **Session Scoping**
+   - Implement module-scoped engine initialization
+   - Use function-scoped sessions for test isolation
+   - Add async context managers for transaction boundaries
+
+**Mock Service Enhancements**
+1. **State Management**
+   ```python
+   class StatefulMockLLMService(MockLLMService):
+       def __init__(self):
+           self.call_history = []
+           self.response_queue = []
+   ```
+2. **Verification Utilities**
+   - Add call counting and argument validation
+   - Implement response sequencing for multi-step tests
+   - Create mock expectation framework
+
+**Test Infrastructure Improvements**
+1. **Failure Injection**
+   ```python
+   @pytest.fixture
+   def fault_injection():
+       def inject_fault(error_type):
+           # Implementation for error simulation
+           pass
+       return inject_fault
+   ```
+2. **Performance Instrumentation**
+   - Add query execution timing
+   - Implement mock response latency simulation
+   - Create test execution metrics collection
+
+**Immediate Action Items**
+1. Resolve async fixture initialization order
+2. Implement connection pooling validation
+3. Add transaction rollback verification hooks
+4. Create mock state reset middleware
+5. Develop test flakiness detection system
+</info added on 2025-05-04T14:10:29.554Z>
+
